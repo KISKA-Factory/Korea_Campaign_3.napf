@@ -1,0 +1,313 @@
+version=54;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1545;
+	mods[]=
+	{
+		"3denEnhanced"
+	};
+	class ItemIDProvider
+	{
+		nextID=22;
+	};
+	class Camera
+	{
+		pos[]={16993.926,381.56482,4288.6694};
+		dir[]={0.18506569,-0.60775584,0.77241188};
+		up[]={0.14161181,0.79409164,0.59106189};
+		aside[]={0.9725914,2.3845023e-006,-0.23304051};
+	};
+};
+binarizationWanted=0;
+sourceName="Korea_Campaign_3";
+addons[]=
+{
+	"Desert"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=1;
+		class Item0
+		{
+			className="Desert";
+			name="Desert";
+		};
+	};
+};
+randomSeed=11995243;
+class ScenarioData
+{
+	author="Ansible2";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2010;
+		month=8;
+		day=5;
+		hour=10;
+		minute=0;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=22;
+		class Item0
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17042.973,109.68528,4409.4033};
+			};
+			title="Destroy Hold out camps?";
+			id=0;
+			atlOffset=0.0001373291;
+		};
+		class Item1
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17363.242,111.216,5233.8052};
+			};
+			title="Kill SF Team";
+			id=1;
+			atlOffset=-0.00018310547;
+		};
+		class Item2
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18492.738,205.939,5076.1611};
+			};
+			title="Destroy Hold out camps?";
+			id=2;
+			atlOffset=0.00032043457;
+		};
+		class Item3
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18664.016,94.696999,4151.7651};
+			};
+			title="Site";
+			id=3;
+			atlOffset=-0.00051116943;
+		};
+		class Item4
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={19277.592,84.428116,4434.9282};
+			};
+			title="Site";
+			id=4;
+			atlOffset=0.00018310547;
+		};
+		class Item5
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18892.648,119.65659,4689.4795};
+			};
+			title="Site";
+			id=5;
+			atlOffset=0.00025939941;
+		};
+		class Item6
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={19135.176,136.70918,5552.334};
+			};
+			title="Site";
+			id=6;
+			atlOffset=0.00038146973;
+		};
+		class Item7
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={19155.445,215.63857,5860.6201};
+			};
+			title="Site";
+			id=7;
+			atlOffset=-1.5258789e-005;
+		};
+		class Item8
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={19509.266,70.703377,6284.7471};
+			};
+			title="Site";
+			id=8;
+			atlOffset=0.00089263916;
+		};
+		class Item9
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18813.09,122.48209,6325.1865};
+			};
+			title="Site";
+			id=9;
+			atlOffset=-1.5258789e-005;
+		};
+		class Item10
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18261.262,92.858749,6054.083};
+			};
+			title="Site";
+			id=10;
+			atlOffset=-8.392334e-005;
+		};
+		class Item11
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18025.842,153.18336,5909.2773};
+			};
+			title="Site";
+			id=11;
+			atlOffset=-0.00067138672;
+		};
+		class Item12
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17925.756,59.027328,6152.7119};
+			};
+			title="Site";
+			id=12;
+			atlOffset=-3.8146973e-006;
+		};
+		class Item13
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17994.814,193.24399,5721.707};
+			};
+			title="Site";
+			id=13;
+			atlOffset=-3.0517578e-005;
+		};
+		class Item14
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18162.98,185.02425,5546.1431};
+			};
+			title="Site";
+			id=14;
+			atlOffset=-0.00015258789;
+		};
+		class Item15
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18254.262,244.41312,5372.0742};
+			};
+			title="Site";
+			id=15;
+			atlOffset=6.1035156e-005;
+		};
+		class Item16
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17920.264,78.26223,5254.5708};
+			};
+			title="Site";
+			id=16;
+			atlOffset=-0.00017547607;
+		};
+		class Item17
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17785.771,66.041832,5487.6772};
+			};
+			title="Site";
+			id=17;
+		};
+		class Item18
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17701.557,124.06316,5288.4419};
+			};
+			title="Site";
+			id=18;
+			atlOffset=0.00062561035;
+		};
+		class Item19
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17692.914,83.795586,5717.7754};
+			};
+			title="Site";
+			id=19;
+			atlOffset=3.8146973e-005;
+		};
+		class Item20
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={17113.676,85.731781,4688.9683};
+			};
+			title="Site";
+			id=20;
+			atlOffset=7.6293945e-006;
+		};
+		class Item21
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={16876.877,102.07514,4342.7485};
+			};
+			title="Site";
+			id=21;
+			atlOffset=-0.00045013428;
+		};
+	};
+};
