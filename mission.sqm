@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=22;
+		nextID=33;
 	};
 	class Camera
 	{
-		pos[]={16993.926,381.56482,4288.6694};
-		dir[]={0.18506569,-0.60775584,0.77241188};
-		up[]={0.14161181,0.79409164,0.59106189};
-		aside[]={0.9725914,2.3845023e-006,-0.23304051};
+		pos[]={15886.95,272.26804,3763.7834};
+		dir[]={0.68383557,-0.35588416,-0.63711339};
+		up[]={0.26038811,0.93452406,-0.24259673};
+		aside[]={-0.68173498,-5.04544e-007,-0.73173565};
 	};
 };
 binarizationWanted=0;
-sourceName="Korea_Campaign_3";
+sourceName="korea_campaign_3";
 addons[]=
 {
 	"Desert"
@@ -132,7 +132,7 @@ class Mission
 			};
 			title="Site";
 			id=5;
-			atlOffset=0.00025939941;
+			atlOffset=0.00026702881;
 		};
 		class Item6
 		{
@@ -176,7 +176,7 @@ class Mission
 			};
 			title="Site";
 			id=9;
-			atlOffset=-1.5258789e-005;
+			atlOffset=-7.6293945e-006;
 		};
 		class Item10
 		{
