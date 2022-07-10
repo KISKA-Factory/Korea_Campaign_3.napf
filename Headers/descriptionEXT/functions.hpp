@@ -1,11 +1,11 @@
-/*
-class
+class KOR
 {
-	class
+	class Effects
 	{
-		file = "functions\";
-		class
+		file = "functions\Effects";
+		class ambientArty
+		{};
+		class stopAmbientArty
 		{};
 	};
 };
-*/
