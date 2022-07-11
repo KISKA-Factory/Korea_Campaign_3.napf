@@ -21,5 +21,7 @@ class KOR
         file = "functions\Site 1";
         class site1_insert
         {};
+        class site1_spawnMarines
+        {};
     };
 };

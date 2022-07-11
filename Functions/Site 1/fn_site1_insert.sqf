@@ -45,6 +45,47 @@ waituntil {
 };
 
 
+private _supportMarines = units KOR_site1_marineSupportGroup;
+KOR_site1_marineSupportGroup addVehicle KOR_site1_insertHeli;
+_supportMarines apply {
+    _x assignAsCargo KOR_site1_insertHeli;
+    [_x] call BIS_fnc_ambientAnim__terminate;
+};
+_supportMarines orderGetIn true;
+
+/* ----------------------------------------------------------------------------
+    Wait for support troops to board heli
+---------------------------------------------------------------------------- */
+
+private _waitingToBoardTime = 0;
+waituntil {
+	sleep 1;
+    _waitingToBoardTime = _waitingToBoardTime + 1;
+    if (_waitingToBoardTime > 30) exitWith {
+        (call CBA_fnc_players) apply {
+            if !(_x in KOR_site1_insertHeli) then {
+                _x moveInCargo KOR_site1_insertHeli;
+            };
+        };
+
+        _supportMarines apply {
+            if !(_x in KOR_site1_insertHeli) then {
+                _x moveInCargo KOR_site1_insertHeli;
+            };
+
+        };
+
+        true
+    };
+
+	private _unitIsNotInHelicopter = [
+        _supportMarines,
+        {!(_x in KOR_site1_insertHeli)}
+    ] call KISKA_fnc_findIfBool;
+
+    !_unitIsNotInHelicopter
+};
+
 // keep players from exiting while heli takes off
 [KOR_site1_insertHeli, true] remoteExecCall ["lock",KOR_site1_insertHeli];
 [] spawn {
@@ -59,7 +100,8 @@ waituntil {
     Drop off players
 ---------------------------------------------------------------------------- */
 private _afterDropCode = {
-
+    private _leader = leader KOR_site1_marineSupportGroup;
+    [KOR_site1_marineSupportGroup, KOR_site1_insertHeli] remoteExec ["leaveVehicle",_leader];
 
 
     _this spawn {
