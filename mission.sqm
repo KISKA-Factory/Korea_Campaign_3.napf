@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5145;
+		nextID=5152;
 	};
 	class LayerIndexProvider
 	{
-		nextID=250;
+		nextID=251;
 	};
 	class Camera
 	{
-		pos[]={18283.896,145.48306,2259.9033};
-		dir[]={0.63751179,-0.2833561,-0.71653879};
-		up[]={0.18838045,0.95898944,-0.21173193};
-		aside[]={-0.74714899,8.4133353e-007,-0.66474694};
+		pos[]={14914.524,449.59821,4027.3171};
+		dir[]={0.87939876,-0.39409879,-0.26756799};
+		up[]={0.37708643,0.9190461,-0.11473223};
+		aside[]={-0.29112199,1.689652e-006,-0.95681381};
 	};
 };
 binarizationWanted=0;
@@ -77,14 +77,13 @@ addons[]=
 	"rhsusf_c_troops",
 	"rhsusf_c_statics",
 	"A3_Characters_F",
-	"A3_Misc_F_Helpers",
-	"rhsusf_c_ch53"
+	"A3_Misc_F_Helpers"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=26;
 		class Item0
 		{
 			className="Desert";
@@ -257,13 +256,6 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item26
-		{
-			className="rhsusf_c_ch53";
-			name="CH-53 Helicopter";
-			author="Red Hammer Studios";
-			url="http://www.rhsmods.org/";
-		};
 	};
 };
 dlcs[]=
@@ -301,7 +293,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=29;
+		items=32;
 		class Item0
 		{
 			dataType="Comment";
@@ -15948,17 +15940,10 @@ class Mission
 		class Item26
 		{
 			dataType="Layer";
-			name="Player Humvees";
-			id=5096;
-			atlOffset=90;
-		};
-		class Item27
-		{
-			dataType="Layer";
 			name="Hidden 3D Markers";
 			class Entities
 			{
-				items=2;
+				items=3;
 				class Item0
 				{
 					dataType="Layer";
@@ -16046,25 +16031,80 @@ class Mission
 					};
 					id=5114;
 				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={18311.061,134.65186,2235.3879};
+						angles[]={0,2.231735,0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+						name="KOR_";
+					};
+					id=5146;
+					type="Sign_Arrow_Direction_F";
+				};
 			};
 			id=5098;
-			atlOffset=205.67665;
+			atlOffset=156.72485;
+		};
+		class Item27
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18174.773,229.96899,2446.8811};
+			};
+			title="Add building and radar";
+			id=5147;
 		};
 		class Item28
 		{
-			dataType="Object";
+			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={18310.938,139.36102,2235.4277};
-				angles[]={-0,2.2842462,0};
+				position[]={14436.85,232.976,3614.8359};
 			};
-			side="Empty";
-			flags=4;
-			class Attributes
+			title="Place Building";
+			id=5148;
+			atlOffset=6.1035156e-005;
+		};
+		class Item29
+		{
+			dataType="Comment";
+			class PositionInfo
 			{
+				position[]={14469.748,430.61499,4144.4111};
 			};
-			id=5143;
-			type="rhsusf_CH53E_USMC_GAU21_D";
+			title="Place Radio Tower";
+			id=5149;
+			atlOffset=-0.00045776367;
+		};
+		class Item30
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={15017.018,365.745,4016.541};
+			};
+			title="Camp 1";
+			id=5150;
+			atlOffset=0.00012207031;
+		};
+		class Item31
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={15007.822,410.453,4253.6172};
+			};
+			title="Camp 2";
+			id=5151;
+			atlOffset=0.0002746582;
 		};
 	};
 };
