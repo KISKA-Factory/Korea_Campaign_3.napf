@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5112;
+		nextID=5117;
 	};
 	class LayerIndexProvider
 	{
-		nextID=225;
+		nextID=226;
 	};
 	class Camera
 	{
-		pos[]={18535.506,154.53383,2557.0093};
-		dir[]={0.44566008,-0.51824492,-0.72993785};
-		up[]={0.27005658,0.8552323,-0.44232032};
-		aside[]={-0.85349667,0,-0.52109832};
+		pos[]={18352.701,138.53574,2273.3577};
+		dir[]={0.95930398,-0.027587101,0.28128827};
+		up[]={0.026499189,0.99961144,0.0077713602};
+		aside[]={0.28140041,7.8836456e-007,-0.95966923};
 	};
 };
 binarizationWanted=0;
@@ -77,14 +77,15 @@ addons[]=
 	"rhsusf_c_troops",
 	"rhsusf_c_statics",
 	"A3_Characters_F",
-	"CUP_WheeledVehicles_NewSOV",
-	"A3_Misc_F_Helpers"
+	"A3_Misc_F_Helpers",
+	"RHS_US_A2_AirImport",
+	"rhsusf_c_ch53"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=27;
+		items=28;
 		class Item0
 		{
 			className="Desert";
@@ -252,15 +253,24 @@ class AddonsMetaData
 		};
 		class Item25
 		{
-			className="CUP_WheeledVehicles_NewSOV";
-			name="CUP_WheeledVehicles_NewSOV";
-		};
-		class Item26
-		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
+		};
+		class Item26
+		{
+			className="RHS_US_A2_AirImport";
+			name="RHSUSF A2 Air Ports";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
+		};
+		class Item27
+		{
+			className="rhsusf_c_ch53";
+			name="CH-53 Helicopter";
+			author="Red Hammer Studios";
+			url="http://www.rhsmods.org/";
 		};
 	};
 };
@@ -270,8 +280,7 @@ dlcs[]=
 	"Expansion",
 	"Enoch",
 	"Orange",
-	"RHS_USAF",
-	"CUP_Vehicles"
+	"RHS_USAF"
 };
 randomSeed=11995243;
 class ScenarioData
@@ -300,7 +309,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=28;
+		items=30;
 		class Item0
 		{
 			dataType="Comment";
@@ -15926,7 +15935,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18541.867,135.65852,2546.6548};
+						position[]={18366.17,134.5952,2303.0256};
 						angles[]={0,2.7866397,-0};
 					};
 					side="West";
@@ -15937,56 +15946,19 @@ class Mission
 					};
 					id=5095;
 					type="B_support_AMort_F";
-					atlOffset=-1.5258789e-005;
 				};
 			};
 			class Attributes
 			{
 			};
 			id=5094;
-			atlOffset=-1.5258789e-005;
 		};
 		class Item26
 		{
 			dataType="Layer";
 			name="Player Humvees";
-			class Entities
-			{
-				items=2;
-				class Item0
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={18386.262,136.98283,2321.0779};
-						angles[]={0,5.287087,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=5092;
-					type="CUP_B_nM1025_SOV_M2_USMC_WDL";
-				};
-				class Item1
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={18382.48,136.98283,2319.0239};
-						angles[]={0,5.3970838,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=5093;
-					type="CUP_B_nM1025_SOV_M2_USMC_WDL";
-				};
-			};
 			id=5096;
+			atlOffset=90;
 		};
 		class Item27
 		{
@@ -15994,7 +15966,7 @@ class Mission
 			name="Hidden 3D Markers";
 			class Entities
 			{
-				items=1;
+				items=2;
 				class Item0
 				{
 					dataType="Layer";
@@ -16040,9 +16012,84 @@ class Mission
 					id=5099;
 					atlOffset=-137.87321;
 				};
+				class Item1
+				{
+					dataType="Layer";
+					name="Player Humvee Spawns";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={18388.402,134.65186,2324.3057};
+								angles[]={-0,5.4144015,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5112;
+							type="Sign_Arrow_Direction_F";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={18383.691,134.65186,2320.9851};
+								angles[]={-0,5.4144015,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=5113;
+							type="Sign_Arrow_Direction_F";
+						};
+					};
+					id=5114;
+				};
 			};
 			id=5098;
-			atlOffset=-137.87321;
+			atlOffset=205.67665;
+		};
+		class Item28
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18363.375,138.32205,2283.0088};
+				angles[]={-0,2.2636087,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				reportOwnPosition=1;
+			};
+			id=5115;
+			type="RHS_CH_47F";
+		};
+		class Item29
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18345.816,139.36102,2262.988};
+				angles[]={-0,2.3881452,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=5116;
+			type="rhsusf_CH53E_USMC_GAU21";
 		};
 	};
 };
