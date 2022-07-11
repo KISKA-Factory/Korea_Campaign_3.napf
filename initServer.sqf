@@ -10,9 +10,8 @@
 
 [] spawn KOR_fnc_effect_ambientArty;
 call KOR_fnc_createPlayerVehicles;
-/* [-0.573,-6.031,-1.695] */
-/* [0.573,-6.031,-1.695] */
 
+/* heli setVariable ["KISKA_ACEFastRope_ropeDeploymentTime",4];
 player moveInCargo heli;
 [
     heli,
@@ -20,9 +19,10 @@ player moveInCargo heli;
     (fullCrew [heli,"cargo"]) apply {
         _x select 0
     },
+    {},
     28,
     [
         [-0.573,-6.031,-1.695],
         [0.573,-6.031,-1.695]
     ]
-] call KISKA_fnc_ACE_fastRope;
+] call KISKA_fnc_ACE_fastRope; */
