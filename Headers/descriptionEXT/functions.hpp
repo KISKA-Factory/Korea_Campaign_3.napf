@@ -16,4 +16,10 @@ class KOR
         class createPlayerVehicles
         {};
     };
+    class Site1
+    {
+        file = "functions\Site 1";
+        class site1_insert
+        {};
+    };
 };
