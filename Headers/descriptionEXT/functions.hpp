@@ -19,6 +19,8 @@ class KOR
     class Site1
     {
         file = "functions\Site 1";
+        class site1_ambush
+        {};
         class site1_insert
         {};
         class site1_spawnMarines

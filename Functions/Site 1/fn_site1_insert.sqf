@@ -103,7 +103,6 @@ private _afterDropCode = {
     private _leader = leader KOR_site1_marineSupportGroup;
     [KOR_site1_marineSupportGroup, KOR_site1_insertHeli] remoteExec ["leaveVehicle",_leader];
 
-
     _this spawn {
         params ["_heli"];
 
@@ -118,6 +117,8 @@ private _afterDropCode = {
         deleteVehicleCrew _heli;
         deleteVehicle _heli;
     };
+    
+    [] call KOR_fnc_site1_ambush;
 };
 
 

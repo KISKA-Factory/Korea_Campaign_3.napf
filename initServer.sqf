@@ -2,7 +2,6 @@
 // add main gate objects
 // add ambient men on airfield
 // add guards around airfield
-// spawn other recon marines that will help with the first mission
 
 [
     ["Arsenals"] call KISKA_fnc_getMissionLayerObjects
@@ -11,7 +10,10 @@
 [] spawn KOR_fnc_effect_ambientArty;
 call KOR_fnc_createPlayerVehicles;
 
-call KOR_fnc_site1_insert;
+[] spawn KOR_fnc_site1_insert;
+
+private _map = ["Airfield"] call KISKA_fnc_bases_createFromConfig;
+hint str _map;
 
 /*
 heli setVariable ["KISKA_ACEFastRope_ropeDeploymentTime",4];
