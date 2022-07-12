@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5787;
+		nextID=5791;
 	};
 	class LayerIndexProvider
 	{
-		nextID=317;
+		nextID=332;
 	};
 	class Camera
 	{
-		pos[]={18326.391,142.84477,2263.1924};
-		dir[]={-0.80935335,-0.34961322,-0.47213489};
-		up[]={-0.3020187,0.9368751,-0.1761817};
-		aside[]={-0.50392777,2.8312206e-007,0.8638581};
+		pos[]={18312.785,141.4471,2267.0359};
+		dir[]={-0.12347662,-0.18333974,-0.97526413};
+		up[]={-0.023028515,0.98304963,-0.18188775};
+		aside[]={-0.99208027,0,0.12560569};
 	};
 };
 binarizationWanted=0;
@@ -16914,7 +16914,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={18313.305,134.5952,2252.946};
-						angles[]={0,3.113029,0};
+						angles[]={0,3.7650745,-0};
 					};
 					side="West";
 					flags=7;
@@ -17251,17 +17251,17 @@ class Mission
 						class Item0
 						{
 							dataType="Layer";
-							name="Airfield Agent Spawns";
+							name="Airfield Maintainer Spawns";
 							class Entities
 							{
-								items=1;
+								items=3;
 								class Item0
 								{
 									dataType="Object";
 									class PositionInfo
 									{
 										position[]={18312.18,134.65186,2249.0879};
-										angles[]={0,5.131022,0};
+										angles[]={-0,0.56411767,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17269,6 +17269,38 @@ class Mission
 									{
 									};
 									id=5783;
+									type="Sign_Arrow_Direction_Blue_F";
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18310.539,134.65186,2248.9863};
+										angles[]={-0,0.56411767,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5787;
+									type="Sign_Arrow_Direction_Blue_F";
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18308.814,134.65186,2249.4333};
+										angles[]={-0,0.56411767,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5788;
 									type="Sign_Arrow_Direction_Blue_F";
 								};
 							};
@@ -17279,7 +17311,7 @@ class Mission
 				};
 			};
 			id=5098;
-			atlOffset=-75.396881;
+			atlOffset=-75.337646;
 		};
 		class Item27
 		{

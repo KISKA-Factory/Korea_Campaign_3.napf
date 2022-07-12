@@ -10,6 +10,15 @@ class Airfield
             numberOfAgents = -1;
             class ambientAnim
             {
+                animationSet[] = {
+                    "SIT_LOW_U",
+                    "STAND_U1",
+                    "STAND_U2",
+                    "STAND_U3",
+                    "BRIEFING"
+                };
+
+                equipmentLevel[] = {"NONE","LIGHT"};
             };
         };
     };
