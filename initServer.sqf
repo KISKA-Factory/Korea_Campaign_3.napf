@@ -13,7 +13,6 @@ call KOR_fnc_createPlayerVehicles;
 [] spawn KOR_fnc_site1_insert;
 
 private _map = ["Airfield"] call KISKA_fnc_bases_createFromConfig;
-hint str _map;
 
 /*
 heli setVariable ["KISKA_ACEFastRope_ropeDeploymentTime",4];

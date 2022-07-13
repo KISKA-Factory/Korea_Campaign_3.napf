@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=5791;
+		nextID=5813;
 	};
 	class LayerIndexProvider
 	{
-		nextID=332;
+		nextID=350;
 	};
 	class Camera
 	{
-		pos[]={18312.785,141.4471,2267.0359};
-		dir[]={-0.12347662,-0.18333974,-0.97526413};
-		up[]={-0.023028515,0.98304963,-0.18188775};
-		aside[]={-0.99208027,0,0.12560569};
+		pos[]={18344.02,143.39079,2301.3579};
+		dir[]={0.54285628,-0.4346754,-0.71858501};
+		up[]={0.26201379,0.9005872,-0.34683061};
+		aside[]={-0.79790723,1.4901161e-008,-0.60278034};
 	};
 };
 binarizationWanted=0;
@@ -16913,8 +16913,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18313.305,134.5952,2252.946};
-						angles[]={0,3.7650745,-0};
+						position[]={18358.277,134.5952,2292.2715};
+						angles[]={0,6.1327538,-0};
 					};
 					side="West";
 					flags=7;
@@ -17247,7 +17247,7 @@ class Mission
 					name="Airfield";
 					class Entities
 					{
-						items=1;
+						items=4;
 						class Item0
 						{
 							dataType="Layer";
@@ -17260,8 +17260,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={18312.18,134.65186,2249.0879};
-										angles[]={-0,0.56411767,0};
+										position[]={18318.678,134.65186,2248.5962};
+										angles[]={0,3.9238482,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17276,8 +17276,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={18310.539,134.65186,2248.9863};
-										angles[]={-0,0.56411767,0};
+										position[]={18294.414,134.65186,2226.637};
+										angles[]={0,3.4929307,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17292,8 +17292,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={18308.814,134.65186,2249.4333};
-										angles[]={-0,0.56411767,0};
+										position[]={18294.137,134.65186,2225.2239};
+										angles[]={0,0.12525919,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17306,12 +17306,253 @@ class Mission
 							};
 							id=5784;
 						};
+						class Item1
+						{
+							dataType="Layer";
+							name="Airfield Simple Helicopters";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18280.336,134.65186,2196.9292};
+										angles[]={-0,2.3310237,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5794;
+									type="Sign_Arrow_Direction_Pink_F";
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18163.74,134.65186,2059.4084};
+										angles[]={-0,2.3310237,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5795;
+									type="Sign_Arrow_Direction_Pink_F";
+								};
+							};
+							id=5796;
+						};
+						class Item2
+						{
+							dataType="Layer";
+							name="Airfield Guard Spawns";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18357.607,134.88287,2307.3054};
+										angles[]={0,2.3561945,-0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5808;
+									type="Sign_Arrow_Direction_Green_F";
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18210.27,249.73903,2583.4441};
+										angles[]={-0,5.710618,6.2826972};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5810;
+									type="Sign_Arrow_Direction_Green_F";
+								};
+							};
+							id=5797;
+							atlOffset=-0.44969177;
+						};
+						class Item3
+						{
+							dataType="Layer";
+							name="Airfield Chatting Unit Spawns";
+							class Entities
+							{
+								items=9;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18349.02,135.16499,2322.4148};
+										angles[]={0,1.9769961,-0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5799;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18350.484,135.16499,2321.6953};
+										angles[]={0,5.3563538,-0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5801;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18367.938,134.65186,2322.3315};
+										angles[]={-0,1.5058609,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5802;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18369.813,134.65186,2323.1428};
+										angles[]={-0,4.0393448,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5803;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item4
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18369.287,134.65186,2321.6626};
+										angles[]={-0,5.4873085,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5804;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item5
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18383.896,134.65186,2310.9641};
+										angles[]={-0,4.7992148,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5805;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item6
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18380.861,134.65186,2310.6467};
+										angles[]={-0,1.3496443,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5806;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item7
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18383.166,134.65186,2309.9106};
+										angles[]={-0,5.0531821,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5807;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item8
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18381.32,134.65186,2309.582};
+										angles[]={-0,0.7004897,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5809;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+							};
+							id=5800;
+							atlOffset=0.0040130615;
+						};
 					};
 					id=5782;
+					atlOffset=14.416779;
 				};
 			};
 			id=5098;
-			atlOffset=-75.337646;
+			atlOffset=-70.920914;
 		};
 		class Item27
 		{

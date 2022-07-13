@@ -1,4 +1,6 @@
 // Side IDs are from BIS_fnc_sideID
+#include "..\..\Unit Classes.hpp"
+
 #define SIDE_OPFOR 0
 #define SIDE_BLUFOR 1
 #define SIDE_INDEP 2
