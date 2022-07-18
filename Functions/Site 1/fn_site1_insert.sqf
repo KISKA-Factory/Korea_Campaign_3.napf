@@ -49,7 +49,7 @@ private _supportMarines = units KOR_site1_marineSupportGroup;
 KOR_site1_marineSupportGroup addVehicle KOR_site1_insertHeli;
 _supportMarines apply {
     _x assignAsCargo KOR_site1_insertHeli;
-    [_x] call BIS_fnc_ambientAnim__terminate;
+    [_x] call KISKA_fnc_ambientAnim_stop;
 };
 _supportMarines orderGetIn true;
 
@@ -117,7 +117,7 @@ private _afterDropCode = {
         deleteVehicleCrew _heli;
         deleteVehicle _heli;
     };
-    
+
     [] call KOR_fnc_site1_ambush;
 };
 

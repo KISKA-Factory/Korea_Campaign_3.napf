@@ -18,9 +18,13 @@ KOR_site1_marineSupportGroup = [
 
     [
         _x,
-        selectRandom ["STAND","SIT_LOW"],
-        "ASIS"
-    ] call BIS_fnc_ambientAnim;
+        [
+            "STAND_ARMED_1",
+            "STAND_ARMED_2",
+            "STAND_UNARMED_1",
+            "SIT_GROUND_ARMED"
+        ]
+    ] call KISKA_fnc_ambientAnim;
 } forEach (units KOR_site1_marineSupportGroup);
 
 

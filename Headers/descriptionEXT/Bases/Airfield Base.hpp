@@ -11,10 +11,10 @@ class Airfield
             class ambientAnim
             {
                 animationSet[] = {
-                    "SIT_LOW_U",
-                    "STAND_U1",
-                    "STAND_U2",
-                    "STAND_U3",
+                    "SIT_GROUND_UNARMED",
+                    "SIT_CHAIR_UNARMED_1",
+                    "SIT_CHAIR_UNARMED_2",
+                    "SIT_CHAIR_UNARMED_3",
                     "BRIEFING"
                 };
 
@@ -33,14 +33,15 @@ class Airfield
             class ambientAnim
             {
                 animationSet[] = {
-                    "STAND_U1",
-                    "STAND_U2",
-                    "STAND_U3",
+                    "STAND_UNARMED_1",
+                    "STAND_UNARMED_2",
+                    "STAND_UNARMED_3",
+                    "STAND_ARMED_1",
+                    "STAND_ARMED_2",
                     "BRIEFING"
                 };
 
-                equipmentLevel = "ASIS";
-                dontAttachToLogic = ON;
+                equipmentLevel = "";
             };
         };
 
@@ -52,14 +53,13 @@ class Airfield
             class ambientAnim
             {
                 animationSet[] = {
-                    "WATCH",
-                    "WATCH2",
-                    "STAND",
-                    "GUARD"
+                    "WATCH_1",
+                    "WATCH_2",
+                    "STAND_ARMED_1",
+                    "STAND_ARMED_2"
                 };
 
-                equipmentLevel = "ASIS";
-                dontAttachToLogic = 1;
+                equipmentLevel = "";
             };
         };
     };
