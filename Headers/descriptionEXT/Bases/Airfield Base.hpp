@@ -4,31 +4,47 @@ class Airfield
 
     class Agents
     {
-        class maintainers
+        class standingMaintainers
         {
-            positions = "Airfield Maintainer Spawns";
+            positions = "Airfield Standing Maintainer Spawns";
             numberOfAgents = -1;
             class ambientAnim
             {
                 animationSet[] = {
-                    "SIT_GROUND_UNARMED",
+                    "STAND_UNARMED_1",
+                    "STAND_UNARMED_2",
+                    "STAND_UNARMED_3",
+                    "BRIEFING"
+                };
+                equipmentLevel = "NONE";
+            };
+        };
+        class sittingMaintainers
+        {
+            positions = "Airfield Sitting Maintainer Spawns";
+            numberOfAgents = -1;
+            class ambientAnim
+            {
+                animationSet[] = {
                     "SIT_CHAIR_UNARMED_1",
                     "SIT_CHAIR_UNARMED_2",
                     "SIT_CHAIR_UNARMED_3",
-                    "BRIEFING"
+                    "SIT_CHAIR_RELAXED",
+                    "SIT_HIGH_1",
+                    "SIT_LOW"
                 };
-
-                equipmentLevel[] = {"NONE","LIGHT"};
+                fallbackFunction = "_this call KOR_fnc_effect_handleAirfieldNoSnap";
+                equipmentLevel = "NONE";
             };
         };
 
-        class chattingMarines
+        class StandingChattingMarines
         {
             infantryClasses[] = {
                 MARINE_INFANTRY_UNIT_CLASSES
             };
 
-            positions = "Airfield Chatting Unit Spawns";
+            positions = "Airfield Standing Chatting Unit Spawns";
             numberOfAgents = 25;
             class ambientAnim
             {
@@ -40,14 +56,29 @@ class Airfield
                     "STAND_ARMED_2",
                     "BRIEFING"
                 };
-
+                equipmentLevel = "";
+            };
+        };
+        class sittingChattingMarines
+        {
+            positions = "Airfield Sitting Unit Spawns";
+            numberOfAgents = -1;
+            class ambientAnim
+            {
+                animationSet[] = {
+                    "SIT_CHAIR_UNARMED_1",0.5,
+                    "SIT_CHAIR_UNARMED_2",0.5,
+                    "SIT_CHAIR_ARMED_1",1,
+                    "SIT_CHAIR_ARMED_2",1
+                };
+                fallbackFunction = "_this call KOR_fnc_effect_handleAirfieldNoSnap";
                 equipmentLevel = "";
             };
         };
 
-        class guards
+        class standingGuards
         {
-            positions = "Airfield Guard Spawns";
+            positions = "Airfield Standing Guard Spawns";
             numberOfAgents = -1;
 
             class ambientAnim
