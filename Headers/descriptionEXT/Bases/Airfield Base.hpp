@@ -29,12 +29,11 @@ class Airfield
                     "SIT_CHAIR_UNARMED_1",
                     "SIT_CHAIR_UNARMED_2",
                     "SIT_CHAIR_UNARMED_3",
-                    "SIT_CHAIR_RELAXED",
                     "SIT_HIGH_1",
                     "SIT_LOW"
                 };
                 fallbackFunction = "_this call KOR_fnc_effect_handleAirfieldNoSnap";
-                equipmentLevel = "NONE";
+                equipmentLevel = "LIGHT";
             };
         };
 
@@ -56,7 +55,6 @@ class Airfield
                     "STAND_ARMED_2",
                     "BRIEFING"
                 };
-                equipmentLevel = "";
             };
         };
         class sittingChattingMarines
@@ -72,7 +70,6 @@ class Airfield
                     "SIT_CHAIR_ARMED_2",1
                 };
                 fallbackFunction = "_this call KOR_fnc_effect_handleAirfieldNoSnap";
-                equipmentLevel = "";
             };
         };
 

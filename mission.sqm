@@ -5,25 +5,25 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=521;
+	toggles=513;
 	mods[]=
 	{
 		"3denEnhanced"
 	};
 	class ItemIDProvider
 	{
-		nextID=5844;
+		nextID=5860;
 	};
 	class LayerIndexProvider
 	{
-		nextID=407;
+		nextID=487;
 	};
 	class Camera
 	{
-		pos[]={18345.656,137.30324,2290.9509};
-		dir[]={-0.62633699,-0.37425327,0.68401426};
-		up[]={-0.25277317,0.92721343,0.27605924};
-		aside[]={0.73758352,-3.4132972e-007,0.67538339};
+		pos[]={18073.162,340.66196,2558.3354};
+		dir[]={0.64986742,-0.29790983,-0.69939983};
+		up[]={0.20285212,0.95455122,-0.21831009};
+		aside[]={-0.73265201,-5.8440492e-008,-0.68076384};
 	};
 };
 binarizationWanted=0;
@@ -76,11 +76,11 @@ addons[]=
 	"A3_Structures_F_EPA_Civ_Camping",
 	"CUP_CAMisc",
 	"CUP_Misc3_Config",
+	"A3_Props_F_Orange_Humanitarian_Camps",
 	"rhsusf_c_troops",
 	"rhsusf_c_statics",
 	"A3_Characters_F",
-	"A3_Misc_F_Helpers",
-	"A3_Props_F_Orange_Humanitarian_Camps"
+	"A3_Misc_F_Helpers"
 };
 class AddonsMetaData
 {
@@ -250,29 +250,29 @@ class AddonsMetaData
 		};
 		class Item25
 		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item26
+		{
 			className="rhsusf_c_troops";
 			name="RHSUSF Infantry & Equipment";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item26
+		class Item27
 		{
 			className="rhsusf_c_statics";
 			name="RHSUSF Static Weapons";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item27
+		class Item28
 		{
 			className="A3_Misc_F";
 			name="Arma 3 - 3D Aids and Helpers";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item28
-		{
-			className="A3_Props_F_Orange";
-			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -8160,7 +8160,7 @@ class Mission
 							name="Statics";
 							class Entities
 							{
-								items=464;
+								items=468;
 								class Item0
 								{
 									dataType="Object";
@@ -16388,7 +16388,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18320.045,134.74339,2247.4685};
-										angles[]={-0,3.7616863,0};
+										angles[]={0,3.7616863,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16406,7 +16406,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18355.395,135.33127,2306.2456};
-										angles[]={0,4.9063077,-0};
+										angles[]={0,4.9063077,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16423,7 +16423,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18357.148,135.33127,2307.7107};
-										angles[]={0,0.55958194,-0};
+										angles[]={0,0.55958194,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16440,7 +16440,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18348.221,135.51845,2319.0959};
-										angles[]={0,5.4813952,-0};
+										angles[]={0,5.4813952,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16456,7 +16456,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18346.855,135.61456,2319.1189};
-										angles[]={-0,4.6190515,0};
+										angles[]={0,4.6190515,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16472,7 +16472,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18347.869,135.61456,2319.9995};
-										angles[]={-0,5.8538923,0};
+										angles[]={0,5.8538923,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16488,7 +16488,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18349.313,135.61456,2318.9287};
-										angles[]={0,1.5885987,-0};
+										angles[]={0,1.5885987,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16504,7 +16504,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18340.141,135.45529,2300.9014};
-										angles[]={-0,0.55958194,0};
+										angles[]={0,0.55958194,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16527,6 +16527,7 @@ class Mission
 									flags=4;
 									class Attributes
 									{
+										disableSimulation=1;
 									};
 									id=5826;
 									type="B_supplyCrate_F";
@@ -16553,8 +16554,8 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={18341.824,134.74339,2292.7253};
-										angles[]={-0,4.4534078,0};
+										position[]={18341.824,134.74339,2292.7251};
+										angles[]={0,1.3064313,0};
 									};
 									side="Empty";
 									flags=4;
@@ -16566,17 +16567,81 @@ class Mission
 									id=5829;
 									type="Box_NATO_WpsLaunch_F";
 								};
+								class Item464
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18338.867,135.45529,2299.9292};
+										angles[]={0,4.0447235,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5825;
+									type="Land_CampingChair_V2_white_F";
+								};
+								class Item465
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17771.682,255.1006,2899.3552};
+										angles[]={6.2511988,3.9821355,6.2661901};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5851;
+									type="Land_CampingChair_V2_white_F";
+								};
+								class Item466
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17771.729,255.13072,2901.729};
+										angles[]={6.2771854,5.7281981,6.2661901};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5852;
+									type="Land_CampingChair_V2_white_F";
+								};
+								class Item467
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17773.596,255.09482,2901.0327};
+										angles[]={6.2771854,0.94938952,6.2661901};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5853;
+									type="Land_CampingChair_V2_white_F";
+								};
 							};
 							id=5058;
-							atlOffset=0.15589905;
+							atlOffset=-7.4378815;
 						};
 					};
 					id=34;
-					atlOffset=-0.31242371;
+					atlOffset=-23.909836;
 				};
 			};
 			id=33;
-			atlOffset=-0.31242371;
+			atlOffset=-23.909836;
 		};
 		class Item23
 		{
@@ -17229,7 +17294,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18358.277,134.5952,2292.2715};
+						position[]={18342.838,134.5952,2287.9243};
 						angles[]={0,6.1327538,0};
 					};
 					side="West";
@@ -17411,7 +17476,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18307.863,134.65186,2257.3743};
-										angles[]={-0,4.4037638,0};
+										angles[]={0,4.4037638,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17459,7 +17524,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18302.73,134.65186,2252.897};
-										angles[]={-0,1.68099,0};
+										angles[]={0,1.68099,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17625,7 +17690,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18378.939,134.65186,2314.187};
-										angles[]={-0,1.3842444,0};
+										angles[]={0,1.3842444,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17641,7 +17706,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18380.359,134.65186,2314.4858};
-										angles[]={-0,4.8569121,0};
+										angles[]={0,4.8569121,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17657,7 +17722,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18379.135,134.65186,2315.6179};
-										angles[]={-0,2.4837041,0};
+										angles[]={0,2.4837041,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17718,7 +17783,7 @@ class Mission
 							name="Airfield Standing Guard Spawns";
 							class Entities
 							{
-								items=1;
+								items=7;
 								class Item0
 								{
 									dataType="Object";
@@ -17735,9 +17800,105 @@ class Mission
 									id=5810;
 									type="Sign_Arrow_Direction_Green_F";
 								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17876.328,252.2077,2794.7673};
+										angles[]={-0,5.710618,0};
+									};
+									side="Empty";
+									class Attributes
+									{
+									};
+									id=5845;
+									type="Sign_Arrow_Direction_Green_F";
+									atlOffset=4.4970856;
+								};
+								class Item2
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17875.635,252.2122,2796.4214};
+										angles[]={0,3.0669427,-0};
+									};
+									side="Empty";
+									class Attributes
+									{
+									};
+									id=5846;
+									type="Sign_Arrow_Direction_Green_F";
+									atlOffset=5.5649109;
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17763.307,254.32181,2902.9172};
+										angles[]={6.2023635,5.9744558,0.091740042};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5847;
+									type="Sign_Arrow_Direction_Green_F";
+								};
+								class Item4
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17765.133,254.55168,2903.6809};
+										angles[]={6.2023635,4.8734603,0.091740042};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5848;
+									type="Sign_Arrow_Direction_Green_F";
+								};
+								class Item5
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17774.988,254.66971,2915.5479};
+										angles[]={6.1558805,5.9744558,0.15279604};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5849;
+									type="Sign_Arrow_Direction_Green_F";
+								};
+								class Item6
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17789.488,255.49194,2909.0979};
+										angles[]={6.1284361,0.80552685,0.094714127};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5850;
+									type="Sign_Arrow_Direction_Green_F";
+								};
 							};
 							id=5797;
-							atlOffset=-143.29073;
+							atlOffset=0.74710083;
 						};
 						class Item3
 						{
@@ -17745,7 +17906,7 @@ class Mission
 							name="Airfield Standing Chatting Unit Spawns";
 							class Entities
 							{
-								items=12;
+								items=14;
 								class Item0
 								{
 									dataType="Object";
@@ -17896,7 +18057,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18343.658,134.65186,2292.1057};
-										angles[]={-0,5.6201272,0};
+										angles[]={0,5.6201272,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17912,7 +18073,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18344.777,134.65186,2294.0864};
-										angles[]={-0,4.5014973,0};
+										angles[]={0,4.5014973,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17928,7 +18089,7 @@ class Mission
 									class PositionInfo
 									{
 										position[]={18357.438,134.88287,2306.1377};
-										angles[]={-0,5.3511276,0};
+										angles[]={0,5.3511276,0};
 									};
 									side="Empty";
 									flags=4;
@@ -17938,9 +18099,41 @@ class Mission
 									id=5808;
 									type="Sign_Arrow_Direction_Green_F";
 								};
+								class Item12
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17779.635,254.71561,2909.1616};
+										angles[]={6.2631893,2.4626579,6.2801757};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5858;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
+								class Item13
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17780.732,254.66422,2908.1482};
+										angles[]={6.2631865,5.118187,6.242209};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5859;
+									type="Sign_Arrow_Direction_Cyan_F";
+								};
 							};
 							id=5800;
-							atlOffset=0.11601257;
+							atlOffset=-11.876968;
 						};
 						class Item4
 						{
@@ -17969,7 +18162,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={18343.076,134.96703,2294.2476};
+										position[]={18343.313,134.96703,2294.0403};
 									};
 									side="Empty";
 									flags=4;
@@ -17984,8 +18177,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={18341.746,135.12726,2292.729};
-										angles[]={0.00034526698,0,6.2818046};
+										position[]={18342.473,134.96703,2292.6841};
 									};
 									side="Empty";
 									flags=4;
@@ -17994,7 +18186,6 @@ class Mission
 									};
 									id=5836;
 									type="Sign_Arrow_Yellow_F";
-									atlOffset=0.16023254;
 								};
 								class Item3
 								{
@@ -18013,7 +18204,7 @@ class Mission
 								};
 							};
 							id=5816;
-							atlOffset=0.06350708;
+							atlOffset=0.075378418;
 						};
 						class Item5
 						{
@@ -18021,7 +18212,7 @@ class Mission
 							name="Airfield Sitting Unit Spawns";
 							class Entities
 							{
-								items=6;
+								items=9;
 								class Item0
 								{
 									dataType="Object";
@@ -18112,17 +18303,65 @@ class Mission
 									id=5842;
 									type="Sign_Arrow_Green_F";
 								};
+								class Item6
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17771.695,254.99825,2901.7708};
+										angles[]={6.2771854,0,6.2661901};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5855;
+									type="Sign_Arrow_Green_F";
+								};
+								class Item7
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17771.826,254.9669,2899.4219};
+										angles[]={6.2511988,0,6.2661901};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5856;
+									type="Sign_Arrow_Green_F";
+								};
+								class Item8
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={17773.693,254.95932,2900.9443};
+										angles[]={6.2771854,0,6.2661901};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+									};
+									id=5857;
+									type="Sign_Arrow_Green_F";
+								};
 							};
 							id=5817;
-							atlOffset=0.10809326;
+							atlOffset=-7.5647736;
 						};
 					};
 					id=5782;
-					atlOffset=5.19664;
+					atlOffset=-19.525803;
 				};
 			};
 			id=5098;
-			atlOffset=-78.649796;
+			atlOffset=-46.89151;
 		};
 		class Item27
 		{
@@ -18183,16 +18422,16 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={18338.867,135.45529,2299.9292};
-				angles[]={-0,4.0447235,0};
+				position[]={17772.748,254.99704,2900.0701};
+				angles[]={6.2771854,0.84171122,6.2661901};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
 			};
-			id=5825;
-			type="Land_CampingChair_V2_white_F";
+			id=5854;
+			type="FoldTable";
 		};
 	};
 };

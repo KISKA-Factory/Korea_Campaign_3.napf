@@ -10,7 +10,7 @@ params [
 ];
 
 private _newAnimSet = +_animSet;
-_newAnimSet deleteAt (_newAnimSet find _animSet);
+_newAnimSet deleteAt (_newAnimSet find _animSetSelection);
 
 if (_newAnimSet isEqualTo []) then {
     _newAnimSet = [

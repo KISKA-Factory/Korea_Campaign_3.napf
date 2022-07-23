@@ -14,6 +14,8 @@ call KOR_fnc_createPlayerVehicles;
 
 private _map = ["Airfield"] call KISKA_fnc_bases_createFromConfig;
 
+private _ambientAnimLogicGroup = missionNamespace getVariable ["KISKA_ambientAnim_attachToLogicGroup",grpNull];
+_ambientAnimLogicGroup enableDynamicSimulation true;
 /*
 heli setVariable ["KISKA_ACEFastRope_ropeDeploymentTime",4];
 player moveInCargo heli;

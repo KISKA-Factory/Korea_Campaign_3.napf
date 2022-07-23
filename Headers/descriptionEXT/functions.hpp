@@ -5,6 +5,8 @@ class KOR
 		file = "functions\Effects";
 		class effect_ambientArty
 		{};
+		class effect_handleAirfieldNoSnap
+		{};
 		class effect_stopAmbientArty
 		{};
 		class effect_setupMusicMap
