@@ -18,11 +18,14 @@ class Airfield
                 };
                 equipmentLevel = "NONE";
             };
+
+            dynamicSim = ON;
         };
         class sittingMaintainers
         {
             positions = "Airfield Sitting Maintainer Spawns";
             numberOfAgents = -1;
+            dynamicSim = ON;
             class ambientAnim
             {
                 animationSet[] = {
@@ -45,6 +48,7 @@ class Airfield
 
             positions = "Airfield Standing Chatting Unit Spawns";
             numberOfAgents = 25;
+            dynamicSim = ON;
             class ambientAnim
             {
                 animationSet[] = {
@@ -61,6 +65,7 @@ class Airfield
         {
             positions = "Airfield Sitting Unit Spawns";
             numberOfAgents = -1;
+            dynamicSim = ON;
             class ambientAnim
             {
                 animationSet[] = {
@@ -77,7 +82,7 @@ class Airfield
         {
             positions = "Airfield Standing Guard Spawns";
             numberOfAgents = -1;
-
+            dynamicSim = ON;
             class ambientAnim
             {
                 animationSet[] = {
