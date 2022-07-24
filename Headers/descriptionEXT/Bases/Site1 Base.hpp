@@ -40,5 +40,85 @@ class Site1
                 };
             };
         };
+
+        class Camp2_mortarBuilding
+        {
+            numberOfUnits = 5;
+            unitsPerGroup = -1;
+            canPath = OFF;
+
+            positions = "Camp 2 Mortar Building Spawns";
+            dynamicSim = ON;
+
+            class reinforce
+            {
+                id = "Camp2_mortarBuilding";
+                canCall[] = {
+                    "Camp1_Pathing"
+                };
+            };
+        };
+
+        class Camp2_overlook_1
+        {
+            numberOfUnits = 9;
+            unitsPerGroup = -1;
+            canPath = OFF;
+            dynamicSim = ON;
+            positions = "Camp 2 Overlook Spawns 1";
+
+            class reinforce
+            {
+                id = "Camp2_overlook_1";
+                canCall[] = {
+                    "Camp1_Pathing"
+                };
+            };
+        };
+
+        class Camp2_overlook_2 : Camp2_overlook_1
+        {
+            numberOfUnits = 4;
+            positions = "Camp 2 Overlook Spawns 2";
+        };
+
+        class Camp2_path_1
+        {
+            numberOfUnits = 6;
+            unitsPerGroup = -1;
+            canPath = ON;
+            dynamicSim = ON;
+            positions = "Camp 2 Path Spawns 1";
+
+            class reinforce
+            {
+                id = "Camp2_path_1";
+                canCall[] = {
+                    ""
+                };
+            };
+        };
+    };
+    class Camp2_path_2 : Camp2_path_1
+    {
+        positions = "Camp 2 Path Spawns 2";
+        class reinforce : reinforce
+        {
+            id = "Camp2_path_2";
+            canCall[] = {
+
+            };
+        };
+    };
+    class Camp2_path_3 : Camp2_path_1
+    {
+        positions = "Camp 2 Path Spawns 3";
+        class reinforce : reinforce
+        {
+            id = "Camp2_path_3";
+            canCall[] = {
+
+            };
+        };
     };
 };
