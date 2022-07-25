@@ -20,6 +20,9 @@ class Site1
             class reinforce
             {
                 id = "Camp1_Pathing";
+                canCall[] = {
+                    "Camp2_path_1"
+                };
             };
         };
 
@@ -54,7 +57,8 @@ class Site1
             {
                 id = "Camp2_mortarBuilding";
                 canCall[] = {
-                    "Camp1_Pathing"
+                    "Camp1_Pathing",
+                    "Camp2_path_1"
                 };
             };
         };
@@ -71,7 +75,8 @@ class Site1
             {
                 id = "Camp2_overlook_1";
                 canCall[] = {
-                    "Camp1_Pathing"
+                    "Camp1_Pathing",
+                    "Camp2_path_1"
                 };
             };
         };
@@ -94,30 +99,30 @@ class Site1
             {
                 id = "Camp2_path_1";
                 canCall[] = {
-                    ""
+                    "Camp1_Pathing"
                 };
             };
         };
-    };
-    class Camp2_path_2 : Camp2_path_1
-    {
-        positions = "Camp 2 Path Spawns 2";
-        class reinforce : reinforce
+        class Camp2_path_2 : Camp2_path_1
         {
-            id = "Camp2_path_2";
-            canCall[] = {
-
+            positions = "Camp 2 Path Spawns 2";
+            class reinforce
+            {
+                id = "Camp2_path_2";
+                canCall[] = {
+                    "Camp2_path_3"
+                };
             };
         };
-    };
-    class Camp2_path_3 : Camp2_path_1
-    {
-        positions = "Camp 2 Path Spawns 3";
-        class reinforce : reinforce
+        class Camp2_path_3 : Camp2_path_1
         {
-            id = "Camp2_path_3";
-            canCall[] = {
-
+            positions = "Camp 2 Path Spawns 3";
+            class reinforce
+            {
+                id = "Camp2_path_3";
+                canCall[] = {
+                    "Camp2_path_2"
+                };
             };
         };
     };
