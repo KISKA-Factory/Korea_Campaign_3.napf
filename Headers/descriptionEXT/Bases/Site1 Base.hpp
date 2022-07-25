@@ -125,5 +125,41 @@ class Site1
                 };
             };
         };
+
+        class Camp3_static
+        {
+            dynamicSim = ON;
+            positions = "Camp 3 Static spawns";
+            canPath = OFF;
+            numberOfUnits = 12;
+            unitsPerGroup = 4;
+
+            class reinforce
+            {
+                id = "Camp3_static";
+                canCall[] = {
+                    "Camp3_path",
+                    "Camp2_path_2",
+                    "Camp2_path_3"
+                };
+            };
+        };
+        class Camp3_path
+        {
+            dynamicSim = ON;
+            positions = "Camp 3 path spawns";
+            canPath = ON;
+            numberOfUnits = 12;
+            unitsPerGroup = 6;
+
+            class reinforce
+            {
+                id = "Camp3_path";
+                canCall[] = {
+                    "Camp2_path_2",
+                    "Camp2_path_3"
+                };
+            };
+        };
     };
 };

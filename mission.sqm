@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=12935;
+		nextID=12943;
 	};
 	class LayerIndexProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={18624.309,244.48413,4089.8743};
-		dir[]={0.055606134,-0.35705885,0.93255866};
-		up[]={0.021266986,0.93398786,0.35658604};
-		aside[]={0.99835724,-3.6444471e-006,-0.059534986};
+		pos[]={17702.916,560.21222,5795.7388};
+		dir[]={0.8695488,-0.43308851,-0.23783563};
+		up[]={0.41791904,0.90112722,-0.11430836};
+		aside[]={-0.26386055,-1.2848468e-006,-0.96469522};
 	};
 };
 binarizationWanted=0;
@@ -541,41 +541,8 @@ class Mission
 	};
 	class Entities
 	{
-		items=40;
+		items=36;
 		class Item0
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={17042.973,109.68528,4409.4033};
-			};
-			title="Destroy Hold out camps?";
-			id=0;
-			atlOffset=0.0001373291;
-		};
-		class Item1
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={17363.242,111.216,5233.8052};
-			};
-			title="Kill SF Team";
-			id=1;
-			atlOffset=-0.00018310547;
-		};
-		class Item2
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={18492.738,205.939,5076.1611};
-			};
-			title="Destroy Hold out camps?";
-			id=2;
-			atlOffset=0.00032043457;
-		};
-		class Item3
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -586,7 +553,7 @@ class Mission
 			title="Site";
 			id=3;
 		};
-		class Item4
+		class Item1
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -597,51 +564,18 @@ class Mission
 			id=4;
 			atlOffset=0.00018310547;
 		};
-		class Item5
+		class Item2
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={18892.648,119.65659,4689.4795};
-			};
-			title="Site";
-			id=5;
-			atlOffset=0.00026702881;
-		};
-		class Item6
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={19135.176,136.70918,5552.334};
-			};
-			title="Site";
-			id=6;
-			atlOffset=0.00038146973;
-		};
-		class Item7
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={19155.445,215.63857,5860.6201};
+				position[]={19182.33,215.588,5855.5645};
+				angles[]={0.037981652,0,0.067893796};
 			};
 			title="Site";
 			id=7;
-			atlOffset=-1.5258789e-005;
 		};
-		class Item8
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={19509.266,70.703377,6284.7471};
-			};
-			title="Site";
-			id=8;
-			atlOffset=0.00089263916;
-		};
-		class Item9
+		class Item3
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -652,7 +586,7 @@ class Mission
 			id=9;
 			atlOffset=-7.6293945e-006;
 		};
-		class Item10
+		class Item4
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -663,18 +597,7 @@ class Mission
 			id=10;
 			atlOffset=-8.392334e-005;
 		};
-		class Item11
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={18025.842,153.18336,5909.2773};
-			};
-			title="Site";
-			id=11;
-			atlOffset=-0.00067138672;
-		};
-		class Item12
+		class Item5
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -685,7 +608,7 @@ class Mission
 			id=12;
 			atlOffset=-3.8146973e-006;
 		};
-		class Item13
+		class Item6
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -696,29 +619,29 @@ class Mission
 			id=13;
 			atlOffset=-3.0517578e-005;
 		};
-		class Item14
+		class Item7
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={18162.98,185.02425,5546.1431};
+				position[]={18216.949,183.16016,5530.0264};
+				angles[]={6.2482009,0,0.072868273};
 			};
 			title="Site";
 			id=14;
-			atlOffset=-0.00015258789;
 		};
-		class Item15
+		class Item8
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={18254.262,244.41312,5372.0742};
+				position[]={18278.5,246.92319,5367.3364};
+				angles[]={6.1835198,0,0.066898093};
 			};
 			title="Site";
 			id=15;
-			atlOffset=6.1035156e-005;
 		};
-		class Item16
+		class Item9
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -729,7 +652,7 @@ class Mission
 			id=16;
 			atlOffset=-0.00017547607;
 		};
-		class Item17
+		class Item10
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -739,51 +662,29 @@ class Mission
 			title="Site";
 			id=17;
 		};
-		class Item18
+		class Item11
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={17701.557,124.06316,5288.4419};
-			};
-			title="Site";
-			id=18;
-			atlOffset=0.00062561035;
-		};
-		class Item19
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={17692.914,83.795586,5717.7754};
-			};
-			title="Site";
-			id=19;
-			atlOffset=3.8146973e-005;
-		};
-		class Item20
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={17113.676,85.731781,4688.9683};
+				position[]={17063.111,77.679703,4662.2368};
+				angles[]={0.08578676,0,0.097685933};
 			};
 			title="Site";
 			id=20;
-			atlOffset=7.6293945e-006;
 		};
-		class Item21
+		class Item12
 		{
 			dataType="Comment";
 			class PositionInfo
 			{
-				position[]={16876.877,102.07514,4342.7485};
+				position[]={16966.527,107.78365,4349.3877};
+				angles[]={0.070879571,0,0.044968102};
 			};
 			title="Site";
 			id=21;
-			atlOffset=-0.00045013428;
 		};
-		class Item22
+		class Item13
 		{
 			dataType="Layer";
 			name="Locations";
@@ -56059,7 +55960,7 @@ class Mission
 			id=33;
 			atlOffset=21.038528;
 		};
-		class Item23
+		class Item14
 		{
 			dataType="Layer";
 			name="Arsenals";
@@ -56257,7 +56158,7 @@ class Mission
 			};
 			id=4863;
 		};
-		class Item24
+		class Item15
 		{
 			dataType="Group";
 			side="West";
@@ -56287,7 +56188,7 @@ class Mission
 			};
 			id=5094;
 		};
-		class Item25
+		class Item16
 		{
 			dataType="Layer";
 			name="Hidden 3D Markers";
@@ -59665,7 +59566,7 @@ class Mission
 			id=5098;
 			atlOffset=-29.016647;
 		};
-		class Item26
+		class Item17
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59675,7 +59576,7 @@ class Mission
 			title="Add building and radar";
 			id=5147;
 		};
-		class Item27
+		class Item18
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59686,7 +59587,7 @@ class Mission
 			id=5148;
 			atlOffset=6.1035156e-005;
 		};
-		class Item28
+		class Item19
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59697,40 +59598,7 @@ class Mission
 			id=5149;
 			atlOffset=-0.00045776367;
 		};
-		class Item29
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={15636.338,258.21201,4292.1958};
-			};
-			title="Camp 3";
-			id=9137;
-			atlOffset=0.00015258789;
-		};
-		class Item30
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={14859.689,400.39606,4031.4319};
-				angles[]={5.9771204,0,6.1815381};
-			};
-			title="Camp 1";
-			id=5150;
-		};
-		class Item31
-		{
-			dataType="Comment";
-			class PositionInfo
-			{
-				position[]={14825.137,456.68704,4276.251};
-				angles[]={0.054943435,0,0.21463846};
-			};
-			title="Camp 2";
-			id=5151;
-		};
-		class Item32
+		class Item20
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59741,7 +59609,7 @@ class Mission
 			id=12891;
 			atlOffset=0.00028991699;
 		};
-		class Item33
+		class Item21
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59752,7 +59620,7 @@ class Mission
 			id=12892;
 			atlOffset=0.25389099;
 		};
-		class Item34
+		class Item22
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59763,7 +59631,7 @@ class Mission
 			id=12893;
 			atlOffset=0.73980713;
 		};
-		class Item35
+		class Item23
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59774,7 +59642,7 @@ class Mission
 			id=12894;
 			atlOffset=-0.00039672852;
 		};
-		class Item36
+		class Item24
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59785,7 +59653,7 @@ class Mission
 			id=12895;
 			atlOffset=0.00012207031;
 		};
-		class Item37
+		class Item25
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59796,7 +59664,7 @@ class Mission
 			id=12896;
 			atlOffset=0.00024414063;
 		};
-		class Item38
+		class Item26
 		{
 			dataType="Comment";
 			class PositionInfo
@@ -59807,7 +59675,7 @@ class Mission
 			id=12897;
 			atlOffset=6.1035156e-005;
 		};
-		class Item39
+		class Item27
 		{
 			dataType="Layer";
 			name="Site 1 Mortars";
@@ -59869,6 +59737,102 @@ class Mission
 			};
 			id=12932;
 			atlOffset=-12.035309;
+		};
+		class Item28
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18523.346,195.9115,5320.9365};
+				angles[]={6.1835198,0,0.066898093};
+			};
+			title="Site";
+			id=12935;
+			atlOffset=6.1035156e-005;
+		};
+		class Item29
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={19058.705,218.91132,5737.4946};
+				angles[]={6.1835198,0,0.066898093};
+			};
+			title="Site";
+			id=12936;
+			atlOffset=6.1035156e-005;
+		};
+		class Item30
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={19113.156,111.6871,6709.5459};
+				angles[]={6.1835198,0,0.066898093};
+			};
+			title="Site";
+			id=12937;
+			atlOffset=4.5776367e-005;
+		};
+		class Item31
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={19000.359,45.091702,6917.7095};
+				angles[]={6.1835198,0,0.066898093};
+			};
+			title="Site";
+			id=12938;
+			atlOffset=-6.8664551e-005;
+		};
+		class Item32
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18512.645,202.84314,5088.5415};
+				angles[]={6.1835198,0,0.066898093};
+			};
+			title="Site";
+			id=12939;
+			atlOffset=0.00018310547;
+		};
+		class Item33
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18428.068,197.11658,4687.0938};
+				angles[]={6.1835198,0,0.066898093};
+			};
+			title="Site";
+			id=12940;
+			atlOffset=9.1552734e-005;
+		};
+		class Item34
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={19060.842,173.10075,5941.7183};
+				angles[]={6.1835198,0,0.066898093};
+			};
+			title="Site";
+			id=12941;
+			atlOffset=-3.0517578e-005;
+		};
+		class Item35
+		{
+			dataType="Comment";
+			class PositionInfo
+			{
+				position[]={18750.717,111.3906,6455.3623};
+				angles[]={6.1835198,0,0.066898093};
+			};
+			title="Site";
+			id=12942;
+			atlOffset=-3.0517578e-005;
 		};
 	};
 };
