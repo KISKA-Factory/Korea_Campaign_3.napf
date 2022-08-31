@@ -6,7 +6,7 @@ KOR_playerVehicles = [];
 _spawns apply {
     private _vehicle = createVehicle [
         RECON_VEHICLE_CLASS,
-        _X,
+        _x,
         [],
         0,
         "NONE"

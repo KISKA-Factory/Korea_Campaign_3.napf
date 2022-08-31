@@ -5,6 +5,8 @@ class KOR
 		file = "functions\Effects";
 		class effect_ambientArty
 		{};
+		class effect_ambientHelicopter
+		{};
 		class effect_handleAirfieldNoSnap
 		{};
 		class effect_stopAmbientArty
