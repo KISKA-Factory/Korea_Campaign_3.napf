@@ -19,22 +19,46 @@
 private _timeline = [
 	[
 		{
+			params ["","","_timelineMap"];
 
+			
 			private _heli = MARINE_CH53_HELI_CLASS createVehicle (getPosATL KOR_ambientHeliSpawn);
+			_heli setPosASL (getPosASL KOR_ambientHeliSpawn);
 			_heli setDir (getDir KOR_ambientHeliSpawn);
 			_heli allowDamage false;
 			_heli lock true;
+			_timelineMap set ["transportHeli",_heli];
 
-			_heli
+			private _crewGroup = createGroup BLUFOR;
+			private _crewSpawns = ["Airfield Timeline Heli Crew Positions"] call KISKA_fnc_getMissionLayerObjects;
+			{
+				private _spawnPos = _crewSpawns select _forEachIndex;
+				private _unit = _crewGroup createUnit [_x,_spawnPos,[],0,"NONE"];
+				_unit setPosASL (getPosASL _spawnPos);
+				_unit setDir (getDir _spawnPos);
+				_unit allowDamage false;
+			} forEach [	
+				MARINE_HELI_PILOT_UNIT_CLASS,
+				MARINE_HELI_PILOT_UNIT_CLASS,
+				MARINE_HELI_CREW_UNIT_CLASS
+			];
+
+			[
+				(units _crewGroup),
+				["STAND_UNARMED_1","STAND_UNARMED_2","STAND_UNARMED_3"]
+			] call KISKA_fnc_ambientAnim;
+
+			_timelineMap set ["heliCrewGroup",_crewGroup];
 		},
 		2
-	],
-	[
-		{
-			params ["","","_heli"];
-			_heli engineOn true;
-		}
 	]
+	// [
+	// 	{
+	// 		params ["","","_timelineMap","_heli"];
+	// 		hint str (_timelineMap getOrDefault ["helo",objNull]);
+	// 		_heli engineOn true;
+	// 	}
+	// ]
 ];
 
 [_timeline] call KISKA_fnc_startTimeline;

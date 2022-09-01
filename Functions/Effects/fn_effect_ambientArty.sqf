@@ -6,16 +6,18 @@ KOR_ambientArty apply {
 
 
 KOR_ambientArtilleryTargets = ["Ambient Artillery Targets"] call KISKA_fnc_getMissionLayerObjects;
-[] spawn {
-    while {sleep 20; missionNamespace getVariable ["KOR_doAmbientArtyFire",true]} do {
-    	KOR_ambientArty apply {
-    		sleep (random [1,3,7]);
-    		[
-                _x,
+KOR_ambientArty apply {
+    [_x] spawn {
+        params ["_arty"];
+
+        while {sleep (random [10,20,30]); missionNamespace getVariable ["KOR_doAmbientArtyFire",true]} do {
+            sleep (random [1,3,7]);
+            [
+                _arty,
                 selectRandom KOR_ambientArtilleryTargets,
                 random [1,3,5]
-            ] spawn KISKA_fnc_arty;
-    	};
+            ] call KISKA_fnc_arty;
+        };
     };
 };
 
