@@ -1,5 +1,4 @@
 #include "..\..\Headers\Unit Classes.hpp"
-// aircrew spawn
 // maintainers spawn
 // marines spawn
 // all ambient anim
@@ -16,6 +15,10 @@
 // aircrew disembarks
 // aircrew start ambient anim
 
+// TODO make maintainer loadout and somehow assign
+// TODO have cobras take off too at some point
+// TODO add in helipad facing correct direction
+
 private _timeline = [
 	[
 		{
@@ -27,6 +30,7 @@ private _timeline = [
 			_heli setDir (getDir KOR_ambientHeliSpawn);
 			_heli allowDamage false;
 			_heli lock true;
+			[_heli] call KISKA_fnc_clearCargoGlobal;
 			_timelineMap set ["transportHeli",_heli];
 
 			private _crewGroup = createGroup BLUFOR;
