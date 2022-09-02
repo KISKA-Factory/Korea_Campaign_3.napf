@@ -19,6 +19,7 @@
 // TODO have cobras take off too at some point
 // TODO add in helipad facing correct direction
 
+
 private _timeline = [
 	[
 		{
@@ -33,7 +34,11 @@ private _timeline = [
 			[_heli] call KISKA_fnc_clearCargoGlobal;
 			_timelineMap set ["transportHeli",_heli];
 
+
+
 			private _crewGroup = createGroup BLUFOR;
+			_timelineMap set ["heliCrewGroup",_crewGroup];
+
 			private _crewSpawns = ["Airfield Timeline Heli Crew Positions"] call KISKA_fnc_getMissionLayerObjects;
 			{
 				private _spawnPos = _crewSpawns select _forEachIndex;
@@ -47,12 +52,28 @@ private _timeline = [
 				MARINE_HELI_CREW_UNIT_CLASS
 			];
 
+
+
 			[
 				(units _crewGroup),
 				["STAND_UNARMED_1","STAND_UNARMED_2","STAND_UNARMED_3"]
 			] call KISKA_fnc_ambientAnim;
 
-			_timelineMap set ["heliCrewGroup",_crewGroup];
+
+			// private _maintainerGroup = createGroup BLUFOR;
+			// _timelineMap set ["heliMaintainerGroup",_maintainerGroup];
+
+			// private _crewSpawns = ["Airfield Timeline Heli Maintainer Spawns"] call KISKA_fnc_getMissionLayerObjects;
+			// {
+			// 	private _spawnPos = _crewSpawns select _forEachIndex;
+			// 	private _unit = _crewGroup createUnit [_x,_spawnPos,[],0,"NONE"];
+			// 	_unit setPosASL (getPosASL _spawnPos);
+			// 	_unit setDir (getDir _spawnPos);
+			// 	_unit allowDamage false;
+			// } forEach [	
+				
+			// ];
+
 		},
 		2
 	]

@@ -3,6 +3,7 @@
 // add ambient men on airfield
 // add guards around airfield
 
+
 [
     ["Arsenals"] call KISKA_fnc_getMissionLayerObjects
 ] call KISKA_fnc_addArsenal;
@@ -27,8 +28,8 @@ _radioChatterPositions apply {
 
 ["Airfield"] call KISKA_fnc_bases_createFromConfig;
 
-// private _ambientAnimLogicGroup = missionNamespace getVariable ["KISKA_ambientAnim_attachToLogicGroup",grpNull];
-// _ambientAnimLogicGroup enableDynamicSimulation true;
+private _ambientAnimLogicGroup = missionNamespace getVariable ["KISKA_ambientAnim_attachToLogicGroup",grpNull];
+_ambientAnimLogicGroup enableDynamicSimulation true;
 
 ["Site1"] call KISKA_fnc_bases_createFromConfig;
 /*

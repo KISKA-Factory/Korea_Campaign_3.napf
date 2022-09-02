@@ -6,6 +6,8 @@ class Airfield
     {
         class standingMaintainers
         {
+            infantryClasses[] = {MARINE_MISC_UNIT_CLASS};
+
             positions = "Airfield Standing Maintainer Spawns";
             numberOfAgents = -1;
             class ambientAnim
@@ -23,9 +25,10 @@ class Airfield
         };
         class sittingMaintainers
         {
+            infantryClasses[] = {MARINE_MISC_UNIT_CLASS};
+            
             positions = "Airfield Sitting Maintainer Spawns";
             numberOfAgents = -1;
-            dynamicSim = ON;
             class ambientAnim
             {
                 animationSet[] = {
@@ -38,12 +41,15 @@ class Airfield
                 fallbackFunction = "_this call KOR_fnc_effect_handleAirfieldNoSnap";
                 equipmentLevel = "LIGHT";
             };
+
+            dynamicSim = ON;
         };
 
         class StandingChattingMarines
         {
             infantryClasses[] = {
-                MARINE_INFANTRY_UNIT_CLASSES
+                MARINE_INFANTRY_UNIT_CLASSES,
+                MARINE_ARMOR_CREW_UNIT_CLASS
             };
 
             positions = "Airfield Standing Chatting Unit Spawns";

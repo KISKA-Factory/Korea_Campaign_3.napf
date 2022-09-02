@@ -5,7 +5,7 @@
 ---------------------------------------------------------------------------- */
 // IF BRIEFINGNAME IS AN EMPTY STRING MISSION WILL NOT SHOW IN SELECTOR
 // Mission name displayed in the mission selection menu.
-// briefingName = "";
+briefingName = "Korea Mission 3";
 
 //Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play
 // overviewText = "";
@@ -14,10 +14,10 @@
 // overviewPicture = "";
 
 // Mission title during load
-// onLoadName = "";
+onLoadName = "Korea Mission 3";
 
 // sub text during load screen
-// onLoadMission = "";
+onLoadMission = "Hunt for NKA holdouts in the south...";
 
 // Relative path to image that appears in load screens
 // loadScreen = "";
@@ -133,3 +133,4 @@ class CfgNotifications
 #include "Headers\descriptionEXT\Tasks\KISKA Tasks.hpp"
 #include "Headers\descriptionEXT\KISKA Traits.hpp"
 #include "Headers\descriptionEXT\Bases\KISKA Bases.hpp"
+#include "Headers\descriptionEXT\loadouts.hpp"

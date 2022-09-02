@@ -111,6 +111,8 @@
     "rhsusf_usmc_recon_marpat_wd_teamleader_lite"
 
 #define MARINE_ARMOR_CREW_UNIT_CLASS "rhsusf_usmc_marpat_wd_crewman"
+#define MARINE_MISC_UNIT_CLASS "rhsusf_usmc_marpat_wd_rifleman_light"
+
 #define RECON_VEHICLE_CLASS "CUP_B_nM1025_SOV_M2_USMC_WDL"
 #define MARINE_COBRA_HELI_CLASS "RHS_AH1Z_wd"
 #define MARINE_HUEY_CLASS "RHS_UH1Y_d"
