@@ -19,7 +19,6 @@
 // TODO have cobras take off too at some point
 // TODO add in helipad facing correct direction
 
-
 private _timeline = [
 	[
 		{
@@ -34,25 +33,27 @@ private _timeline = [
 			[_heli] call KISKA_fnc_clearCargoGlobal;
 			_timelineMap set ["transportHeli",_heli];
 
+			private _createUnitsForGroup = {
+				params ["_spawnPositions","_unitClasses"];
+				
+				private _group = createGroup BLUFOR;
+				{
+					private _spawnPos = _spawnPositions select _forEachIndex;
+					private _unit = _group createUnit [_x,_spawnPos,[],0,"NONE"];
+					_unit setPosASL (getPosASL _spawnPos);
+					_unit setDir (getDir _spawnPos);
+					_unit allowDamage false;
+				} forEach _classes;
 
 
-			private _crewGroup = createGroup BLUFOR;
+				_group
+			};
+
+			private _crewGroup = [
+				["Airfield Timeline Heli Crew Positions"] call KISKA_fnc_getMissionLayerObjects,
+				[MARINE_HELI_PILOT_UNIT_CLASS,MARINE_HELI_PILOT_UNIT_CLASS,MARINE_HELI_CREW_UNIT_CLASS]
+			] call _createUnitsForGroup;
 			_timelineMap set ["heliCrewGroup",_crewGroup];
-
-			private _crewSpawns = ["Airfield Timeline Heli Crew Positions"] call KISKA_fnc_getMissionLayerObjects;
-			{
-				private _spawnPos = _crewSpawns select _forEachIndex;
-				private _unit = _crewGroup createUnit [_x,_spawnPos,[],0,"NONE"];
-				_unit setPosASL (getPosASL _spawnPos);
-				_unit setDir (getDir _spawnPos);
-				_unit allowDamage false;
-			} forEach [	
-				MARINE_HELI_PILOT_UNIT_CLASS,
-				MARINE_HELI_PILOT_UNIT_CLASS,
-				MARINE_HELI_CREW_UNIT_CLASS
-			];
-
-
 
 			[
 				(units _crewGroup),
@@ -60,21 +61,13 @@ private _timeline = [
 			] call KISKA_fnc_ambientAnim;
 
 
-			private _maintainerGroup = createGroup BLUFOR;
+			private _maintainerGroup = private _crewGroup = [
+				["Airfield Timeline Heli Maintainer Spawns"] call KISKA_fnc_getMissionLayerObjects,
+				[MARINE_MISC_UNIT_CLASS,MARINE_MISC_UNIT_CLASS]
+			] call _createUnitsForGroup;
 			_timelineMap set ["heliMaintainerGroup",_maintainerGroup];
 
-			private _maintainerSpawns = ["Airfield Timeline Heli Maintainer Spawns"] call KISKA_fnc_getMissionLayerObjects;
-			{
-				private _spawnPos = _maintainerSpawns select _forEachIndex;
-				private _unit = _maintainerGroup createUnit [_x,_spawnPos,[],0,"NONE"];
-				_unit setPosASL (getPosASL _spawnPos);
-				_unit setDir (getDir _spawnPos);
-				_unit allowDamage false;
-			} forEach [	
-				MARINE_MISC_UNIT_CLASS,
-				MARINE_MISC_UNIT_CLASS
-			];
-
+			
 		},
 		2
 	]
