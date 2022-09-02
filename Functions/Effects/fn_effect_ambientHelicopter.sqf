@@ -15,7 +15,7 @@
 // aircrew disembarks
 // aircrew start ambient anim
 
-// TODO make maintainer loadout and somehow assign
+// TODO add maintainer loadouts to loadouts.hpp
 // TODO have cobras take off too at some point
 // TODO add in helipad facing correct direction
 

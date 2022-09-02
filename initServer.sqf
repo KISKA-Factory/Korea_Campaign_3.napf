@@ -2,7 +2,7 @@
 // add main gate objects
 // add ambient men on airfield
 // add guards around airfield
-
+[] call KOR_fnc_setupClassEventHandlers;
 
 [
     ["Arsenals"] call KISKA_fnc_getMissionLayerObjects

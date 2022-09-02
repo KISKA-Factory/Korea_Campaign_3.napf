@@ -19,6 +19,8 @@ class KOR
         file = "functions\Misc";
         class createPlayerVehicles
         {};
+        class setupClassEventHandlers
+        {};
     };
     class Site1
     {
