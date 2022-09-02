@@ -60,19 +60,20 @@ private _timeline = [
 			] call KISKA_fnc_ambientAnim;
 
 
-			// private _maintainerGroup = createGroup BLUFOR;
-			// _timelineMap set ["heliMaintainerGroup",_maintainerGroup];
+			private _maintainerGroup = createGroup BLUFOR;
+			_timelineMap set ["heliMaintainerGroup",_maintainerGroup];
 
-			// private _crewSpawns = ["Airfield Timeline Heli Maintainer Spawns"] call KISKA_fnc_getMissionLayerObjects;
-			// {
-			// 	private _spawnPos = _crewSpawns select _forEachIndex;
-			// 	private _unit = _crewGroup createUnit [_x,_spawnPos,[],0,"NONE"];
-			// 	_unit setPosASL (getPosASL _spawnPos);
-			// 	_unit setDir (getDir _spawnPos);
-			// 	_unit allowDamage false;
-			// } forEach [	
-				
-			// ];
+			private _maintainerSpawns = ["Airfield Timeline Heli Maintainer Spawns"] call KISKA_fnc_getMissionLayerObjects;
+			{
+				private _spawnPos = _maintainerSpawns select _forEachIndex;
+				private _unit = _maintainerGroup createUnit [_x,_spawnPos,[],0,"NONE"];
+				_unit setPosASL (getPosASL _spawnPos);
+				_unit setDir (getDir _spawnPos);
+				_unit allowDamage false;
+			} forEach [	
+				MARINE_MISC_UNIT_CLASS,
+				MARINE_MISC_UNIT_CLASS
+			];
 
 		},
 		2
