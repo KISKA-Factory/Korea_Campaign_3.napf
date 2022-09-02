@@ -2,16 +2,25 @@
 // add main gate objects
 // add ambient men on airfield
 // add guards around airfield
+/* ----------------------------------------------------------------------------
+    Misc setup
+---------------------------------------------------------------------------- */
 [] call KOR_fnc_setupClassEventHandlers;
 
 [
     ["Arsenals"] call KISKA_fnc_getMissionLayerObjects
 ] call KISKA_fnc_addArsenal;
 
-[] spawn KOR_fnc_effect_ambientArty;
-call KOR_fnc_createPlayerVehicles;
 
+
+/* ----------------------------------------------------------------------------
+    Airfield Effects
+---------------------------------------------------------------------------- */
+call KOR_fnc_createPlayerVehicles;
+[] spawn KOR_fnc_effect_ambientArty;
 [] spawn KOR_fnc_site1_insert;
+[] call KOR_fnc_effect_ambientHelicopter;
+["Airfield"] call KISKA_fnc_bases_createFromConfig;
 
 private _radioChatterPositions = ["Airfield Radio Chatter Markers"] call KISKA_fnc_getMissionLayerObjects;
 _radioChatterPositions apply {
@@ -23,15 +32,20 @@ _radioChatterPositions apply {
     ] call KISKA_fnc_radioChatter;
 };
 
-
-[] call KOR_fnc_effect_ambientHelicopter;
-
-["Airfield"] call KISKA_fnc_bases_createFromConfig;
-
 private _ambientAnimLogicGroup = missionNamespace getVariable ["KISKA_ambientAnim_attachToLogicGroup",grpNull];
 _ambientAnimLogicGroup enableDynamicSimulation true;
 
+
+/* ----------------------------------------------------------------------------
+    Enemy Sites
+---------------------------------------------------------------------------- */
 ["Site1"] call KISKA_fnc_bases_createFromConfig;
+
+
+
+
+
+
 /*
 heli setVariable ["KISKA_ACEFastRope_ropeDeploymentTime",4];
 player moveInCargo heli;
