@@ -61,13 +61,19 @@ private _timeline = [
 			] call KISKA_fnc_ambientAnim;
 
 
-			private _maintainerGroup = private _crewGroup = [
+			private _maintainerGroup = [
 				["Airfield Timeline Heli Maintainer Spawns"] call KISKA_fnc_getMissionLayerObjects,
 				[MARINE_MISC_UNIT_CLASS,MARINE_MISC_UNIT_CLASS]
 			] call _createUnitsForGroup;
 			_timelineMap set ["heliMaintainerGroup",_maintainerGroup];
 
-			
+			private _reconGroup = [
+				["Airfield Timeline Heli Recon Spawns"] call KISKA_fnc_getMissionLayerObjects,
+				[MARINE_RECON_FAST_UNIT_CLASSES] // count of 8
+			] call _createUnitsForGroup;
+			_timelineMap set ["heliReconGroup",_reconGroup];
+
+
 		},
 		2
 	]
