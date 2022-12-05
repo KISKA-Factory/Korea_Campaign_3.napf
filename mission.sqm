@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=14030;
+		nextID=14041;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1524;
+		nextID=1647;
 	};
 	class Camera
 	{
-		pos[]={18241.367,143.38303,2160.8352};
-		dir[]={0.24838242,-0.34679931,-0.90445375};
-		up[]={0.091838405,0.93793935,-0.33441812};
-		aside[]={-0.96429873,7.4505806e-009,-0.26481715};
+		pos[]={19209.764,471.23517,2327.209};
+		dir[]={-0.86100984,-0.40968466,0.30143228};
+		up[]={-0.3866809,0.91222477,0.13537411};
+		aside[]={0.33043459,2.8975774e-007,0.94384938};
 	};
 };
 binarizationWanted=0;
@@ -602,7 +602,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=32;
+		items=31;
 		class Item0
 		{
 			dataType="Comment";
@@ -17297,11 +17297,10 @@ class Mission
 								};
 							};
 							id=5061;
-							atlOffset=190.89532;
 						};
 					};
 					id=34;
-					atlOffset=182.82253;
+					atlOffset=-4.4894562;
 				};
 				class Item1
 				{
@@ -70690,7 +70689,7 @@ class Mission
 				};
 			};
 			id=33;
-			atlOffset=128.2491;
+			atlOffset=129.30061;
 		};
 		class Item12
 		{
@@ -74322,7 +74321,7 @@ class Mission
 							name="Airfield Timeline Heli";
 							class Entities
 							{
-								items=3;
+								items=8;
 								class Item0
 								{
 									dataType="Layer";
@@ -74393,8 +74392,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={18252.615,134.65186,2147.0381};
-												angles[]={0,5.2651415,0};
+												position[]={18253.41,134.65186,2146.8755};
+												angles[]={-0,5.2651415,0};
 											};
 											side="Empty";
 											flags=4;
@@ -74409,8 +74408,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={18251.445,134.65186,2148.4785};
-												angles[]={0,2.6767082,0};
+												position[]={18252.24,134.65186,2148.3159};
+												angles[]={-0,2.6767082,0};
 											};
 											side="Empty";
 											flags=4;
@@ -74561,16 +74560,144 @@ class Mission
 									};
 									id=14021;
 								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18242.967,134.65186,2143.8564};
+										angles[]={-0,2.222754,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+										name="KOR_ambientHeliSpawn";
+									};
+									id=13990;
+									type="Sign_Arrow_Direction_Pink_F";
+								};
+								class Item4
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18253.904,134.65186,2156.3682};
+										angles[]={-0,3.9071815,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+										name="KOR_maintPos_1";
+									};
+									id=14032;
+									type="Sign_Arrow_Direction_Yellow_F";
+								};
+								class Item5
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18261.719,134.65186,2128.4097};
+										angles[]={-0,5.4898806,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+										name="KOR_marshallerPos";
+									};
+									id=14033;
+									type="Sign_Arrow_Direction_Yellow_F";
+								};
+								class Item6
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18251.996,134.65186,2156.1633};
+										angles[]={-0,1.4321474,0};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+										name="KOR_maintPos_2";
+									};
+									id=14034;
+									type="Sign_Arrow_Direction_Yellow_F";
+								};
+								class Item7
+								{
+									dataType="Layer";
+									name="Airfield Timeline Heli waypoints";
+									class Entities
+									{
+										items=3;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={18590.016,174.19398,2503.6719};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_timelineHeli_wp_1";
+											};
+											id=14037;
+											type="Sign_Arrow_Large_Yellow_F";
+											atlOffset=38.849991;
+										};
+										class Item1
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={21004.529,39.600239,3801.6433};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_timelineHeli_wp_2";
+											};
+											id=14039;
+											type="Sign_Arrow_Large_Yellow_F";
+											atlOffset=128.86005;
+										};
+										class Item2
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={20392.77,392.76425,10428.478};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_timelineHeli_wp_3";
+											};
+											id=14040;
+											type="Sign_Arrow_Large_Yellow_F";
+											atlOffset=476.70801;
+										};
+									};
+									id=14038;
+									atlOffset=335.26733;
+								};
 							};
 							id=13991;
+							atlOffset=91.267944;
 						};
 					};
 					id=5782;
-					atlOffset=-32.773117;
+					atlOffset=146.05219;
 				};
 			};
 			id=5098;
-			atlOffset=-12.277359;
+			atlOffset=39.07486;
 		};
 		class Item15
 		{
@@ -74798,23 +74925,6 @@ class Mission
 			atlOffset=-0.0039138794;
 		};
 		class Item29
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={18242.512,134.65186,2144.1482};
-				angles[]={0,2.222754,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-				name="KOR_ambientHeliSpawn";
-			};
-			id=13990;
-			type="Sign_Arrow_Direction_Pink_F";
-		};
-		class Item30
 		{
 			dataType="Layer";
 			name="Layer 1401";
@@ -78238,7 +78348,7 @@ class Mission
 			id=14000;
 			atlOffset=6.9214554;
 		};
-		class Item31
+		class Item30
 		{
 			dataType="Logic";
 			class PositionInfo

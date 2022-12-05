@@ -1,9 +1,4 @@
 #include "..\..\Headers\Unit Classes.hpp"
-// maintainers spawn
-// marines spawn
-// all ambient anim
-// aircrew and maintainers stand chatting at the aircraft
-// aircrew boards aircraft
 // maintainers take up positions
 // aircrew start engines
 // crewchief stays outside
@@ -20,6 +15,9 @@
 // TODO add in helipad facing correct direction
 
 private _timeline = [
+	/* ----------------------------------------------------------------------------
+		Init
+	---------------------------------------------------------------------------- */
 	[
 		{
 			params ["","","_timelineMap"];
@@ -60,15 +58,24 @@ private _timeline = [
 			] call KISKA_fnc_ambientAnim;
 
 
-			private _maintainerGroup = [
-				["Airfield Timeline Heli Maintainer Spawns"] call KISKA_fnc_getMissionLayerObjects,
-				[MARINE_MISC_UNIT_CLASS,MARINE_MISC_UNIT_CLASS]
-			] call _createUnitsForGroup;
-			_timelineMap set ["heliMaintainerGroup",_maintainerGroup];
+
+			private _maintSpawns = ["Airfield Timeline Heli Maintainer Spawns"] call KISKA_fnc_getMissionLayerObjects;
+			private _maintainers = [];
+			_maintSpawns apply {
+				private _group = [
+					[_x],
+					[MARINE_MISC_UNIT_CLASS]
+				] call _createUnitsForGroup;
+				_maintainers pushBack (leader _group);
+			};
+			
+			_timelineMap set ["heliMaintainers",_maintainers];
+
 			[
-				(units _maintainerGroup),
+				_maintainers,
 				["STAND_UNARMED_1","STAND_UNARMED_2","STAND_UNARMED_3"]
 			] call KISKA_fnc_ambientAnim;
+
 
 
 			private _reconGroup = [
@@ -84,6 +91,9 @@ private _timeline = [
 		},
 		5
 	],
+	/* ----------------------------------------------------------------------------
+		Crew Board
+	---------------------------------------------------------------------------- */
 	[
 		{
 			params ["","","_timelineMap"];
@@ -132,13 +142,81 @@ private _timeline = [
 		},
 		2
 	],
+	/* ----------------------------------------------------------------------------
+		Engine start/Marshllers move
+	---------------------------------------------------------------------------- */
 	[
 		{
-			hint "units boarded";
 			params ["","","_timelineMap"];
 			
-			private _heli = _timelineMap getOrDefault ["transportHeli",objNull];
+			private _heli = _timelineMap get "transportHeli";
 			_heli engineOn true;
+
+			private _maintUnits = _timelineMap get "heliMaintainers";
+			_maintUnits apply {
+				[_x,false] call KISKA_fnc_ambientAnim_stop;
+			};
+			
+			private _marshaller = _maintUnits select 0;
+			_marshaller doMove (getPosATL KOR_marshallerPos);
+			(group _marshaller) setSpeedMode "LIMITED";
+
+			private _otherMaint = _maintUnits select 1;
+			_otherMaint doMove (getPosATL KOR_MaintPos_1);
+			(group _otherMaint) setSpeedMode "LIMITED";
+
+			
+			// KOR_MaintPos_2
+			[_marshaller,_otherMaint]
+		},
+		{
+			params ["","","","_maintainers"];
+			_maintainers params ["_marshaller","_otherMaint"];
+			
+			((_marshaller distance2D KOR_marshallerPos) <= 0.5) AND ((_otherMaint distance2D KOR_MaintPos_1) <= 0.5)
+		},
+		1
+	],
+	/* ----------------------------------------------------------------------------
+		Move maintainers
+	---------------------------------------------------------------------------- */
+	[
+		{
+			params ["","","_timelineMap","_maintUnits"];
+			
+			_maintUnits params ["_marshaller","_otherMaint"];
+			private _heli = _timelineMap get "transportHeli";
+			_marshaller doWatch _heli;
+			_otherMaint doWatch _heli;
+
+			_maintUnits
+		},
+		2
+	],
+	/* ----------------------------------------------------------------------------
+		fly away
+	---------------------------------------------------------------------------- */
+	[
+		{
+			hint "fly";
+			params ["","","_timelineMap","_maintUnits"];
+
+			private _heli = _timelineMap get "transportHeli";
+			_heli flyInHeight 20;
+			private _driverGroup = group (driver _heli);
+			
+			private _waypoints = [KOR_timelineHeli_wp_1,KOR_timelineHeli_wp_2,KOR_timelineHeli_wp_3];
+			_waypoints apply {
+				[
+					_driverGroup,
+					getPosASL _x,
+					-1,
+					"MOVE",
+					"CARELESS",
+					"BLUE",
+					"FULL"
+				] call CBA_fnc_addWaypoint;
+			};
 		}
 	]
 ];
