@@ -108,7 +108,7 @@ private _timeline = [
 			_crewGroup addVehicle _heli;
 			_heliCrewUnits orderGetIn true;
 
-			private _heliInfo = [_heli,_heliCrewUnits];
+			private _boardingInfo = [_heli,_heliCrewUnits];
 			[
 				{
 					params ["_heli","_heliCrewUnits"];
@@ -118,12 +118,12 @@ private _timeline = [
 						};
 					};
 				},
-				_heliInfo,
+				_boardingInfo,
 				25
 			] call CBA_fnc_waitAndExecute;
 			
 			
-			_heliInfo
+			_boardingInfo
 		},
 		{
 			params ["","","","_heliArgs"];
@@ -150,7 +150,6 @@ private _timeline = [
 			params ["","","_timelineMap"];
 			
 			private _heli = _timelineMap get "transportHeli";
-			_heli engineOn true;
 
 			private _maintUnits = _timelineMap get "heliMaintainers";
 			_maintUnits apply {
@@ -173,7 +172,7 @@ private _timeline = [
 			params ["","","","_maintainers"];
 			_maintainers params ["_marshaller","_otherMaint"];
 			
-			((_marshaller distance2D KOR_marshallerPos) <= 0.5) AND ((_otherMaint distance2D KOR_MaintPos_1) <= 0.5)
+			((_marshaller distance2D KOR_marshallerPos) <= 0.75) AND ((_otherMaint distance2D KOR_MaintPos_1) <= 0.75)
 		},
 		1
 	],
@@ -194,12 +193,100 @@ private _timeline = [
 		2
 	],
 	/* ----------------------------------------------------------------------------
+		Board Recon team
+	---------------------------------------------------------------------------- */
+	[
+		{
+			params ["","","_timelineMap"];
+			
+			private _reconGroup = _timelineMap get "heliReconGroup";
+			private _heli = _timelineMap get "transportHeli";
+			private _reconUnits = units _reconGroup;
+			_reconUnits apply {
+				[_x,false] call KISKA_fnc_ambientAnim_stop;
+			};
+
+			_reconGroup addVehicle _heli;
+			_reconUnits orderGetIn true;
+
+			private _boardingInfo = [_heli,_reconUnits];
+			[
+				{
+					params ["_heli","_reconUnits"];
+					_reconUnits apply {
+						if !(_x in _heli) then {
+							_x moveInAny _heli;
+						};
+					};
+				},
+				_boardingInfo,
+				45
+			] call CBA_fnc_waitAndExecute;
+			
+			
+			_boardingInfo
+		},
+		{
+			params ["","","","_heliArgs"];
+			_heliArgs params ["_heli","_reconUnits"];
+
+			private _reconIsBoarded = true;
+			_reconUnits apply {
+				if !(_x in _heli) then {
+					_reconIsBoarded = false; 
+					break; 
+				};
+			};
+
+			_reconIsBoarded
+		},
+		2
+	],
+	/* ----------------------------------------------------------------------------
+		Marshall
+	---------------------------------------------------------------------------- */
+	[
+		{
+			params ["","","_timelineMap"];
+			private _heli = _timelineMap get "transportHeli";
+			private _marshaller = (_timelineMap get "heliMaintainers") select 0;
+
+			[_heli,_marshaller] spawn {
+				params ["_heli","_marshaller"];
+
+				_heli engineOn true;
+				
+				sleep 10;
+
+				_marshaller switchMove "Acts_JetsMarshallingStraight_in";
+				_marshaller setVariable ["KOR_isMarshalling",true];
+				sleep 6;
+
+				_marshaller playMove "Acts_JetsMarshallingStraight_out";
+				sleep 0.5;
+
+				_marshaller playMoveNow "AmovPercMstpSnonWnonDnon_SaluteIn";
+				sleep 2;
+
+				_marshaller playMove "AmovPercMstpSnonWnonDnon_Saluteout";
+				_marshaller setVariable ["KOR_isMarshalling",false];
+			};
+
+			_marshaller
+		},
+		{
+			params ["","","","_marshaller"];
+
+			_marshaller getVariable ["KOR_isMarshalling",false]
+		},
+		0.1
+	],
+	/* ----------------------------------------------------------------------------
 		fly away
 	---------------------------------------------------------------------------- */
 	[
 		{
-			hint "fly";
-			params ["","","_timelineMap","_maintUnits"];
+			params ["","","_timelineMap","_marshaller"];
 
 			private _heli = _timelineMap get "transportHeli";
 			_heli flyInHeight 20;
@@ -217,6 +304,29 @@ private _timeline = [
 					"FULL"
 				] call CBA_fnc_addWaypoint;
 			};
+
+
+			_marshaller
+		},
+		{
+			_marshaller getVariable ["KOR_isMarshalling",false]
+		},
+		0.1
+	],
+	[
+		{
+			hint "marshaller is done";
+			// TODO:
+			// Tell marshallers to stop watching
+			// move marshallers back to idle
+			// tell them to watch each other
+			// animate ambient
+
+			// tell helicopter once it reaches its destination to delete recon team and disable simulation
+			// after some time reenable simulation and then have the heli land back at the spawn marker
+
+			// _marshaller doWatch objNull;
+			// _otherMaint doWatch objNull;
 		}
 	]
 ];
