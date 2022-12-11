@@ -32,7 +32,7 @@ _radioChatterPositions apply {
     ] call KISKA_fnc_radioChatter;
 };
 
-private _ambientAnimLogicGroup = missionNamespace getVariable ["KISKA_ambientAnim_attachToLogicGroup",grpNull];
+private _ambientAnimLogicGroup = call KISKA_fnc_ambientAnim_getAttachToLogicGroup;
 _ambientAnimLogicGroup enableDynamicSimulation true;
 
 
