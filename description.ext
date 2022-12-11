@@ -129,6 +129,24 @@ class CfgNotifications
 };
 
 
+class KISKA_dynamicSimulation
+{
+	enableDynamicSimulation = ON;
+
+	class Coef
+	{
+		IsMoving = 1;
+	};
+
+	class ActivationDistance 
+	{
+		Group = 1000;
+		Vehicle = 1000;
+		EmptyVehicle = 50;
+		Prop = 50;
+	};
+};
+
 
 #include "Headers\descriptionEXT\Tasks\KISKA Tasks.hpp"
 #include "Headers\descriptionEXT\KISKA Traits.hpp"
