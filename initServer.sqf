@@ -40,6 +40,7 @@ _ambientAnimLogicGroup enableDynamicSimulation true;
     Enemy Sites
 ---------------------------------------------------------------------------- */
 ["Site1"] call KISKA_fnc_bases_createFromConfig;
+["Site2"] call KISKA_fnc_bases_createFromConfig;
 
 
 
