@@ -12,6 +12,7 @@ class Site2
 			positions = "Site 2 Static Unit Markers";
 			numberOfUnits = 12;
 			unitsPerGroup = 3;
+			canPath = ON;
 		};
 
 		class sittingAnimatedUnits
@@ -27,6 +28,7 @@ class Site2
                     "SIT_CHAIR_ARMED_2",
 					"SIT_CHAIR_RELAXED"
                 };
+				exitOnCombat = ON;
             };
 		};
 
@@ -43,6 +45,7 @@ class Site2
                     "BRIEFING",
 					"SIT_GROUND_ARMED"
                 };
+				exitOnCombat = ON;
             };
 		};
 	};
