@@ -21,11 +21,11 @@ class Site2
 			positions = "Site 2 Static Unit Markers";
 			numberOfUnits = 12;
 			unitsPerGroup = 3;
-			canPath = ON;
-			// class reinforce : reinforceBase
-			// {
-			// 	id = "staticNormal";
-			// };
+
+			class reinforce : reinforceBase
+			{
+				id = "staticNormal";
+			};
 		};
 
 		class sittingAnimatedUnits
@@ -33,6 +33,7 @@ class Site2
 			positions = "Site 2 Sitting Animated Unit Markers";
 			numberOfUnits = -1;
 			unitsPerGroup = -1;
+			canPath = ON;
 
 			class ambientAnim
             {
@@ -43,10 +44,10 @@ class Site2
                 };
 				exitOnCombat = ON;
             };
-			// class reinforce : reinforceBase
-			// {
-			// 	id = "staticSitting";
-			// };
+			class reinforce : reinforceBase
+			{
+				id = "staticSitting";
+			};
 		};
 
 		class animatedUnits
@@ -54,6 +55,8 @@ class Site2
 			positions = "Site 2 Standing Animated Unit Markers";
 			numberOfUnits = -1;
 			unitsPerGroup = 3;
+			canPath = ON;
+
 			class ambientAnim
             {
                 animationSet[] = {
@@ -64,10 +67,10 @@ class Site2
                 };
 				exitOnCombat = ON;
             };
-			// class reinforce : reinforceBase
-			// {
-			// 	id = "staticStanding";
-			// };
+			class reinforce : reinforceBase
+			{
+				id = "staticStanding";
+			};
 		};
 	};
 
