@@ -12,18 +12,18 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=25539;
+		nextID=25543;
 	};
 	class LayerIndexProvider
 	{
-		nextID=2749;
+		nextID=2922;
 	};
 	class Camera
 	{
-		pos[]={18802.609,279.7948,4093.8225};
-		dir[]={-0.49229088,-0.75292903,0.4367623};
-		up[]={-0.56321901,0.6580959,0.49969089};
-		aside[]={0.66366309,-1.6298145e-007,0.74804133};
+		pos[]={18811.561,146.28606,4116.7144};
+		dir[]={-0.70457494,-0.50230908,0.50125825};
+		up[]={-0.40929717,0.86468816,0.29118773};
+		aside[]={0.57969832,0,0.81483132};
 	};
 };
 binarizationWanted=0;
@@ -67518,7 +67518,6 @@ class Mission
 								{
 									dataType="Layer";
 									name="Statics";
-									state=1;
 									class Entities
 									{
 										items=157;
@@ -68134,7 +68133,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={18695.191,92.73983,4167.3252};
+												position[]={18695.486,92.720108,4167.5869};
 												angles[]={0.053945597,0.67993838,6.2641892};
 											};
 											side="Empty";
@@ -68148,7 +68147,6 @@ class Mission
 											};
 											id=13191;
 											type="Land_CampingChair_V1_F";
-											atlOffset=-1.5258789e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -68172,7 +68170,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={18695.721,92.800591,4166.0137};
+												position[]={18696.066,92.789444,4166.0986};
 												angles[]={0.053945597,1.363994,6.2641892};
 											};
 											side="Empty";
@@ -68186,7 +68184,6 @@ class Mission
 											};
 											id=13192;
 											type="Land_CampingChair_V1_F";
-											atlOffset=-1.5258789e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -68210,7 +68207,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={18691.613,92.889748,4166.2173};
+												position[]={18691.318,92.891083,4166.3306};
 												angles[]={0.063911393,4.6507092,6.2541943};
 											};
 											side="Empty";
@@ -68224,7 +68221,6 @@ class Mission
 											};
 											id=13193;
 											type="Land_CampingChair_V1_F";
-											atlOffset=-3.8146973e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -68248,7 +68244,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={18692.604,92.942291,4164.9478};
+												position[]={18692.264,92.965523,4164.7388};
 												angles[]={0.063911393,4.2086868,6.2541943};
 											};
 											side="Empty";
@@ -68262,7 +68258,6 @@ class Mission
 											};
 											id=13194;
 											type="Land_CampingChair_V1_F";
-											atlOffset=-3.0517578e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -137703,7 +137698,7 @@ class Mission
 					name="Site 2";
 					class Entities
 					{
-						items=3;
+						items=4;
 						class Item0
 						{
 							dataType="Layer";
@@ -138152,13 +138147,30 @@ class Mission
 							id=25538;
 							atlOffset=0.0060119629;
 						};
+						class Item3
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={18695.998,92.718819,4178.979};
+								angles[]={6.2362185,0,0.017994344};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								name="KOR_site2_patrolSpawn";
+							};
+							id=25540;
+							type="Sign_Arrow_Green_F";
+						};
 					};
 					id=25503;
-					atlOffset=0.15436554;
+					atlOffset=0.29444122;
 				};
 			};
 			id=5098;
-			atlOffset=-68.57373;
+			atlOffset=-69.278595;
 		};
 		class Item12
 		{

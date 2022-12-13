@@ -5,6 +5,15 @@ class Site2
         ENEMY_INFANTRY_UNIT_CLASSES
     };
 
+	class reinforceBase
+	{
+		id = "";
+		canCall[] = {
+			"patrol1",
+			"patrol2"
+		};
+	};
+
 	class infantry
 	{
 		class staticUnits
@@ -13,6 +22,10 @@ class Site2
 			numberOfUnits = 12;
 			unitsPerGroup = 3;
 			canPath = ON;
+			// class reinforce : reinforceBase
+			// {
+			// 	id = "staticNormal";
+			// };
 		};
 
 		class sittingAnimatedUnits
@@ -30,6 +43,10 @@ class Site2
                 };
 				exitOnCombat = ON;
             };
+			// class reinforce : reinforceBase
+			// {
+			// 	id = "staticSitting";
+			// };
 		};
 
 		class animatedUnits
@@ -47,6 +64,10 @@ class Site2
                 };
 				exitOnCombat = ON;
             };
+			// class reinforce : reinforceBase
+			// {
+			// 	id = "staticStanding";
+			// };
 		};
 	};
 
@@ -56,6 +77,46 @@ class Site2
 		{
 			turrets = "Site 2 Turrets";
 			dynamicSim = ON;
+		};
+	};
+
+	class Patrols
+	{
+		class patrol1
+		{
+			spawnPosition = "KOR_site2_patrolSpawn";
+			numberOfUnits = 4;
+			behaviour = "SAFE";
+			speed = "LIMITED";
+			formation = "STAG COLUMN";
+			dynamicSim = ON;
+
+			class RandomPatrol
+			{
+				numberOfPoints = 4;
+				radius = 300;
+				waypointType = "MOVE";
+			};
+
+			class reinforce
+			{
+				id = "patrol1";
+				canCall[] = {
+					"patrol2"
+				};
+			};
+		};
+		class patrol2 : patrol1
+		{
+			numberOfUnits = 4;
+
+			class reinforce
+			{
+				id = "patrol2";
+				canCall[] = {
+					"patrol1"
+				};
+			};
 		};
 	};
 };
