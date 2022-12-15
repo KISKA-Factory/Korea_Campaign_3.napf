@@ -13,4 +13,5 @@ class KISKA_Bases
     #include "Airfield Base.hpp"
     #include "Site1 Base.hpp"
     #include "Site2 Base.hpp"
+    #include "Site3 Base.hpp"
 };
