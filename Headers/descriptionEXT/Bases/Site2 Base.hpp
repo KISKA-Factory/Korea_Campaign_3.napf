@@ -63,7 +63,10 @@ class Site2
                     "STAND_ARMED_1",
                     "STAND_ARMED_2",
                     "BRIEFING",
-					"SIT_GROUND_ARMED"
+					"SIT_GROUND_ARMED",
+					"KNEEL",
+					"WATCH_1",
+					"WATCH_2"
                 };
 				exitOnCombat = ON;
             };
