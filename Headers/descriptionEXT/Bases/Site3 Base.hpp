@@ -18,6 +18,7 @@ class Site3
 			positions = "Site 3 Static Unit Markers";
 			numberOfUnits = 5;
 			unitsPerGroup = -1;
+			canPath = ON;
 			class reinforce : reinforceBase
 			{
 				id = "staticUnits";
@@ -29,7 +30,8 @@ class Site3
 			positions = "Site 3 Standing Unit Markers";
 			numberOfUnits = -1;
 			unitsPerGroup = -1;
-
+			canPath = ON;
+			
 			class reinforce : reinforceBase
 			{
 				id = "standingUnits";
