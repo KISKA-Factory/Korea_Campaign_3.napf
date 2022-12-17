@@ -64,28 +64,28 @@ class Site4
 	};
 
 
-	// class Patrols
-	// {
-	// 	class patrol1
-	// 	{
-	// 		spawnPosition = "KOR_site3_patrolSpawn";
-	// 		numberOfUnits = 6;
-	// 		behaviour = "SAFE";
-	// 		speed = "LIMITED";
-	// 		formation = "STAG COLUMN";
-	// 		dynamicSim = ON;
+	class Patrols
+	{
+		class patrol1
+		{
+			spawnPosition = "KOR_site4_patrolSpawn";
+			numberOfUnits = 6;
+			behaviour = "SAFE";
+			speed = "LIMITED";
+			formation = "STAG COLUMN";
+			dynamicSim = ON;
 
-	// 		class SpecificPatrol
-	// 		{
-	// 			patrolPoints = "Site 3 Patrol Points";
-	// 			random = OFF;
-    //             numberOfPoints = -1;
-	// 		};
+			class RandomPatrol
+			{
+				numberOfPoints = 4;
+				radius = 300;
+				waypointType = "MOVE";
+			};
 
-	// 		class reinforce
-	// 		{
-	// 			id = "patrol1";
-	// 		};
-	// 	};
-	// };
+			class reinforce
+			{
+				id = "patrol1";
+			};
+		};
+	};
 };
