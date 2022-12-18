@@ -15,4 +15,5 @@ class KISKA_Bases
     #include "Site2 Base.hpp"
     #include "Site3 Base.hpp"
     #include "Site4 Base.hpp"
+    #include "Site5 Base.hpp"
 };

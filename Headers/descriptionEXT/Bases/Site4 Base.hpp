@@ -1,5 +1,3 @@
-// Site 4 Static Units
-
 class Site4
 {
 	side = SIDE_OPFOR;

@@ -19,7 +19,7 @@
 call KOR_fnc_createPlayerVehicles;
 [] spawn KOR_fnc_effect_ambientArty;
 [] spawn KOR_fnc_site1_insert;
-[] call KOR_fnc_effect_ambientHelicopter;
+// [] call KOR_fnc_effect_ambientHelicopter;
 ["Airfield"] call KISKA_fnc_bases_createFromConfig;
 
 private _radioChatterPositions = ["Airfield Radio Chatter Markers"] call KISKA_fnc_getMissionLayerObjects;
@@ -43,6 +43,7 @@ _ambientAnimLogicGroup enableDynamicSimulation true;
 ["Site2"] call KISKA_fnc_bases_createFromConfig;
 ["Site3"] call KISKA_fnc_bases_createFromConfig;
 ["Site4"] call KISKA_fnc_bases_createFromConfig;
+["Site5"] call KISKA_fnc_bases_createFromConfig;
 
 
 
