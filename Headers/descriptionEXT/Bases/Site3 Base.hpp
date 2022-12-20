@@ -19,6 +19,8 @@ class Site3
             numberOfUnits = 5;
             unitsPerGroup = -1;
             canPath = ON;
+            dynamicSim = ON;
+
             class reinforce : reinforceBase
             {
                 id = "staticUnits";
@@ -31,6 +33,7 @@ class Site3
             numberOfUnits = -1;
             unitsPerGroup = -1;
             canPath = ON;
+            dynamicSim = ON;
             
             class reinforce : reinforceBase
             {

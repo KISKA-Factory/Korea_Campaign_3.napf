@@ -21,6 +21,7 @@ class Site2
             positions = "Site 2 Static Unit Markers";
             numberOfUnits = 12;
             unitsPerGroup = 3;
+            dynamicSim = ON;
 
             class reinforce : reinforceBase
             {
@@ -34,6 +35,7 @@ class Site2
             numberOfUnits = -1;
             unitsPerGroup = -1;
             canPath = ON;
+            dynamicSim = ON;
 
             class ambientAnim
             {
@@ -56,6 +58,7 @@ class Site2
             numberOfUnits = -1;
             unitsPerGroup = 3;
             canPath = ON;
+            dynamicSim = ON;
 
             class ambientAnim
             {
