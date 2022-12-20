@@ -35,8 +35,8 @@
 */
 
 /*
-	if a class is to be solely a base one, you need to include _baseClass (EXACTLY AS IT IS CASE SENSITIVE)
-	 somewhere in the class name so that it can be excluded from being added to the shop
+    if a class is to be solely a base one, you need to include _baseClass (EXACTLY AS IT IS CASE SENSITIVE)
+     somewhere in the class name so that it can be excluded from being added to the shop
 */
 /*
 class KISKA_basicSupport_baseClass

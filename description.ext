@@ -1,7 +1,7 @@
 #include "Headers\descriptionEXT\descriptionEXT defines.hpp"
 
 /* ----------------------------------------------------------------------------
-	Strings (image paths and text)
+    Strings (image paths and text)
 ---------------------------------------------------------------------------- */
 // IF BRIEFINGNAME IS AN EMPTY STRING MISSION WILL NOT SHOW IN SELECTOR
 // Mission name displayed in the mission selection menu.
@@ -23,7 +23,7 @@ onLoadMission = "Hunt for NKA holdouts in the south...";
 // loadScreen = "";
 
 /* ----------------------------------------------------------------------------
-	Respawns
+    Respawns
 ---------------------------------------------------------------------------- */
 /* respawn = RESPAWN_TYPE_BASE; */
 respawnOnStart = RESPAWN_ON_START_NONE;
@@ -41,7 +41,7 @@ respawnTemplatesVirtual[] = {}; // Virtual players, used mainly in Curator (Zeus
 */
 
 /* ----------------------------------------------------------------------------
-	Garbage Collector
+    Garbage Collector
 ---------------------------------------------------------------------------- */
 corpseManagerMode = CW_MANAGER_MODE_ALL;
 corpseLimit = 15;
@@ -56,95 +56,95 @@ wreckRemovalMaxTime = 600;
 minPlayerDistance = 50;
 
 /* ----------------------------------------------------------------------------
-	Misc
+    Misc
 ---------------------------------------------------------------------------- */
 saving = OFF;
 disabledAI = ON;
 enableDebugConsole = ENABLE_DEBUG_CONSOLE_ADMIN_HOSTS;
 
 /* ----------------------------------------------------------------------------
-	Configs
+    Configs
 ---------------------------------------------------------------------------- */
 class Header
 {
-	gameType = GAME_TYPE_COOP;
-	minPlayers =  	 1;
-	maxPlayers = 	 14;
+    gameType = GAME_TYPE_COOP;
+    minPlayers =       1;
+    maxPlayers =      14;
 };
 
 class CfgFunctions
 {
-	#include "Headers\descriptionEXT\functions.hpp"
-	#include "KISKA Systems\KISKA Functions.hpp"
+    #include "Headers\descriptionEXT\functions.hpp"
+    #include "KISKA Systems\KISKA Functions.hpp"
 };
 
 class CfgSounds
 {
-	#include "Headers\descriptionEXT\sounds.hpp"
+    #include "Headers\descriptionEXT\sounds.hpp"
 };
 
 class Params
 {
-	#include "Headers\descriptionEXT\missionParams.hpp"
+    #include "Headers\descriptionEXT\missionParams.hpp"
 };
 
 class CfgCommunicationMenu
 {
-	#include "Headers\descriptionEXT\supports.hpp"
+    #include "Headers\descriptionEXT\supports.hpp"
 };
 
 class CfgTaskDescriptions
 {
-	#include "Headers\descriptionEXT\taskDescriptions.hpp"
+    #include "Headers\descriptionEXT\taskDescriptions.hpp"
 };
 
 class CfgDebriefing
 {
-	/*
-	class End1
-	{
-		title = "[END]";
-		subtitle = "You Did Not Survive";
-		description = "Game Over";
-		pictureBackground = "";
-		picture = "KIA";
-		pictureColor[] = {0.6,0.1,0.2,1};
-	};
-	*/
+    /*
+    class End1
+    {
+        title = "[END]";
+        subtitle = "You Did Not Survive";
+        description = "Game Over";
+        pictureBackground = "";
+        picture = "KIA";
+        pictureColor[] = {0.6,0.1,0.2,1};
+    };
+    */
 };
 
 
 class CfgNotifications
 {
-	/*
-	class SpecialWarning
-	{
-		title = "WARNING!!";
-		iconPicture = "A3\ui_f\data\Map\Markers\Military\warning_CA.paa";
-		description = "%1";
-		color[] = {1,0,0,1};
-		duration = 5;
-	};
-	*/
+    /*
+    class SpecialWarning
+    {
+        title = "WARNING!!";
+        iconPicture = "A3\ui_f\data\Map\Markers\Military\warning_CA.paa";
+        description = "%1";
+        color[] = {1,0,0,1};
+        duration = 5;
+    };
+    */
 };
 
 
 class KISKA_dynamicSimulation
 {
-	enableDynamicSimulation = ON;
+    enableDynamicSimulation = ON;
 
-	class Coef
-	{
-		IsMoving = 1;
-	};
+    class Coef
+    {
+        IsMoving = 1;
+    };
 
-	class ActivationDistance 
-	{
-		Group = 1000;
-		Vehicle = 1000;
-		EmptyVehicle = 50;
-		Prop = 50;
-	};
+    class ActivationDistance 
+    {
+        Group = 1000;
+        Vehicle = 1000;
+        EmptyVehicle = 50;
+        Prop = 50;
+    };
 };
 
 

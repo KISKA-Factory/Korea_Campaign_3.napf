@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-	Corpse & Wreck Manager Modes
+    Corpse & Wreck Manager Modes
 ---------------------------------------------------------------------------- */
 #define CW_MANAGER_MODE_NONE 0
 #define CW_MANAGER_MODE_ALL 1
@@ -7,14 +7,14 @@
 #define CW_MANAGER_MODE_ALL_BUT_RESPAWNED 3
 
 /* ----------------------------------------------------------------------------
-	Debug Console Settings
+    Debug Console Settings
 ---------------------------------------------------------------------------- */
 #define ENABLE_DEBUG_CONSOLE_EDITOR 0
 #define ENABLE_DEBUG_CONSOLE_ADMIN_HOSTS 1
 #define ENABLE_DEBUG_CONSOLE_ALL 2
 
 /* ----------------------------------------------------------------------------
-	Game Types
+    Game Types
 ---------------------------------------------------------------------------- */
 #define GAME_TYPE_UNKNOWN Unknown
 #define GAME_TYPE_DEATHMATCH DM
@@ -38,7 +38,7 @@
 #define GAME_TYPE_WARLORDS Warlords
 
 /* ----------------------------------------------------------------------------
-	Respawn Types
+    Respawn Types
 ---------------------------------------------------------------------------- */
 #define RESPAWN_TYPE_NONE 0
 #define RESPAWN_TYPE_BIRD 1
@@ -48,7 +48,7 @@
 #define RESPAWN_TYPE_SIDE 5
 
 /* ----------------------------------------------------------------------------
-	Respawn Templates
+    Respawn Templates
 ---------------------------------------------------------------------------- */
 #define RESPAWN_TEMPLATE_NONE "None"
 #define RESPAWN_TEMPLATE_SPECTATOR "Spectator"
@@ -65,7 +65,7 @@
 #define RESPAWN_TEMPLATE_MENU_INVENTORY "MenuInventory"
 
 /* ----------------------------------------------------------------------------
-	respawnOnStart Modes
+    respawnOnStart Modes
 ---------------------------------------------------------------------------- */
 // players do not respawn on mission start and onPlayerRespawn is NOT run
 #define RESPAWN_ON_START_NONE -1
@@ -75,13 +75,13 @@
 #define RESPAWN_ON_START_RUN_SCRIPT 1
 
 /* ----------------------------------------------------------------------------
-	Misc
+    Misc
 ---------------------------------------------------------------------------- */
 #define OFF 0
 #define ON 1
 
 /* ----------------------------------------------------------------------------
-	Task Types
+    Task Types
 ---------------------------------------------------------------------------- */
 // Action task types
 #define TASK_TYPE_ATTACK "attack"

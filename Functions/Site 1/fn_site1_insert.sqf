@@ -36,9 +36,9 @@ _heliGroup setCombatMode "BLUE";
     Wait for players to board heli
 ---------------------------------------------------------------------------- */
 waituntil {
-	sleep 1;
-	private _alivePlayers = count (call KISKA_fnc_alivePlayers);
-	(
+    sleep 1;
+    private _alivePlayers = count (call KISKA_fnc_alivePlayers);
+    (
         (_alivePlayers > 0) AND
         {count (crew KOR_site1_insertHeli) isEqualTo (NUMBER_OF_CREW + _alivePlayers)}
     )
@@ -59,7 +59,7 @@ _supportMarines orderGetIn true;
 
 private _waitingToBoardTime = 0;
 waituntil {
-	sleep 1;
+    sleep 1;
     _waitingToBoardTime = _waitingToBoardTime + 1;
     if (_waitingToBoardTime > 30) exitWith {
         (call CBA_fnc_players) apply {
@@ -78,7 +78,7 @@ waituntil {
         true
     };
 
-	private _unitIsNotInHelicopter = [
+    private _unitIsNotInHelicopter = [
         _supportMarines,
         {!(_x in KOR_site1_insertHeli)}
     ] call KISKA_fnc_findIfBool;
