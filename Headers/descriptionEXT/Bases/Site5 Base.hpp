@@ -5,28 +5,119 @@ class Site5
         ENEMY_INFANTRY_UNIT_CLASSES
     };
 
-	class reinforceBase
-	{
-		id = "";
-		canCall[] = {
-			"patrol1",
-			"patrol2"
-		};
-	};
-
 	class infantry
 	{
 		class interior_1
 		{
 			positions = "Site 5 Interior Unit Markers 1";
-			numberOfUnits = 8;
-			unitsPerGroup = 2;
-			canPath = ON;
-			class reinforce : reinforceBase
+			numberOfUnits = -1;
+			unitsPerGroup = -1;
+			canPath = OFF;
+			
+			class reinforce
 			{
 				id = "interior_1";
+				canCall[] = {
+				};
 			};
-		};	
+		};
+
+		class interior_2 : interior_1
+		{
+			positions = "Site 5 Interior Unit Markers 2";
+			numberOfUnits = 6;
+			unitsPerGroup = 3;
+			canPath = ON;
+
+			class reinforce : reinforce
+			{
+				id = "interior_2";
+			};
+		};
+		
+
+		class interior_3
+		{
+			positions = "Site 5 Interior Unit Markers 3";
+			numberOfUnits = 3;
+			unitsPerGroup = -1;
+			canPath = OFF;
+			
+			class reinforce
+			{
+				id = "interior_3";
+				canCall[] = {
+
+				};
+			};
+		};
+		class interior_4 : interior_3
+		{
+			positions = "Site 5 Interior Unit Markers 4";
+			class reinforce : reinforce
+			{
+				id = "interior_4";
+			};
+		};
+		class interior_5 : interior_3
+		{
+			positions = "Site 5 Interior Unit Markers 5";
+			canPath = ON;
+			
+			class reinforce
+			{
+				id = "interior_5";
+			};
+		};
+
+		class interior_6
+		{
+			positions = "Site 5 Interior Unit Markers 6";
+			numberOfUnits = -1;
+			unitsPerGroup = -1;
+			canPath = OFF;
+			
+			class reinforce
+			{
+				id = "interior_6";
+				canCall[] = {
+
+				};
+			};
+		};
+
+		class interior_7
+		{
+			positions = "Site 5 Interior Unit Markers 7";
+			numberOfUnits = 6;
+			unitsPerGroup = 3;
+			canPath = ON;
+			
+			class reinforce
+			{
+				id = "interior_7";
+				canCall[] = {
+
+				};
+			};
+		};
+
+		class exterior_1
+		{
+			positions = "Site 5 Exterior Unit Markers 1";
+
+			numberOfUnits = 6;
+			unitsPerGroup = 3;
+			canPath = ON;
+
+			class reinforce
+			{
+				id = "exterior_1";
+				canCall[] = {
+
+				};
+			};
+		};
 
 		// class standingUnits
 		// {
