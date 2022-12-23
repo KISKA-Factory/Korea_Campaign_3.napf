@@ -18,6 +18,9 @@ class Site5
             class reinforce
             {
                 canCall[] = {
+                    "exterior_1",
+                    "exterior_2",
+                    "exterior_3"
                 };
             };
         };
@@ -28,10 +31,6 @@ class Site5
             numberOfUnits = 6;
             unitsPerGroup = 3;
             canPath = ON;
-
-            class reinforce : reinforce
-            {
-            };
         };
         
 
@@ -43,28 +42,22 @@ class Site5
             canPath = OFF;
             dynamicSim = ON;
             
-            class reinforce : reinforce
+            class reinforce
             {
                 canCall[] = {
-
+                    "exterior_4",
+                    "exterior_5"
                 };
             };
         };
         class interior_4 : interior_3
         {
             positions = "Site 5 Interior Unit Markers 4";
-            class reinforce : reinforce
-            {
-            };
         };
         class interior_5 : interior_3
         {
             positions = "Site 5 Interior Unit Markers 5";
             canPath = ON;
-            
-            class reinforce : reinforce
-            {
-            };
         };
 
         class interior_6
@@ -74,13 +67,7 @@ class Site5
             unitsPerGroup = -1;
             canPath = OFF;
             dynamicSim = ON;
-            
-            class reinforce
-            {
-                canCall[] = {
 
-                };
-            };
         };
 
         class interior_7
@@ -90,14 +77,9 @@ class Site5
             unitsPerGroup = 3;
             canPath = ON;
             dynamicSim = ON;
-            
-            class reinforce
-            {
-                canCall[] = {
-
-                };
-            };
         };
+
+
 
         class exterior_1
         {
@@ -111,7 +93,8 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-
+                    "exterior_2",
+                    "exterior_3"
                 };
             };
 
@@ -136,30 +119,53 @@ class Site5
 
             numberOfUnits = 4;
             unitsPerGroup = -1;
-            canPath = OFF;
+            canPath = ON;
             dynamicSim = ON;
 
             class reinforce
             {
                 canCall[] = {
-
+                    "exterior_1",
+                    "exterior_3"
                 };
             };
         };
 
-        class exterior_3
+        class exterior_3 : exterior_2
         {
             positions = "Site 5 Exterior Unit Markers 3";
 
-            numberOfUnits = 4;
-            unitsPerGroup = -1;
-            canPath = OFF;
+            class reinforce
+            {
+                canCall[] = {
+                    "exterior_1",
+                    "exterior_2"
+                };
+            };
+        };
+        class exterior_4 : exterior_2
+        {
+            positions = "Site 5 Exterior Unit Markers 4";
+
+            class reinforce
+            {
+                canCall[] = {
+                    "exterior_5"
+                };
+            };
+        };
+        class exterior_5
+        {
+            positions = "Site 5 Exterior Unit Markers 5";
+            numberOfUnits = 6;
+            unitsPerGroup = 3;
+            canPath = ON;
             dynamicSim = ON;
 
             class reinforce
             {
                 canCall[] = {
-
+                    "exterior_4"
                 };
             };
         };
