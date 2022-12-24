@@ -130,6 +130,24 @@ class Site5
                 };
             };
         };
+        class exterior_2_static
+        {
+            positions = "Site 5 Exterior Unit Markers 2 (STATIC)";
+
+            numberOfUnits = -1;
+            unitsPerGroup = -1;
+            canPath = OFF;
+            dynamicSim = ON;
+
+            class reinforce
+            {
+                canCall[] = {
+                    "exterior_1",
+                    "exterior_2",
+                    "exterior_3"
+                };
+            };
+        };
 
         class exterior_3 : exterior_2
         {
