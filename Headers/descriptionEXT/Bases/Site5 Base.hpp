@@ -20,7 +20,9 @@ class Site5
                 canCall[] = {
                     "exterior_1",
                     "exterior_2",
-                    "exterior_3"
+                    "exterior_3",
+                    "patrol_1",
+                    "patrol_2"
                 };
             };
         };
@@ -46,7 +48,8 @@ class Site5
             {
                 canCall[] = {
                     "exterior_4",
-                    "exterior_5"
+                    "exterior_5",
+                    "patrol_3"
                 };
             };
         };
@@ -94,7 +97,9 @@ class Site5
             {
                 canCall[] = {
                     "exterior_2",
-                    "exterior_3"
+                    "exterior_3",
+                    "patrol_1",
+                    "patrol_2"
                 };
             };
 
@@ -126,7 +131,9 @@ class Site5
             {
                 canCall[] = {
                     "exterior_1",
-                    "exterior_3"
+                    "exterior_3",
+                    "patrol_1",
+                    "patrol_2"
                 };
             };
         };
@@ -144,7 +151,9 @@ class Site5
                 canCall[] = {
                     "exterior_1",
                     "exterior_2",
-                    "exterior_3"
+                    "exterior_3",
+                    "patrol_1",
+                    "patrol_2"
                 };
             };
         };
@@ -157,7 +166,9 @@ class Site5
             {
                 canCall[] = {
                     "exterior_1",
-                    "exterior_2"
+                    "exterior_2",
+                    "patrol_1",
+                    "patrol_2"
                 };
             };
         };
@@ -168,7 +179,8 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "exterior_5"
+                    "exterior_5",
+                    "patrol_3"
                 };
             };
         };
@@ -183,7 +195,8 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "exterior_4"
+                    "exterior_4",
+                    "patrol_3"
                 };
             };
         };
@@ -213,6 +226,65 @@ class Site5
         //         exitOnCombat = ON;
         //     };
         // };
+    };
+
+    class Patrols
+    {
+        class patrol_1
+        {
+            spawnPosition = "KOR_site5_patrol1_spawn";
+            numberOfUnits = 8;
+            dynamicSim = ON;
+            
+            class SpecificPatrol
+            {
+                patrolPoints = "Site 5 Patrol 1 Markers";
+                random = OFF;
+                numberOfPoints = -1;
+            };
+
+            class reinforce
+            {
+                canCall[] = {
+                    "patrol_2"
+                };
+            };
+        };
+        class patrol_2 : patrol_1
+        {
+            spawnPosition = "KOR_site5_patrol2_spawn";
+            numberOfUnits = 6;
+
+            class SpecificPatrol : SpecificPatrol
+            {
+                patrolPoints = "Site 5 Patrol 2 Markers";
+            };
+
+            class reinforce
+            {
+                canCall[] = {
+                    "patrol_1",
+                    "patrol_3"
+                };
+            };
+        };
+        class patrol_3 : patrol_1
+        {
+            spawnPosition = "KOR_site5_patrol3_spawn";
+            numberOfUnits = 3;
+
+            class SpecificPatrol : SpecificPatrol
+            {
+                patrolPoints = "Site 5 Patrol 3 Markers";
+            };
+
+            class reinforce
+            {
+                canCall[] = {
+                    "patrol_1"
+                };
+            };
+        };
     };
 
     class Turrets
