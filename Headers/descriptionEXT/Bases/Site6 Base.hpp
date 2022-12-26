@@ -23,8 +23,8 @@ class Site6
         class static_A
         {
             positions = "Site 6 A Static Unit Markers";
-            numberOfUnits = 5;
-            unitsPerGroup = -1;
+            numberOfUnits = 8;
+            unitsPerGroup = 4;
             canPath = OFF;
             dynamicSim = ON;
             
@@ -43,7 +43,7 @@ class Site6
         class ambient_A
         {
             positions = "Site 6 A Ambient Unit Markers";
-            numberOfUnits = 8;
+            numberOfUnits = 12;
             unitsPerGroup = 4;
             canPath = ON;
             dynamicSim = ON;
@@ -73,7 +73,10 @@ class Site6
             class reinforce : reinforce_B
             {};
         };
+    };	
 
+    class Patrols
+    {
         class patrol_A
         {
             spawnPosition = "KOR_site6A_patrolSpawn";
@@ -97,7 +100,7 @@ class Site6
         };
         class patrol_B : patrol_A
         {
-            spawnPosition = "KOR_site6A_patrolSpawn";
+            spawnPosition = "KOR_site6B_patrolSpawn";
             class SpecificPatrol : SpecificPatrol
             {
                 patrolPoints = "Site 6 B Patrol Markers";
@@ -111,6 +114,5 @@ class Site6
                 };
             };
         };
-
-    };	
+    };
 };
