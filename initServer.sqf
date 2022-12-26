@@ -44,6 +44,7 @@ _ambientAnimLogicGroup enableDynamicSimulation true;
 ["Site3"] call KISKA_fnc_bases_createFromConfig;
 ["Site4"] call KISKA_fnc_bases_createFromConfig;
 ["Site5"] call KISKA_fnc_bases_createFromConfig;
+["Site6"] call KISKA_fnc_bases_createFromConfig;
 
 
 
