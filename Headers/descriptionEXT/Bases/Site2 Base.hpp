@@ -7,16 +7,15 @@ class Site2
 
     class reinforceBase
     {
-        id = "";
         canCall[] = {
-            "patrol1",
-            "patrol2"
+            "site_2_patrol1",
+            "site_2_patrol2"
         };
     };
 
     class infantry
     {
-        class staticUnits
+        class site_2_staticUnits
         {
             positions = "Site 2 Static Unit Markers";
             numberOfUnits = 12;
@@ -25,11 +24,10 @@ class Site2
 
             class reinforce : reinforceBase
             {
-                id = "staticNormal";
             };
         };
 
-        class sittingAnimatedUnits
+        class site_2_sittingAnimatedUnits
         {
             positions = "Site 2 Sitting Animated Unit Markers";
             numberOfUnits = -1;
@@ -48,11 +46,10 @@ class Site2
             };
             class reinforce : reinforceBase
             {
-                id = "staticSitting";
             };
         };
 
-        class animatedUnits
+        class site_2_animatedUnits
         {
             positions = "Site 2 Standing Animated Unit Markers";
             numberOfUnits = -1;
@@ -75,7 +72,6 @@ class Site2
             };
             class reinforce : reinforceBase
             {
-                id = "staticStanding";
             };
         };
     };
@@ -91,7 +87,7 @@ class Site2
 
     class Patrols
     {
-        class patrol1
+        class site_2_patrol1
         {
             spawnPosition = "KOR_site2_patrolSpawn";
             numberOfUnits = 4;
@@ -109,21 +105,19 @@ class Site2
 
             class reinforce
             {
-                id = "patrol1";
                 canCall[] = {
-                    "patrol2"
+                    "site_2_patrol2"
                 };
             };
         };
-        class patrol2 : patrol1
+        class site_2_patrol2 : site_2_patrol1
         {
             numberOfUnits = 4;
 
             class reinforce
             {
-                id = "patrol2";
                 canCall[] = {
-                    "patrol1"
+                    "site_2_patrol1"
                 };
             };
         };

@@ -8,19 +8,19 @@ class Site6
     class reinforce_A
     {
         canCall[] = {
-            "patrol_A"
+            "site_6_patrol_A"
         };
     };
     class reinforce_B
     {
         canCall[] = {
-            "patrol_B"
+            "site_6_patrol_B"
         };
     };
 
     class infantry
     {
-        class static_A
+        class site_6_static_A
         {
             positions = "Site 6 A Static Unit Markers";
             numberOfUnits = 8;
@@ -31,7 +31,7 @@ class Site6
             class reinforce : reinforce_A
             {};
         };
-        class static_B : static_A
+        class site_6_static_B : site_6_static_A
         {
             positions = "Site 6 B Static Unit Markers";
             numberOfUnits = 4;
@@ -40,7 +40,7 @@ class Site6
             {};
         };
 
-        class ambient_A
+        class site_6_ambient_A
         {
             positions = "Site 6 A Ambient Unit Markers";
             numberOfUnits = 12;
@@ -65,7 +65,7 @@ class Site6
             class reinforce : reinforce_A
             {};
         };
-        class ambient_B : ambient_A
+        class site_6_ambient_B : site_6_ambient_A
         {
             positions = "Site 6 B Ambient Unit Markers";
             numberOfUnits = 5;
@@ -77,7 +77,7 @@ class Site6
 
     class Patrols
     {
-        class patrol_A
+        class site_6_patrol_A
         {
             spawnPosition = "KOR_site6A_patrolSpawn";
             numberOfUnits = 5;
@@ -93,12 +93,12 @@ class Site6
             class reinforce
             {
                 canCall[] = {
-                    "patrol_B",
-                    "ambient_A"
+                    "site_6_patrol_B",
+                    "site_6_ambient_A"
                 };
             };
         };
-        class patrol_B : patrol_A
+        class site_6_patrol_B : site_6_patrol_A
         {
             spawnPosition = "KOR_site6B_patrolSpawn";
             class SpecificPatrol : SpecificPatrol
@@ -109,8 +109,8 @@ class Site6
             class reinforce
             {
                 canCall[] = {
-                    "patrol_A",
-                    "ambient_B"
+                    "site_6_patrol_A",
+                    "site_6_ambient_B"
                 };
             };
         };

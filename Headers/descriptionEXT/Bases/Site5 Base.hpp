@@ -7,7 +7,7 @@ class Site5
 
     class infantry
     {
-        class interior_1
+        class site_5_interior_1
         {
             positions = "Site 5 Interior Unit Markers 1";
             numberOfUnits = -1;
@@ -18,16 +18,16 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "exterior_1",
-                    "exterior_2",
-                    "exterior_3",
-                    "patrol_1",
-                    "patrol_2"
+                    "site_5_exterior_1",
+                    "site_5_exterior_2",
+                    "site_5_exterior_3",
+                    "site_5_patrol_1",
+                    "site_5_patrol_2"
                 };
             };
         };
 
-        class interior_2 : interior_1
+        class site_5_interior_2 : site_5_interior_1
         {
             positions = "Site 5 Interior Unit Markers 2";
             numberOfUnits = 6;
@@ -36,7 +36,7 @@ class Site5
         };
         
 
-        class interior_3
+        class site_5_interior_3
         {
             positions = "Site 5 Interior Unit Markers 3";
             numberOfUnits = 3;
@@ -47,23 +47,23 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "exterior_4",
-                    "exterior_5",
-                    "patrol_3"
+                    "site_5_exterior_4",
+                    "site_5_exterior_5",
+                    "site_5_patrol_3"
                 };
             };
         };
-        class interior_4 : interior_3
+        class site_5_interior_4 : site_5_interior_3
         {
             positions = "Site 5 Interior Unit Markers 4";
         };
-        class interior_5 : interior_3
+        class site_5_interior_5 : site_5_interior_3
         {
             positions = "Site 5 Interior Unit Markers 5";
             canPath = ON;
         };
 
-        class interior_6
+        class site_5_interior_6
         {
             positions = "Site 5 Interior Unit Markers 6";
             numberOfUnits = -1;
@@ -73,7 +73,7 @@ class Site5
 
         };
 
-        class interior_7
+        class site_5_interior_7
         {
             positions = "Site 5 Interior Unit Markers 7";
             numberOfUnits = 6;
@@ -84,7 +84,7 @@ class Site5
 
 
 
-        class exterior_1
+        class site_5_exterior_1
         {
             positions = "Site 5 Exterior Unit Markers 1";
 
@@ -96,10 +96,10 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "exterior_2",
-                    "exterior_3",
-                    "patrol_1",
-                    "patrol_2"
+                    "site_5_exterior_2",
+                    "site_5_exterior_3",
+                    "site_5_patrol_1",
+                    "site_5_patrol_2"
                 };
             };
 
@@ -118,7 +118,7 @@ class Site5
             };
         };
 
-        class exterior_2
+        class site_5_exterior_2
         {
             positions = "Site 5 Exterior Unit Markers 2";
 
@@ -130,14 +130,14 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "exterior_1",
-                    "exterior_3",
-                    "patrol_1",
-                    "patrol_2"
+                    "site_5_exterior_1",
+                    "site_5_exterior_3",
+                    "site_5_patrol_1",
+                    "site_5_patrol_2"
                 };
             };
         };
-        class exterior_2_static
+        class site_5_exterior_2_static
         {
             positions = "Site 5 Exterior Unit Markers 2 (STATIC)";
 
@@ -149,42 +149,42 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "exterior_1",
-                    "exterior_2",
-                    "exterior_3",
-                    "patrol_1",
-                    "patrol_2"
+                    "site_5_exterior_1",
+                    "site_5_exterior_2",
+                    "site_5_exterior_3",
+                    "site_5_patrol_1",
+                    "site_5_patrol_2"
                 };
             };
         };
 
-        class exterior_3 : exterior_2
+        class site_5_exterior_3 : site_5_exterior_2
         {
             positions = "Site 5 Exterior Unit Markers 3";
 
             class reinforce
             {
                 canCall[] = {
-                    "exterior_1",
-                    "exterior_2",
-                    "patrol_1",
-                    "patrol_2"
+                    "site_5_exterior_1",
+                    "site_5_exterior_2",
+                    "site_5_patrol_1",
+                    "site_5_patrol_2"
                 };
             };
         };
-        class exterior_4 : exterior_2
+        class site_5_exterior_4 : site_5_exterior_2
         {
             positions = "Site 5 Exterior Unit Markers 4";
 
             class reinforce
             {
                 canCall[] = {
-                    "exterior_5",
-                    "patrol_3"
+                    "site_5_exterior_5",
+                    "site_5_patrol_3"
                 };
             };
         };
-        class exterior_5
+        class site_5_exterior_5
         {
             positions = "Site 5 Exterior Unit Markers 5";
             numberOfUnits = 6;
@@ -195,42 +195,17 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "exterior_4",
-                    "patrol_3"
+                    "site_5_exterior_4",
+                    "site_5_patrol_3"
                 };
             };
         };
 
-        // class standingUnits
-        // {
-        //     positions = "Site 4 Standing Unit Markers";
-        //     numberOfUnits = 12;
-        //     unitsPerGroup = 4;
-        //     canPath = ON;
-        //     class reinforce : reinforceBase
-        //     {
-        //         id = "standingUnits";
-        //     };
-
-        //     class ambientAnim
-        //     {
-        //         animationSet[] = {
-        //             "STAND_ARMED_1",
-        //             "STAND_ARMED_2",
-        //             "BRIEFING",
-        //             "SIT_GROUND_ARMED",
-        //             "KNEEL",
-        //             "WATCH_1",
-        //             "WATCH_2"
-        //         };
-        //         exitOnCombat = ON;
-        //     };
-        // };
     };
 
     class Patrols
     {
-        class patrol_1
+        class site_5_patrol_1
         {
             spawnPosition = "KOR_site5_patrol1_spawn";
             numberOfUnits = 8;
@@ -246,11 +221,11 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "patrol_2"
+                    "site_5_patrol_2"
                 };
             };
         };
-        class patrol_2 : patrol_1
+        class site_5_patrol_2 : site_5_patrol_1
         {
             spawnPosition = "KOR_site5_patrol2_spawn";
             numberOfUnits = 6;
@@ -263,12 +238,12 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "patrol_1",
-                    "patrol_3"
+                    "site_5_patrol_1",
+                    "site_5_patrol_3"
                 };
             };
         };
-        class patrol_3 : patrol_1
+        class site_5_patrol_3 : site_5_patrol_1
         {
             spawnPosition = "KOR_site5_patrol3_spawn";
             numberOfUnits = 3;
@@ -281,7 +256,7 @@ class Site5
             class reinforce
             {
                 canCall[] = {
-                    "patrol_1"
+                    "site_5_patrol_1"
                 };
             };
         };

@@ -8,12 +8,12 @@ class Site4
     class reinforceBase
     {
         id = "";
-        canCall[] = {"patrol1"};
+        canCall[] = {"site_4_patrol1"};
     };
 
     class infantry
     {
-        class staticUnits
+        class site_4_staticUnits
         {
             positions = "Site 4 Static Unit Markers";
             numberOfUnits = 8;
@@ -23,11 +23,11 @@ class Site4
             
             class reinforce : reinforceBase
             {
-                id = "staticUnits";
+                id = "site_4_staticUnits";
             };
         };    
 
-        class standingUnits
+        class site_4_standingUnits
         {
             positions = "Site 4 Standing Unit Markers";
             numberOfUnits = 12;
@@ -37,7 +37,7 @@ class Site4
 
             class reinforce : reinforceBase
             {
-                id = "standingUnits";
+                id = "site_4_standingUnits";
             };
 
             class ambientAnim
@@ -68,7 +68,7 @@ class Site4
 
     class Patrols
     {
-        class patrol1
+        class site_4_patrol1
         {
             spawnPosition = "KOR_site4_patrolSpawn";
             numberOfUnits = 6;
@@ -86,7 +86,7 @@ class Site4
 
             class reinforce
             {
-                id = "patrol1";
+                id = "site_4_patrol1";
             };
         };
     };

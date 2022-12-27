@@ -7,13 +7,12 @@ class Site3
 
     class reinforceBase
     {
-        id = "";
-        canCall[] = {"patrol1"};
+        canCall[] = {"site_3_patrol1"};
     };
 
     class infantry
     {
-        class staticUnits
+        class site_3_staticUnits
         {
             positions = "Site 3 Static Unit Markers";
             numberOfUnits = 5;
@@ -23,11 +22,10 @@ class Site3
 
             class reinforce : reinforceBase
             {
-                id = "staticUnits";
             };
         };    
 
-        class standingUnits
+        class site_3_standingUnits
         {
             positions = "Site 3 Standing Unit Markers";
             numberOfUnits = -1;
@@ -37,7 +35,6 @@ class Site3
             
             class reinforce : reinforceBase
             {
-                id = "standingUnits";
             };
 
             class ambientAnim
@@ -58,7 +55,7 @@ class Site3
 
     class Patrols
     {
-        class patrol1
+        class site_3_patrol1
         {
             spawnPosition = "KOR_site3_patrolSpawn";
             numberOfUnits = 6;
@@ -76,7 +73,6 @@ class Site3
 
             class reinforce
             {
-                id = "patrol1";
             };
         };
     };
