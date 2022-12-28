@@ -42,6 +42,7 @@ _radioChatterPositions apply {
 ["Site4"] call KISKA_fnc_bases_createFromConfig;
 ["Site5"] call KISKA_fnc_bases_createFromConfig;
 ["Site6"] call KISKA_fnc_bases_createFromConfig;
+["Site7"] call KISKA_fnc_bases_createFromConfig;
 
 
 
