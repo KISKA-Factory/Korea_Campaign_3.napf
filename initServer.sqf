@@ -32,9 +32,6 @@ _radioChatterPositions apply {
     ] call KISKA_fnc_radioChatter;
 };
 
-private _ambientAnimLogicGroup = call KISKA_fnc_ambientAnim_getAttachToLogicGroup;
-_ambientAnimLogicGroup enableDynamicSimulation true;
-
 
 /* ----------------------------------------------------------------------------
     Enemy Sites
@@ -49,7 +46,10 @@ _ambientAnimLogicGroup enableDynamicSimulation true;
 
 
 
-
+private _logicGroupMap = call KISKA_fnc_ambientAnim_getAttachLogicGroupsMap;
+(values _logicGroupMap) apply {
+    _x enableDynamicSimulation true;
+};
 
 /*
 heli setVariable ["KISKA_ACEFastRope_ropeDeploymentTime",4];

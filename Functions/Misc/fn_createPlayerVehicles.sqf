@@ -13,8 +13,8 @@ _spawns apply {
     ];
 
     _vehicle setDir (getDir _x);
-    [_vehicle, true] remoteExecCall ["lock", _vehicle];
-    [_vehicle, false] remoteExec ["allowDamage", 0, true];
+    // [_vehicle, true] remoteExecCall ["lock", _vehicle];
+    // [_vehicle, false] remoteExec ["allowDamage", 0, true];
     [_vehicle, true] remoteExec ["enableDynamicSimulation", 0, true];
 
     KOR_playerVehicles pushBack _vehicle;

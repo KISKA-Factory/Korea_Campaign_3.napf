@@ -127,7 +127,7 @@ class CfgNotifications
     };
     */
 };
-
+// TODO: seems like the dynamic sim of some animated units is not working
 
 class KISKA_dynamicSimulation
 {
@@ -140,8 +140,8 @@ class KISKA_dynamicSimulation
 
     class ActivationDistance 
     {
-        Group = 1000;
-        Vehicle = 1000;
+        Group = 800;
+        Vehicle = 800;
         EmptyVehicle = 50;
         Prop = 50;
     };
