@@ -1,4 +1,4 @@
-class Site7
+class Site8
 {
     side = SIDE_OPFOR;
     infantryClasses[] = {
@@ -6,31 +6,20 @@ class Site7
     };
 
     class reinforceBase
-    {
-        canCall[] = {
-            "site7_patrol1"
-        };
-    };
+	{
+		canCall[] = {
+
+		};
+	};
 
     class infantry
     {
         class site7_static1
         {
-            positions = "Site 7 Static Unit Markers 1";
+            positions = "Site 8 Static Unit Markers 1";
             numberOfUnits = 9;
             unitsPerGroup = 3;
             canPath = OFF;
-            dynamicSim = ON;
-            
-            class reinforce : reinforceBase
-            {};
-        };
-        class site7_path1
-        {
-            positions = "Site 7 Path Unit Markers 1";
-            numberOfUnits = 10;
-            unitsPerGroup = 5;
-            canPath = ON;
             dynamicSim = ON;
             
             class reinforce : reinforceBase
@@ -52,7 +41,7 @@ class Site7
             class RandomPatrol
             {
                 numberOfPoints = 4;
-                radius = 300;
+                radius = 400;
                 waypointType = "MOVE";
             };
         };

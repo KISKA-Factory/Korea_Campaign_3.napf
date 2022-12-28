@@ -140,8 +140,8 @@ class KISKA_dynamicSimulation
 
     class ActivationDistance 
     {
-        Group = 800;
-        Vehicle = 800;
+        Group = 1000;
+        Vehicle = 1000;
         EmptyVehicle = 50;
         Prop = 50;
     };

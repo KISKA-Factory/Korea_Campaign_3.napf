@@ -18,7 +18,7 @@ private _enemySpawnCode = {
     [
         configFile >> "KISKA_loadouts" >> "KISKA_loadouts_koreaRatnik",
         _unit
-    ] spawn KISKA_fnc_assignUnitLoadout;
+    ] call KISKA_fnc_assignUnitLoadout;
 };
 _enemyClasses apply {
     [_x, "init", _enemySpawnCode] call CBA_fnc_addClassEventHandler;
@@ -32,7 +32,7 @@ _enemyClasses apply {
     [
         missionConfigFile >> "KOR_marine_loadouts",
         _unit
-    ] spawn KISKA_fnc_assignUnitLoadout;
+    ] call KISKA_fnc_assignUnitLoadout;
 }] call CBA_fnc_addClassEventhandler;
 
 
