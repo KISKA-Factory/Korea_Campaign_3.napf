@@ -21,4 +21,5 @@ class KISKA_Bases
     #include "Site8 Base.hpp"
     #include "Site9 Base.hpp"
     #include "Site10 Base.hpp"
+    #include "Site11 Base.hpp"
 };
