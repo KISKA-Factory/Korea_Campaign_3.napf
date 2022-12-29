@@ -18,7 +18,7 @@
 ---------------------------------------------------------------------------- */
 call KOR_fnc_createPlayerVehicles;
 [] spawn KOR_fnc_effect_ambientArty;
-[] spawn KOR_fnc_site1_insert;
+// [] spawn KOR_fnc_site1_insert;
 // [] call KOR_fnc_effect_ambientHelicopter;
 ["Airfield"] call KISKA_fnc_bases_createFromConfig;
 
@@ -45,7 +45,6 @@ _radioChatterPositions apply {
 ["Site7"] call KISKA_fnc_bases_createFromConfig;
 ["Site8"] call KISKA_fnc_bases_createFromConfig;
 ["Site9"] call KISKA_fnc_bases_createFromConfig;
-
 
 
 
