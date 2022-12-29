@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=26294;
+		nextID=26295;
 	};
 	class MarkerIDProvider
 	{
@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={18180.842,365.97537,2340.0613};
-		dir[]={0.30559507,-0.74039084,0.59876394};
-		up[]={0.33657172,0.67218661,0.65945768};
-		aside[]={0.89073783,2.8818613e-007,-0.45461288};
+		pos[]={18233.123,329.0177,2654.0115};
+		dir[]={-0.14280327,-0.5142653,-0.84574354};
+		up[]={-0.085623592,0.85762709,-0.50710177};
+		aside[]={-0.98611891,3.8131839e-007,0.16650824};
 	};
 };
 binarizationWanted=0;
@@ -182,7 +182,8 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"rhs_c_heavyweapons",
 	"rhsgref_c_vehicles_ret",
-	"A3_Ui_F"
+	"A3_Ui_F",
+	"A3_Modules_F_Curator_Misc"
 };
 class AddonsMetaData
 {
@@ -684,7 +685,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=31;
+		items=32;
 		class Item0
 		{
 			dataType="Comment";
@@ -17441,6 +17442,7 @@ class Mission
 						{
 							dataType="Layer";
 							name="Statics";
+							state=1;
 							class Entities
 							{
 								items=1244;
@@ -149455,6 +149457,7 @@ class Mission
 			{
 				position[]={18384.42,162.595,2002.312};
 			};
+			name="KOR_zeusModule";
 			id=14020;
 			type="ModuleCurator_F";
 			class CustomAttributes
@@ -150612,6 +150615,21 @@ class Mission
 			};
 			id=26286;
 			atlOffset=90;
+		};
+		class Item31
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={17736.275,210.28174,4785.9478};
+				angles[]={0,4.0263948,-0};
+			};
+			areaSize[]={1651.8203,0,3112.0232};
+			areaIsRectangle=1;
+			flags=1;
+			id=26294;
+			type="ModuleCoverMap_F";
+			atlOffset=129.82181;
 		};
 	};
 };
