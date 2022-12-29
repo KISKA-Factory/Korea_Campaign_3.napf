@@ -70,4 +70,9 @@ class KISKA_cfgTasks
 
         visibleIn3D = OFF;
     };
+// sites_2_3_marker
+    class Site2_clearTask
+    {
+
+    };
 };

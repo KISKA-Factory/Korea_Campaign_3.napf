@@ -61,6 +61,38 @@ minPlayerDistance = 50;
 saving = OFF;
 disabledAI = ON;
 enableDebugConsole = ENABLE_DEBUG_CONSOLE_ADMIN_HOSTS;
+// disableChannels[] = {
+//     {
+//         SIDE_CHANNEL_ID, // channel ID
+//         0,	// disable text chat
+//         1	// disable voice chat
+//     },
+//     {
+//         GLOBAL_CHANNEL_ID,
+//         0,
+//         0
+//     },
+//     {
+//         COMMAND_CHANNEL_ID,
+//         0,
+//         0
+//     },
+//     {
+//         GROUP_CHANNEL_ID,
+//         0,
+//         0
+//     },
+//     {
+//         VEHICLE_CHANNEL_ID,
+//         0,
+//         0
+//     },
+//     {
+//         DIRECT_CHANNEL_ID,
+//         0,
+//         0
+//     }    
+// };
 
 /* ----------------------------------------------------------------------------
     Configs
