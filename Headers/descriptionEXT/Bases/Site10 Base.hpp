@@ -1,4 +1,4 @@
-class Site8
+class Site10
 {
     side = SIDE_OPFOR;
     infantryClasses[] = {
