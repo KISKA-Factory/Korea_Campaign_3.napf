@@ -12,7 +12,6 @@
 ] call KISKA_fnc_addArsenal;
 
 
-
 /* ----------------------------------------------------------------------------
     Airfield Effects
 ---------------------------------------------------------------------------- */
@@ -72,3 +71,30 @@ player moveInCargo heli;
     ]
 ] call KISKA_fnc_ACE_fastRope;
 */
+
+
+
+/* ----------------------------------------------------------------------------
+    Tasks
+---------------------------------------------------------------------------- */
+["Area1_Task"] call KISKA_fnc_createTaskFromConfig;
+["Site2_clearTask"] call KISKA_fnc_createTaskFromConfig;
+["Site3_clearTask"] call KISKA_fnc_createTaskFromConfig;
+
+["Area2_Task"] call KISKA_fnc_createTaskFromConfig;
+["Site7_clearTask"] call KISKA_fnc_createTaskFromConfig;
+["Site8_clearTask"] call KISKA_fnc_createTaskFromConfig;
+["Site9_clearTask"] call KISKA_fnc_createTaskFromConfig;
+
+["Area3_Task"] call KISKA_fnc_createTaskFromConfig;
+["Site11_clearTask"] call KISKA_fnc_createTaskFromConfig;
+
+["Area4_Task"] call KISKA_fnc_createTaskFromConfig;
+["Site10_clearTask"] call KISKA_fnc_createTaskFromConfig;
+
+["Area5_Task"] call KISKA_fnc_createTaskFromConfig;
+["Site4_clearTask"] call KISKA_fnc_createTaskFromConfig;
+["Site6_clearTask"] call KISKA_fnc_createTaskFromConfig;
+
+["Area6_Task"] call KISKA_fnc_createTaskFromConfig;
+["Site5_clearTask"] call KISKA_fnc_createTaskFromConfig;

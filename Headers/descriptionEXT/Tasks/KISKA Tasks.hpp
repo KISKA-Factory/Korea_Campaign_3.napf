@@ -1,6 +1,3 @@
-#define ON 1
-#define OFF 0
-
 class KISKA_cfgTasks
 {
     class exampleTask_base // class name will become Task Id
@@ -30,49 +27,125 @@ class KISKA_cfgTasks
 
         visibleIn3D = OFF; // 3d marker creation
     };
-    class exampleTask_parent : exampleTask_base
+
+    class area_base
     {
-        title = "My Example Task Parent";
-        description = "This is an example task parent";
-
-        parentTask = "";
-        type = "default";
-
-        onComplete = "hint 'Parent complete'";
-        onCreate = "hint 'Parent created'";
-
-        destination[] = {};
-
-        defaultState = "";
+        type = TASK_TYPE_KILL;
         priority = -1;
         notifyOnComplete = ON;
-        notifyOnCreate = ON;
-
         visibleIn3D = OFF;
     };
-    class exampleTask_child : exampleTask_base
+    class site_base
     {
-        title = "My Example Task Child";
-        description = "This is an example task child";
-
-        parentTask = "exampleTask_parent";
-        type = "Move";
-
-        onComplete = "hint 'Child complete'";
-        onCreate = "hint 'Child created'";
-
-        destination[] = {};
-
-        defaultState = "";
-        priority = -1;
+        type = TASK_TYPE_ATTACK;
         notifyOnComplete = ON;
-        notifyOnCreate = ON;
-
-        visibleIn3D = OFF;
     };
-// sites_2_3_marker
-    class Site2_clearTask
-    {
 
+    /* ----------------------------------------------------------------------------
+        Area 1
+    ---------------------------------------------------------------------------- */
+    class Area1_Task : area_base
+    {
+        title = "Clear Camps In Area 1";
+        compiledDestination = "markerPos 'Area1_marker'";
+        onComplete = "deleteMarker 'Area1_marker'";
+    };
+    class Site2_clearTask : site_base
+    {
+        title = "Area 1 - Site 1";
+        parentTask = "Area1_Task";
+        
+    };
+    class Site3_clearTask : Site2_clearTask
+    {
+        title = "Area 1 - Site 2";
+    };
+
+    /* ----------------------------------------------------------------------------
+        Area 2
+    ---------------------------------------------------------------------------- */
+    class Area2_Task : area_base
+    {
+        title = "Clear Camps In Area 2";
+        compiledDestination = "markerPos 'Area2_marker'";
+        onComplete = "deleteMarker 'Area2_marker'";
+    };
+    class Site7_clearTask : site_base
+    {
+        title = "Area 2 - Site 1";
+        parentTask = "Area2_Task";
+    };
+    class Site8_clearTask : Site7_clearTask
+    {
+        title = "Area 2 - Site 2";
+    };
+    class Site9_clearTask : Site7_clearTask
+    {
+        title = "Area 2 - Site 3";
+    };
+
+    /* ----------------------------------------------------------------------------
+        Area 3
+    ---------------------------------------------------------------------------- */
+    class Area3_Task : area_base
+    {
+        title = "Clear Camps In Area 3";
+        compiledDestination = "markerPos 'Area3_marker'";
+        onComplete = "deleteMarker 'Area3_marker'";
+    };
+    class Site11_clearTask : site_base
+    {
+        title = "Area 3 - Site 1";
+        parentTask = "Area3_Task";
+    };
+
+
+    /* ----------------------------------------------------------------------------
+        Area 4
+    ---------------------------------------------------------------------------- */
+    class Area4_Task : area_base
+    {
+        title = "Clear Camps In Area 4";
+        compiledDestination = "markerPos 'Area4_marker'";
+        onComplete = "deleteMarker 'Area4_marker'";
+    };
+    class Site10_clearTask : site_base
+    {
+        title = "Area 4 - Site 1";
+        parentTask = "Area4_Task";
+    };
+
+    /* ----------------------------------------------------------------------------
+        Area 5
+    ---------------------------------------------------------------------------- */
+    class Area5_Task : area_base
+    {
+        title = "Clear Camps In Area 5";
+        compiledDestination = "markerPos 'Area5_marker'";
+        onComplete = "deleteMarker 'Area5_marker'";
+    };
+    class Site4_clearTask : site_base
+    {
+        title = "Area 5 - Site 1";
+        parentTask = "Area5_Task";
+    };
+    class Site6_clearTask : Site4_clearTask
+    {
+        title = "Area 5 - Site 2";
+    };
+
+    /* ----------------------------------------------------------------------------
+        Area 6
+    ---------------------------------------------------------------------------- */
+    class Area6_Task : area_base
+    {
+        title = "Clear Camps In Area 6";
+        compiledDestination = "markerPos 'Area6_marker'";
+        onComplete = "deleteMarker 'Area6_marker'";
+    };
+    class Site5_clearTask : site_base
+    {
+        title = "Area 6 - Site 1";
+        parentTask = "Area6_Task";
     };
 };
