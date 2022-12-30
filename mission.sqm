@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=6342;
+		nextID=6676;
 	};
 	class Camera
 	{
-		pos[]={18488.352,716.96704,3942.7634};
-		dir[]={0.31548113,-0.93928128,0.13499016};
-		up[]={0.86354971,0.34314808,0.36950138};
-		aside[]={0.39338735,0,-0.91937286};
+		pos[]={16846.539,139.22502,4162.1196};
+		dir[]={0.63791102,-0.4894065,0.59461343};
+		up[]={0.35800111,0.87205344,0.33370259};
+		aside[]={0.68185115,5.5093551e-008,-0.73150027};
 	};
 };
 binarizationWanted=0;
@@ -94253,6 +94253,7 @@ class Mission
 											};
 											id=21677;
 											type="Land_BakedBeans_F";
+											atlOffset=1.1444092e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94325,6 +94326,7 @@ class Mission
 											};
 											id=21678;
 											type="Land_Can_Dented_F";
+											atlOffset=3.8146973e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94397,6 +94399,7 @@ class Mission
 											};
 											id=21679;
 											type="Land_Can_V2_F";
+											atlOffset=7.6293945e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94469,6 +94472,7 @@ class Mission
 											};
 											id=21680;
 											type="Land_Can_V3_F";
+											atlOffset=7.6293945e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94541,6 +94545,7 @@ class Mission
 											};
 											id=21681;
 											type="Land_Can_Rusty_F";
+											atlOffset=7.6293945e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94613,6 +94618,7 @@ class Mission
 											};
 											id=21682;
 											type="Land_Can_V1_F";
+											atlOffset=7.6293945e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94640,6 +94646,7 @@ class Mission
 												angles[]={0.0063851168,0.38210332,6.2626891};
 											};
 											side="Empty";
+											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -94648,7 +94655,7 @@ class Mission
 											};
 											id=21730;
 											type="Land_CanisterFuel_F";
-											atlOffset=0.46470642;
+											atlOffset=0.00019454956;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94676,6 +94683,7 @@ class Mission
 												angles[]={0.0063851168,4.1759782,6.2626891};
 											};
 											side="Empty";
+											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -94684,7 +94692,7 @@ class Mission
 											};
 											id=21731;
 											type="Land_CanisterFuel_Blue_F";
-											atlOffset=0.47993851;
+											atlOffset=0.00011444092;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94721,6 +94729,7 @@ class Mission
 											};
 											id=21735;
 											type="Land_CanisterFuel_Blue_F";
+											atlOffset=0.00016403198;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94757,7 +94766,7 @@ class Mission
 											};
 											id=21732;
 											type="Land_CanisterFuel_Red_F";
-											atlOffset=3.8146973e-006;
+											atlOffset=6.1035156e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94794,6 +94803,7 @@ class Mission
 											};
 											id=21734;
 											type="Land_CanisterFuel_Red_F";
+											atlOffset=5.3405762e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -94902,6 +94912,7 @@ class Mission
 											};
 											id=21683;
 											type="Land_Canteen_F";
+											atlOffset=2.6702881e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -95001,6 +95012,7 @@ class Mission
 												angles[]={0.0063851168,0,6.2626891};
 											};
 											side="Empty";
+											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -95009,7 +95021,7 @@ class Mission
 											};
 											id=21684;
 											type="Land_CerealsBox_F";
-											atlOffset=0.38061905;
+											atlOffset=0.00011062622;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -150119,7 +150131,7 @@ class Mission
 						{
 							dataType="Marker";
 							position[]={19330.447,146.37199,6069.5239};
-							name="sites_10_marker";
+							name="Area4_marker";
 							markerType="ELLIPSE";
 							type="";
 							colorName="ColorEAST";
@@ -150134,7 +150146,7 @@ class Mission
 						{
 							dataType="Marker";
 							position[]={16961.199,124.297,4501.7988};
-							name="sites_11_marker";
+							name="Area3_marker";
 							markerType="ELLIPSE";
 							type="";
 							colorName="ColorEAST";
@@ -150164,7 +150176,7 @@ class Mission
 						{
 							dataType="Marker";
 							position[]={18504.957,81.653,6195.9409};
-							name="sites_4_6_marker";
+							name="Area5_marker";
 							markerType="ELLIPSE";
 							type="";
 							colorName="ColorEAST";
@@ -150179,7 +150191,7 @@ class Mission
 						{
 							dataType="Marker";
 							position[]={19065.389,115.839,6833.0698};
-							name="sites_5_marker";
+							name="Area6_marker";
 							markerType="ELLIPSE";
 							type="";
 							colorName="ColorEAST";
@@ -150201,7 +150213,7 @@ class Mission
 							alpha=0.50000018;
 							a=554.849;
 							b=570.98999;
-							angle=270.10098;
+							angle=270.10092;
 							id=26228;
 							atlOffset=7.1683502;
 						};
