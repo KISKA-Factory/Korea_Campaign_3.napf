@@ -24,10 +24,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15040.548,377.0896,3923.0923};
-		dir[]={0.42305744,-0.41135702,0.80750275};
-		up[]={0.19092312,0.91141051,0.36442241};
-		aside[]={0.88589984,-8.8544402e-007,-0.46413574};
+		pos[]={18154.807,255.15295,2459.9558};
+		dir[]={0.65976501,-0.38117018,-0.64774698};
+		up[]={0.27201754,0.92449701,-0.26706237};
+		aside[]={-0.70063782,3.0040974e-007,-0.71363533};
 	};
 };
 binarizationWanted=0;
@@ -686,7 +686,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=32;
+		items=31;
 		class Item0
 		{
 			dataType="Comment";
@@ -65029,7 +65029,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={15130.353,350.85907,3976.8984};
+										position[]={15117.527,355.03574,3986.1995};
 										angles[]={0,5.7944932,0};
 									};
 									side="Empty";
@@ -150590,53 +150590,6 @@ class Mission
 			atlOffset=-66.442596;
 		};
 		class Item30
-		{
-			dataType="Layer";
-			name="Locations_1";
-			class Entities
-			{
-				items=1;
-				class Item0
-				{
-					dataType="Layer";
-					name="Brienz";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Layer";
-							name="Sniper Postion";
-							class Entities
-							{
-								items=2;
-								class Item0
-								{
-									dataType="Layer";
-									name="Statics_1";
-									id=26289;
-									atlOffset=90;
-								};
-								class Item1
-								{
-									dataType="Layer";
-									name="Simmed";
-									id=26291;
-									atlOffset=90;
-								};
-							};
-							id=26288;
-							atlOffset=90;
-						};
-					};
-					id=26287;
-					atlOffset=90;
-				};
-			};
-			id=26286;
-			atlOffset=90;
-		};
-		class Item31
 		{
 			dataType="Logic";
 			class PositionInfo

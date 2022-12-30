@@ -1,7 +1,3 @@
-// add helicopter for inital infil
-// add main gate objects
-// add ambient men on airfield
-// add guards around airfield
 /* ----------------------------------------------------------------------------
     Misc setup
 ---------------------------------------------------------------------------- */
@@ -10,6 +6,9 @@
 [
     ["Arsenals"] call KISKA_fnc_getMissionLayerObjects
 ] call KISKA_fnc_addArsenal;
+
+call KOR_fnc_createPlayerVehicles;
+
 
 /* ----------------------------------------------------------------------------
     Tasks
@@ -25,7 +24,6 @@
 /* ----------------------------------------------------------------------------
     Airfield Effects
 ---------------------------------------------------------------------------- */
-call KOR_fnc_createPlayerVehicles;
 [] spawn KOR_fnc_effect_ambientArty;
 // [] call KOR_fnc_effect_ambientHelicopter;
 ["Airfield"] call KISKA_fnc_bases_createFromConfig;
