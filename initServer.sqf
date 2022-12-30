@@ -104,6 +104,25 @@ private _unitsToKill = _site1Base get "unit list";
     }
 ] call KISKA_fnc_setupMultiKillEvent;
 
+
+/* ----------------------------------------------------------------------------
+    Supports
+---------------------------------------------------------------------------- */
+["KOR_120_arty"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_120_arty"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_120_arty"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_F35_CAS"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_F35_CAS"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_A164_CAS"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_A164_CAS"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_humvee_drop"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_humvee_drop"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_humvee_drop"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_humvee_drop"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_arsenalDrop"] call KISKA_fnc_supportManager_addToPool_global;
+["KOR_arsenalDrop"] call KISKA_fnc_supportManager_addToPool_global;
+
+
 /* ----------------------------------------------------------------------------
     Misc
 ---------------------------------------------------------------------------- */
