@@ -23,6 +23,12 @@ import KISKA_supplyDrop_aircraft_baseClass from CfgCommunicationMenu;
 #define CALL_SUPPORT_MASTER(CLASS) "["#CLASS",_this,%1] call KISKA_fnc_callingForSupportMaster"
 #define EXPRESSION_CALL_MASTER(CLASS) expression = CALL_SUPPORT_MASTER(CLASS);
 
+#define CONDITION_BE_JTAC managerCondition = "player getUnitTrait 'JTAC'";
+#define CONDITION_BE_JTAC_OR_COMMANDER managerCondition = "(player getUnitTrait 'JTAC') OR (player getUnitTrait 'COMMANDER')";
+
+#define CONDITION_MESSAGE_BE_JTAC conditionMessage = "You must have the JTAC trait to take this support";
+#define CONDITION_MESSAGE_BE_JTAC_OR_COMMANDER conditionMessage = "You must have the JTAC or COMMANDER traits to take this support";
+
 /*
 // expression arguments
 
@@ -64,6 +70,9 @@ class KOR_155_arty : KISKA_ARTY_155_templateClass
 
     radiuses[] = {50,100};
     roundCount = 3;
+
+    CONDITION_BE_JTAC_OR_COMMANDER
+    CONDITION_MESSAGE_BE_JTAC_OR_COMMANDER
 };
 
 
@@ -77,6 +86,9 @@ class KOR_120_arty : KISKA_ARTY_120_templateClass
 
     radiuses[] = {50,100};
     roundCount = 3;
+
+    CONDITION_BE_JTAC_OR_COMMANDER
+    CONDITION_MESSAGE_BE_JTAC_OR_COMMANDER
 };
 
 class KOR_F35_CAS : KISKA_CAS_baseClass
@@ -91,6 +103,9 @@ class KOR_F35_CAS : KISKA_CAS_baseClass
     vehicleTypes[] = {
         "CUP_B_F35B_USMC"
     };
+
+    CONDITION_BE_JTAC
+    CONDITION_MESSAGE_BE_JTAC
 };
 
 class KOR_A164_CAS : KISKA_CAS_baseClass
@@ -105,6 +120,9 @@ class KOR_A164_CAS : KISKA_CAS_baseClass
     vehicleTypes[] = {
         "B_Plane_CAS_01_dynamicLoadout_F"
     };
+
+    CONDITION_BE_JTAC
+    CONDITION_MESSAGE_BE_JTAC
 };
 
 class KOR_humvee_drop : KISKA_supplyDrop_aircraft_baseClass
@@ -123,6 +141,9 @@ class KOR_humvee_drop : KISKA_supplyDrop_aircraft_baseClass
     };
 
     EXPRESSION_CALL_MASTER(KOR_humvee_drop)
+
+    CONDITION_BE_JTAC_OR_COMMANDER
+    CONDITION_MESSAGE_BE_JTAC_OR_COMMANDER
 };
 class KOR_arsenalDrop : KISKA_supplyDrop_aircraft_baseClass
 {
@@ -137,4 +158,7 @@ class KOR_arsenalDrop : KISKA_supplyDrop_aircraft_baseClass
     };
 
     EXPRESSION_CALL_MASTER(KOR_arsenalDrop)
+
+    CONDITION_BE_JTAC_OR_COMMANDER
+    CONDITION_MESSAGE_BE_JTAC_OR_COMMANDER
 };

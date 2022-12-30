@@ -106,7 +106,7 @@ private _unitsToKill = _site1Base get "unit list";
 
 
 /* ----------------------------------------------------------------------------
-    Supports
+    Supports and Traits
 ---------------------------------------------------------------------------- */
 ["KOR_120_arty"] call KISKA_fnc_supportManager_addToPool_global;
 ["KOR_120_arty"] call KISKA_fnc_supportManager_addToPool_global;
@@ -122,6 +122,9 @@ private _unitsToKill = _site1Base get "unit list";
 ["KOR_arsenalDrop"] call KISKA_fnc_supportManager_addToPool_global;
 ["KOR_arsenalDrop"] call KISKA_fnc_supportManager_addToPool_global;
 
+["COMMANDER"] call KISKA_fnc_traitManager_addToPool_global;
+["jtac"] call KISKA_fnc_traitManager_addToPool_global;
+["jtac"] call KISKA_fnc_traitManager_addToPool_global;
 
 /* ----------------------------------------------------------------------------
     Misc
