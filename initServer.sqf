@@ -27,7 +27,6 @@
 ---------------------------------------------------------------------------- */
 call KOR_fnc_createPlayerVehicles;
 [] spawn KOR_fnc_effect_ambientArty;
-// [] spawn KOR_fnc_site1_insert;
 // [] call KOR_fnc_effect_ambientHelicopter;
 ["Airfield"] call KISKA_fnc_bases_createFromConfig;
 
@@ -97,6 +96,13 @@ private _unitsToKill = _site1Base get "unit list";
     _unitsToKill,
     {
         ["site1_killInfantry_task"] call KISKA_fnc_endTask;
+    }
+] call KISKA_fnc_setupMultiKillEvent;
+
+[
+    ["Site 1 Mortars"] call KISKA_fnc_getMissionLayerObjects,
+    {
+        ["site1_destroyMortars_task"] call KISKA_fnc_endTask;
     }
 ] call KISKA_fnc_setupMultiKillEvent;
 
