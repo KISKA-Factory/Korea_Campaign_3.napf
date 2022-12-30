@@ -21,6 +21,8 @@ class KOR
         {};
         class setupClassEventHandlers
         {};
+        class areaTaskComplete
+        {};
     };
     class Site1
     {
@@ -30,6 +32,12 @@ class KOR
         class site1_insert
         {};
         class site1_spawnMarines
+        {};
+        class site1_enable
+        {};
+        class site1_extraction
+        {};
+        class site1_subTaskComplete
         {};
     };
 };

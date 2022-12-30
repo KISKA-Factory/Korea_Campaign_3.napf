@@ -91,12 +91,18 @@ private _fnc_createEnemyBase = {
     _x call _fnc_createEnemyBase;
 };
 
-["Site1"] call KISKA_fnc_bases_createFromConfig;
+private _site1Base = ["Site1"] call KISKA_fnc_bases_createFromConfig;
+private _unitsToKill = _site1Base get "unit list";
+[
+    _unitsToKill,
+    {
+        ["site1_killInfantry_task"] call KISKA_fnc_endTask;
+    }
+] call KISKA_fnc_setupMultiKillEvent;
 
-
-
-
-
+/* ----------------------------------------------------------------------------
+    Misc
+---------------------------------------------------------------------------- */
 private _logicGroupMap = call KISKA_fnc_ambientAnim_getAttachLogicGroupsMap;
 (values _logicGroupMap) apply {
     _x enableDynamicSimulation true;

@@ -31,6 +31,7 @@ class KISKA_cfgTasks
         priority = -1;
         notifyOnComplete = ON;
         visibleIn3D = OFF;
+        onComplete = "_this call KOR_fnc_areaTaskComplete";
     };
     class site_base
     {
@@ -44,8 +45,8 @@ class KISKA_cfgTasks
     class Area1_Task : area_base
     {
         title = "Clear Camps In Area 1";
+        marker = "Area1_marker";
         compiledDestination = "markerPos 'Area1_marker'";
-        onComplete = "deleteMarker 'Area1_marker'";
     };
     class Site2_clearTask : site_base
     {
@@ -65,7 +66,7 @@ class KISKA_cfgTasks
     {
         title = "Clear Camps In Area 2";
         compiledDestination = "markerPos 'Area2_marker'";
-        onComplete = "deleteMarker 'Area2_marker'";
+        marker = "Area2_marker";
     };
     class Site7_clearTask : site_base
     {
@@ -88,7 +89,7 @@ class KISKA_cfgTasks
     {
         title = "Clear Camps In Area 3";
         compiledDestination = "markerPos 'Area3_marker'";
-        onComplete = "deleteMarker 'Area3_marker'";
+        marker = "Area3_marker";
     };
     class Site11_clearTask : site_base
     {
@@ -104,7 +105,7 @@ class KISKA_cfgTasks
     {
         title = "Clear Camps In Area 4";
         compiledDestination = "markerPos 'Area4_marker'";
-        onComplete = "deleteMarker 'Area4_marker'";
+        marker = "Area4_marker";
     };
     class Site10_clearTask : site_base
     {
@@ -119,7 +120,7 @@ class KISKA_cfgTasks
     {
         title = "Clear Camps In Area 5";
         compiledDestination = "markerPos 'Area5_marker'";
-        onComplete = "deleteMarker 'Area5_marker'";
+        marker = "Area5_marker";
     };
     class Site4_clearTask : site_base
     {
@@ -138,11 +139,41 @@ class KISKA_cfgTasks
     {
         title = "Clear Camps In Area 6";
         compiledDestination = "markerPos 'Area6_marker'";
-        onComplete = "deleteMarker 'Area6_marker'";
+        marker = "Area6_marker";
     };
     class Site5_clearTask : site_base
     {
         title = "Area 6 - Site 1";
         parentTask = "Area6_Task";
+    };
+
+    /* ----------------------------------------------------------------------------
+        Mortar Area
+    ---------------------------------------------------------------------------- */
+    class site1_Task
+    {
+        title = "Conduct BDA On Enemy Mortars";
+        description = "Artillery has been consistently hammering mortar positions on a mountain top located West of the Airfield. Recon in force the position and clear out any remaining mortar tubes and enemy infantry";
+        destination[] = {15057.3, 3964.97, 0};
+        type = TASK_TYPE_SEARCH;
+        notifyOnComplete = ON;
+        notifyOnCreate = ON;
+    };
+
+    class site1_destroyMortars_task
+    {
+        title = "Ensure All Mortars Are Destroyed";
+        type = TASK_TYPE_DESTROY;
+        notifyOnComplete = ON;
+        notifyOnCreate = OFF;
+        onComplete = "_this call KOR_fnc_site1_subTaskComplete";
+    };
+    class site1_killInfantry_task
+    {
+        title = "Clear Out Infantry";
+        type = TASK_TYPE_ATTACK;
+        notifyOnComplete = ON;
+        notifyOnCreate = OFF;
+        onComplete = "_this call KOR_fnc_site1_subTaskComplete";
     };
 };

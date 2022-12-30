@@ -35,12 +35,13 @@ _heliGroup setCombatMode "BLUE";
 /* ----------------------------------------------------------------------------
     Wait for players to board heli
 ---------------------------------------------------------------------------- */
+private _heliCrewCount = count (_vehicleInfo select 1);
 waituntil {
     sleep 1;
     private _alivePlayers = count (call KISKA_fnc_alivePlayers);
     (
         (_alivePlayers > 0) AND
-        {count (crew KOR_site1_insertHeli) isEqualTo (NUMBER_OF_CREW + _alivePlayers)}
+        {count (crew KOR_site1_insertHeli) isEqualTo (_heliCrewCount + _alivePlayers)}
     )
 };
 
@@ -97,7 +98,7 @@ waituntil {
 
 
 /* ----------------------------------------------------------------------------
-    Drop off players
+    Drop off Units
 ---------------------------------------------------------------------------- */
 private _afterDropCode = {
     private _leader = leader KOR_site1_marineSupportGroup;
@@ -117,8 +118,6 @@ private _afterDropCode = {
         deleteVehicleCrew _heli;
         deleteVehicle _heli;
     };
-
-    [] call KOR_fnc_site1_ambush;
 };
 
 
