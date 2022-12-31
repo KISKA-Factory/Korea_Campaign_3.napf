@@ -322,7 +322,7 @@ private _timeline = [
     [
         {
             params ["","","_timelineMap","_maintainers"];
-            _maintainers params ["_marshaller","_otherMaint"]
+            _maintainers params ["_marshaller","_otherMaint"];
             _marshaller doWatch _otherMaint;
             _otherMaint doWatch _marshaller;
             
