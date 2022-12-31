@@ -184,8 +184,18 @@ class KISKA_cfgTasks
         notifyOnCreate = ON;
         visibleIn3D = ON;
         defaultState = "ASSIGNED";
-        compiledDestination = "KOR_site1_insertHeli"
+        compiledDestination = "KOR_site1_insertHeli";
     };
-
+    class extraction
+    {
+        title = "Extract From The Hill";
+        description = "A helicopter is inbound for pickup";
+        type = TASK_TYPE_GETIN;
+        notifyOnComplete = ON;
+        notifyOnCreate = ON;
+        visibleIn3D = ON;
+        defaultState = "ASSIGNED";
+        compiledDestination = "KOR_extractionLZ";
+    }   
 
 };

@@ -99,6 +99,8 @@ private _heliDropOffScript = {
             deleteVehicleCrew _heli;
             deleteVehicle _heli;
         };
+
+        [KOR_site1_marineSupportGroup] remoteExec ["KOR_fnc_site1_marineOrders",_leader];
     };
 
 
@@ -136,7 +138,7 @@ private _pairedHeliScript = {
     [
         _group,
         (group ((crew KOR_site1_insertHeli) select 0)),
-        2.5,
+        2,
         {
             KOR_site1InsertHeliPairedHeli_info params ["_vehicle","_crew"];
             deleteVehicleCrew _vehicle;

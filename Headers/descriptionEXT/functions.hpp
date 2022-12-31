@@ -41,5 +41,7 @@ class KOR
         {};
         class site1_createHelicopters
         {};
+        class site1_marineOrders
+        {};
     };
 };
