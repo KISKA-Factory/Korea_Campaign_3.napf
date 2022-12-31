@@ -1,5 +1,7 @@
 scriptName "KOR_fnc_site1_insert";
 
+["site1_boardHeli"] call KISKA_fnc_createTaskFromConfig;
+
 private _heliDropOffScript = {
     params ["_vehicleInfo"];
 
@@ -59,6 +61,7 @@ private _heliDropOffScript = {
     };
 
     localNamespace setVariable ["KOR_site1HeliTakingOff",true];
+    ["site1_boardHeli"] call KISKA_fnc_endTask;
 
     // keep players from exiting while heli takes off
     [KOR_site1_insertHeli, true] remoteExecCall ["lock",KOR_site1_insertHeli];

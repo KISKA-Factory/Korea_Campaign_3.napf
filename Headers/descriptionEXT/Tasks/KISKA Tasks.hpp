@@ -176,4 +176,15 @@ class KISKA_cfgTasks
         notifyOnCreate = OFF;
         onComplete = "_this call KOR_fnc_site1_subTaskComplete";
     };
+    class site1_boardHeli
+    {
+        title = "Board Helicopter";
+        type = TASK_TYPE_GETIN;
+        notifyOnComplete = ON;
+        notifyOnCreate = ON;
+        visibleIn3D = ON;
+        defaultState = "ASSIGNED";
+    };
+
+
 };

@@ -12,6 +12,8 @@ KOR_site1InsertHeli_info = [
     -1,
     MARINE_CH53_HELI_CLASS
 ] call KISKA_fnc_spawnVehicle;
+KOR_site1_insertHeli = KOR_site1InsertHeli_info select 0;
+
 KOR_site1InsertHeliPairedHeli_info = [
     KOR_site1_heliSpawn_2,
     -1,
