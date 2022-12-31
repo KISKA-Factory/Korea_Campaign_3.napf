@@ -1,11 +1,25 @@
+#include "Headers\Unit Classes.hpp"
+
 /* ----------------------------------------------------------------------------
     Misc setup
 ---------------------------------------------------------------------------- */
 [] call KOR_fnc_setupClassEventHandlers;
 
-[
-    ["Arsenals"] call KISKA_fnc_getMissionLayerObjects
-] call KISKA_fnc_addArsenal;
+[] call KOR_fnc_site1_spawnMarines;
+
+KOR_site1InsertHeli_info = [
+    KOR_site1_heliSpawn_1,
+    -1,
+    MARINE_CH53_HELI_CLASS
+] call KISKA_fnc_spawnVehicle;
+KOR_site1InsertHeliPairedHeli_info = [
+    KOR_site1_heliSpawn_2,
+    -1,
+    MARINE_CH53_HELI_CLASS
+] call KISKA_fnc_spawnVehicle;
+
+private _pairHeli = KOR_site1InsertHeliPairedHeli_info select 0;
+_pairHeli lock true;
 
 call KOR_fnc_createPlayerVehicles;
 
@@ -125,6 +139,9 @@ private _unitsToKill = _site1Base get "unit list";
 ["COMMANDER"] call KISKA_fnc_traitManager_addToPool_global;
 ["jtac"] call KISKA_fnc_traitManager_addToPool_global;
 ["jtac"] call KISKA_fnc_traitManager_addToPool_global;
+["medic"] call KISKA_fnc_traitManager_addToPool_global;
+["medic"] call KISKA_fnc_traitManager_addToPool_global;
+["engineer"] call KISKA_fnc_traitManager_addToPool_global;
 
 /* ----------------------------------------------------------------------------
     Misc
@@ -134,22 +151,7 @@ private _logicGroupMap = call KISKA_fnc_ambientAnim_getAttachLogicGroupsMap;
     _x enableDynamicSimulation true;
 };
 
-/*
-heli setVariable ["KISKA_ACEFastRope_ropeDeploymentTime",4];
-player moveInCargo heli;
+
 [
-    heli,
-    spot,
-    (fullCrew [heli,"cargo"]) apply {
-        _x select 0
-    },
-    {},
-    28,
-    [
-        [-0.573,-6.031,-1.695],
-        [0.573,-6.031,-1.695]
-    ]
-] call KISKA_fnc_ACE_fastRope;
-*/
-
-
+    ["Arsenals"] call KISKA_fnc_getMissionLayerObjects
+] call KISKA_fnc_addArsenal;
