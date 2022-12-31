@@ -1,18 +1,4 @@
 #include "..\..\Headers\Unit Classes.hpp"
-// maintainers take up positions
-// aircrew start engines
-// crewchief stays outside
-// Marines break from ambient anim and walk to aircraft and board
-// crew chief boards
-// aircraft waits for a few seconds,
-// aircraft lifts off towards the north
-// after a few minutes aircraft returns and lands facing the same way
-// aircrew disembarks
-// aircrew start ambient anim
-
-// TODO add maintainer loadouts to loadouts.hpp
-// TODO have cobras take off too at some point
-// TODO add in helipad facing correct direction
 
 private _timeline = [
     /* ----------------------------------------------------------------------------
@@ -89,7 +75,7 @@ private _timeline = [
             ] call KISKA_fnc_ambientAnim;
 
         },
-        5
+        random [60,120,180] // time till take off sequence
     ],
     /* ----------------------------------------------------------------------------
         Crew Board
@@ -319,16 +305,12 @@ private _timeline = [
             params ["","","_timelineMap"]; 
             
             private _maintainers = _timelineMap get "heliMaintainers";
-            _maintainers params ["_marshaller","_otherMaint"];
-            _marshaller doWatch objNull;
-            _marshaller doWatch _otherMaint;
-            _otherMaint doWatch objNull;
-            _otherMaint doWatch _marshaller;
+            _maintainers params ["_marshaller"];
 
             _marshaller doMove (getPosATL KOR_maintPos_2);
             (group _marshaller) setSpeedMode "LIMITED";
 
-            [_marshaller,_otherMaint]
+            _maintainers
         },
         {
             params ["","","","_maintainers"];
@@ -340,9 +322,9 @@ private _timeline = [
     [
         {
             params ["","","_timelineMap","_maintainers"];
-            _maintainers apply {
-                _x doWatch objNull;
-            };
+            _maintainers params ["_marshaller","_otherMaint"]
+            _marshaller doWatch _otherMaint;
+            _otherMaint doWatch _marshaller;
             
             [
                 _maintainers,
