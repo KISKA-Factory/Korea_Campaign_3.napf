@@ -309,24 +309,60 @@ private _timeline = [
             _marshaller
         },
         {
-            _marshaller getVariable ["KOR_isMarshalling",false]
+            params ["","","","_marshaller"];
+            !(_marshaller getVariable ["KOR_isMarshalling",true])
         },
-        0.1
+        1
     ],
     [
         {
-            hint "marshaller is done";
-            // TODO:
-            // Tell marshallers to stop watching
-            // move marshallers back to idle
-            // tell them to watch each other
-            // animate ambient
+            params ["","","_timelineMap"]; 
+            
+            private _maintainers = _timelineMap get "heliMaintainers";
+            _maintainers params ["_marshaller","_otherMaint"];
+            _marshaller doWatch objNull;
+            _marshaller doWatch _otherMaint;
+            _otherMaint doWatch objNull;
+            _otherMaint doWatch _marshaller;
 
-            // tell helicopter once it reaches its destination to delete recon team and disable simulation
-            // after some time reenable simulation and then have the heli land back at the spawn marker
+            _marshaller doMove (getPosATL KOR_maintPos_2);
+            (group _marshaller) setSpeedMode "LIMITED";
 
-            // _marshaller doWatch objNull;
-            // _otherMaint doWatch objNull;
+            [_marshaller,_otherMaint]
+        },
+        {
+            params ["","","","_maintainers"];
+            _maintainers params ["_marshaller","_otherMaint"];
+            
+            ((_marshaller distance2D KOR_MaintPos_2) <= 1) AND ((_otherMaint distance2D KOR_MaintPos_1) <= 0.75)
+        }
+    ],
+    [
+        {
+            params ["","","_timelineMap","_maintainers"];
+            _maintainers apply {
+                _x doWatch objNull;
+            };
+            
+            [
+                _maintainers,
+                ["STAND_UNARMED_1","STAND_UNARMED_2","STAND_UNARMED_3"]
+            ] call KISKA_fnc_ambientAnim;
+
+            private _heli = _timelineMap get "transportHeli";
+            _heli
+        },
+        {
+            params ["","","","_heli"];
+            _heli distance2D KOR_timelineHeli_wp_3 <= 200
+        },
+        3
+    ],
+    [
+        {
+            params ["","","","_heli"];
+            deleteVehicleCrew _heli;
+            deleteVehicle _heli;
         }
     ]
 ];

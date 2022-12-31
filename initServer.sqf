@@ -25,7 +25,7 @@ call KOR_fnc_createPlayerVehicles;
     Airfield Effects
 ---------------------------------------------------------------------------- */
 [] spawn KOR_fnc_effect_ambientArty;
-// [] call KOR_fnc_effect_ambientHelicopter;
+[] call KOR_fnc_effect_ambientHelicopter;
 ["Airfield"] call KISKA_fnc_bases_createFromConfig;
 
 private _radioChatterPositions = ["Airfield Radio Chatter Markers"] call KISKA_fnc_getMissionLayerObjects;
