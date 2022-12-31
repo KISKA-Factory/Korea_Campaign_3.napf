@@ -184,6 +184,7 @@ class KISKA_cfgTasks
         notifyOnCreate = ON;
         visibleIn3D = ON;
         defaultState = "ASSIGNED";
+        compiledDestination = "KOR_site1_insertHeli"
     };
 
 

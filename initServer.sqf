@@ -1,5 +1,3 @@
-#include "Headers\Unit Classes.hpp"
-
 /* ----------------------------------------------------------------------------
     Misc setup
 ---------------------------------------------------------------------------- */
@@ -7,21 +5,7 @@
 
 [] call KOR_fnc_site1_spawnMarines;
 
-KOR_site1InsertHeli_info = [
-    KOR_site1_heliSpawn_1,
-    -1,
-    MARINE_CH53_HELI_CLASS
-] call KISKA_fnc_spawnVehicle;
-KOR_site1_insertHeli = KOR_site1InsertHeli_info select 0;
-
-KOR_site1InsertHeliPairedHeli_info = [
-    KOR_site1_heliSpawn_2,
-    -1,
-    MARINE_CH53_HELI_CLASS
-] call KISKA_fnc_spawnVehicle;
-
-private _pairHeli = KOR_site1InsertHeliPairedHeli_info select 0;
-_pairHeli lock true;
+call KOR_fnc_site1_createHelicopters;
 
 call KOR_fnc_createPlayerVehicles;
 

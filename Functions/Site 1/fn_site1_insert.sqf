@@ -8,7 +8,8 @@ private _heliDropOffScript = {
     /* ----------------------------------------------------------------------------
         Wait for players to board heli
     ---------------------------------------------------------------------------- */
-    private _heliCrewCount = count (_vehicleInfo select 1);
+    private _crew = _vehicleInfo select 1;
+    private _heliCrewCount = count _crew;
     waituntil {
         sleep 1;
         private _alivePlayers = count ([] call KISKA_fnc_alivePlayers);
@@ -17,7 +18,6 @@ private _heliDropOffScript = {
             {count (crew KOR_site1_insertHeli) isEqualTo (_heliCrewCount + _alivePlayers)}
         )
     };
-
 
     private _supportMarines = units KOR_site1_marineSupportGroup;
     KOR_site1_marineSupportGroup addVehicle KOR_site1_insertHeli;
@@ -30,7 +30,6 @@ private _heliDropOffScript = {
     /* ----------------------------------------------------------------------------
         Wait for support troops to board heli
     ---------------------------------------------------------------------------- */
-
     private _waitingToBoardTime = 0;
     waituntil {
         sleep 1;
@@ -59,6 +58,11 @@ private _heliDropOffScript = {
 
         !_unitIsNotInHelicopter
     };
+
+    private _heli = _vehicleInfo select 0;
+    _heli engineOn true;
+    
+    sleep 9;
 
     localNamespace setVariable ["KOR_site1HeliTakingOff",true];
     ["site1_boardHeli"] call KISKA_fnc_endTask;
@@ -144,27 +148,8 @@ private _pairedHeliScript = {
 
 
 {
-    private _vehicleInfo = _x;
-    private _vehicle = _vehicleInfo select 0;
-    private _jipDamageId = "";
-    private _script = {};
-
-    if (_forEachIndex isEqualTo 0) then {
-        KOR_site1_insertHeli = _vehicle;
-        _jipDamageId = "KOR_site1_insertHeli_damage";
-        _script = _heliDropOffScript;
-    } else {
-        _jipDamageId = "KOR_site1_insertHeliPaired_damage";
-        _script = _pairedHeliScript;
-    };
-
-
-    [_vehicle, false] remoteExec ["allowDamage", 0, _jipDamageId];
-    private _crew = _vehicleInfo select 1;
-    _crew apply {
-        [_x, false] remoteExec ["allowDamage", 0, _jipDamageId];
-    };
-
+    _x params ["_vehicleInfo","_script"];
+    
     private _heliGroup = _vehicleInfo select 2;
     [_heliGroup, true] call KISKA_fnc_ACEX_setHCTransfer;
     _heliGroup setBehaviour "CARELESS";
@@ -173,8 +158,14 @@ private _pairedHeliScript = {
     [_vehicleInfo] spawn _script;
 
 } forEach [
-    KOR_site1InsertHeli_info,
-    KOR_site1InsertHeliPairedHeli_info
+    [
+        KOR_site1InsertHeli_info,
+        _heliDropOffScript
+    ],
+    [
+        KOR_site1InsertHeliPairedHeli_info,
+        _pairedHeliScript
+    ]
 ];
 
 

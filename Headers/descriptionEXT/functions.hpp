@@ -39,5 +39,7 @@ class KOR
         {};
         class site1_subTaskComplete
         {};
+        class site1_createHelicopters
+        {};
     };
 };

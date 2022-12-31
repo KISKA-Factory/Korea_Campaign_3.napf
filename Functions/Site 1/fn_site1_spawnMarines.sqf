@@ -15,6 +15,7 @@ KOR_site1_marineSupportGroup = [
     private _animatePosition = _animatePositions select _forEachIndex;
     _x setPosASL (getPosASL _animatePosition);
     _x setDir (getDir _animatePosition);
+    [_x,false] remoteExec ["allowDamage",0,(str _x) + "_KOR_Damage"];
 
     [
         _x,
