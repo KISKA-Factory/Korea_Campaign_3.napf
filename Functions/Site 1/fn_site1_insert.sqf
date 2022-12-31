@@ -76,11 +76,19 @@ private _heliDropOffScript = {
     };
 
 
-
+    (call CBA_fnc_players) apply {
+        [_x,false] remoteExecCall ["allowDamage",0];
+    };
     /* ----------------------------------------------------------------------------
         Drop off Units
     ---------------------------------------------------------------------------- */
     private _afterDropCode = {
+        [] call KOR_fnc_site1_ambush;
+
+        (call CBA_fnc_players) apply {
+            [_x,true] remoteExecCall ["allowDamage",0];
+        };
+
         private _leader = leader KOR_site1_marineSupportGroup;
         [KOR_site1_marineSupportGroup, KOR_site1_insertHeli] remoteExec ["leaveVehicle",_leader];
 
