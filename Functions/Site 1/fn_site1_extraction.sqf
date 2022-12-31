@@ -8,6 +8,12 @@ scriptName "KOR_fnc_site1_extraction";
 private _afterLandCode = {
     params ["_heli"];
 
+    [KOR_site1_marineSupportGroup] call KISKA_fnc_clearWaypoints;
+    private _supportMarines = units KOR_site1_marineSupportGroup;
+    private _waypoint = KOR_site1_marineSupportGroup addWaypoint [_heli,0];
+    _waypoint setWaypointType "GETIN";
+    _waypoint waypointAttachVehicle _heli;
+
     [
         {
             params ["_heli"];
@@ -17,47 +23,20 @@ private _afterLandCode = {
                 };
             };
         },
-        60,
-        [_heli]
+        [_heli],
+        60
     ] call CBA_fnc_waitAndExecute;
 
-    // [_heli,_thisArgs] spawn {
-    //     params ["_heli","_thisArgs"];
-    //     _thisArgs params ["_crewCount"];
-
-    //     private _supportMarines = units KOR_site1_marineSupportGroup;
-    //     _supportMarines apply {
-    //         _x assignAsCargo _heli;
-    //     };
-    //     _supportMarines orderGetIn true;
-
-    //     waitUntil {
-    //         sleep 2;
-
-    //         private _unitsInHeli = count (crew _heli);
-    //         private _playerCount = count ([true] call KISKA_fnc_alivePlayers);
-    //         _unitsInHeli isEqualTo (_marineCount + _playerCount + _crewCount)
-    //     };
-
-    //     localNamespace setVariable ["KOR_extractionPickedUp", true];
-
-    //     [
-    //         _heli,
-    //         KOR_site1_heliSpawn_1,
-    //         "LAND"
-    //     ] call KISKA_fnc_heliLand;
-    // };
-
     [
-        [_thisArgs,{
-            params ["_heli"];
-            _thisArgs params ["_crewCount"];
+        {
+            params ["_heli","_crewCount","_marineCount"];
             
             private _unitsInHeli = count (crew _heli);
             private _playerCount = count ([true] call KISKA_fnc_alivePlayers);
             _unitsInHeli isEqualTo (_marineCount + _playerCount + _crewCount)
-        }],
+        },
         {
+            // everyone is picked up, RTB
             params ["_heli"];
             
             ["extraction"] call KISKA_fnc_endTask;
@@ -72,7 +51,14 @@ private _afterLandCode = {
                     ["EveryoneWon"] call BIS_fnc_endMissionServer;
                 }
             ] call KISKA_fnc_heliLand;
-        }
+
+        },
+        3,
+        [
+            _heli,
+            _thisArgs select 0,
+            count (units KOR_site1_marineSupportGroup)
+        ]
     ] call KISKA_fnc_waitUntil;
 };
 
@@ -112,10 +98,20 @@ private _afterLandCode = {
         ] call KISKA_fnc_heliLand;
 
     } else {
+        KOR_pairedExtractionHeli = _vehicle;
         [
             _heliCrewGroup,
             KOR_extractionHeliGroup,
-            2
+            2,
+            {
+                [
+                    KOR_pairedExtractionHeli,
+                    KOR_site1_heliSpawn_2,
+                    "LAND"
+                ] call KISKA_fnc_heliLand;
+
+            },
+            {localNamespace getVariable ["KOR_extractionPickedUp", false]}
         ] spawn KISKA_fnc_stalk;
     };
 } forEach [
