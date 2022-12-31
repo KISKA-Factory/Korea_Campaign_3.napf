@@ -13,6 +13,8 @@ class KOR
         {};
         class effect_setupMusicMap
         {};
+        class effect_weatherTimeline
+        {};
     };
     class Misc
     {

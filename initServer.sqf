@@ -141,3 +141,12 @@ private _logicGroupMap = call KISKA_fnc_ambientAnim_getAttachLogicGroupsMap;
 [
     ["Arsenals"] call KISKA_fnc_getMissionLayerObjects
 ] call KISKA_fnc_addArsenal;
+
+0 setOvercast 0.25;
+forceWeatherChange;
+
+private _timeForWeather = 7200; // 2hrs
+_timeForWeather setOvercast 1;
+_timeForWeather setRain 1;
+_timeForWeather setLightnings 1;
+// call KOR_fnc_effect_weatherTimeline;
