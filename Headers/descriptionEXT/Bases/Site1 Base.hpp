@@ -6,6 +6,11 @@ class Site1
         ENEMY_INFANTRY_UNIT_CLASSES
     };
 
+    class reinforceBase
+    {
+        onEnemyDetected = "['site1Fight',_this select 1] call KOR_fnc_effect_playMusicForScene; false";
+    };
+
     class infantry
     {
         class Camp1_path
@@ -17,7 +22,7 @@ class Site1
             positions = "Camp 1 Path Spawns";
             dynamicSim = ON;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp1_Pathing";
                 canCall[] = {
@@ -35,7 +40,7 @@ class Site1
             positions = "Camp 1 Static Spawns";
             dynamicSim = ON;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp1_static";
                 canCall[] = {
@@ -53,7 +58,7 @@ class Site1
             positions = "Camp 2 Mortar Building Spawns";
             dynamicSim = ON;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp2_mortarBuilding";
                 canCall[] = {
@@ -71,7 +76,7 @@ class Site1
             dynamicSim = ON;
             positions = "Camp 2 Overlook Spawns 1";
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp2_overlook_1";
                 canCall[] = {
@@ -95,7 +100,7 @@ class Site1
             dynamicSim = ON;
             positions = "Camp 2 Path Spawns 1";
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp2_path_1";
                 canCall[] = {
@@ -106,7 +111,7 @@ class Site1
         class Camp2_path_2 : Camp2_path_1
         {
             positions = "Camp 2 Path Spawns 2";
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp2_path_2";
                 canCall[] = {
@@ -117,7 +122,7 @@ class Site1
         class Camp2_path_3 : Camp2_path_1
         {
             positions = "Camp 2 Path Spawns 3";
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp2_path_3";
                 canCall[] = {
@@ -134,7 +139,7 @@ class Site1
             numberOfUnits = 12;
             unitsPerGroup = 4;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp3_static";
                 canCall[] = {
@@ -152,7 +157,7 @@ class Site1
             numberOfUnits = 12;
             unitsPerGroup = 6;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 id = "Camp3_path";
                 canCall[] = {

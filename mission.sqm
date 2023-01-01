@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7988;
+		nextID=8156;
 	};
 	class Camera
 	{
-		pos[]={19146.143,289.90875,5848.208};
-		dir[]={-0.41597089,-0.52619565,0.74182737};
-		up[]={-0.25739786,0.85031068,0.45903596};
-		aside[]={0.87232482,7.3157207e-007,0.48914415};
+		pos[]={18351.885,255.72916,4900.6548};
+		dir[]={0.8218661,-0.47088349,0.32092464};
+		up[]={0.43862396,0.88220185,0.17127532};
+		aside[]={0.36377156,-1.2347009e-006,-0.93159354};
 	};
 };
 binarizationWanted=0;
@@ -165336,7 +165336,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={15213.218,357.71014,6750.1416};
+										position[]={16818.447,120.10605,5113.8433};
 									};
 									side="Empty";
 									class Attributes
@@ -165344,14 +165344,14 @@ class Mission
 									};
 									id=26336;
 									type="Sign_Arrow_Large_Green_F";
-									atlOffset=66.179169;
+									atlOffset=96.604904;
 								};
 								class Item1
 								{
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={15213.218,357.71014,7110.792};
+										position[]={16944.242,120.10605,5366.3535};
 									};
 									side="Empty";
 									class Attributes
@@ -165359,14 +165359,14 @@ class Mission
 									};
 									id=26337;
 									type="Sign_Arrow_Large_Green_F";
-									atlOffset=48.899445;
+									atlOffset=132.13776;
 								};
 								class Item2
 								{
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={15714.62,357.71014,6750.1416};
+										position[]={16972.238,120.10605,5196.0093};
 									};
 									side="Empty";
 									class Attributes
@@ -165374,11 +165374,11 @@ class Mission
 									};
 									id=26338;
 									type="Sign_Arrow_Large_Green_F";
-									atlOffset=172.76297;
+									atlOffset=93.7202;
 								};
 							};
 							id=26335;
-							atlOffset=111.03825;
+							atlOffset=92.12439;
 						};
 						class Item4
 						{
@@ -165441,11 +165441,11 @@ class Mission
 						};
 					};
 					id=26330;
-					atlOffset=326.32758;
+					atlOffset=53.994278;
 				};
 			};
 			id=5098;
-			atlOffset=206.04358;
+			atlOffset=68.006653;
 		};
 		class Item11
 		{

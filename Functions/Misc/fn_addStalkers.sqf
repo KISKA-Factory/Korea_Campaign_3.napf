@@ -5,7 +5,7 @@ params ["_layer","_musicScene"];
 
 [
     {
-        [_musicScene] call KOR_fnc_effect_playMusicForScene;
+        _this call KOR_fnc_effect_playMusicForScene;
     },
     [_musicScene],
     30

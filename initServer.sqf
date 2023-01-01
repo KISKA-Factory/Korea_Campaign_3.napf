@@ -188,8 +188,8 @@ private _musicSceneMap = createHashMapFromArray [
     ["site10","CCM_se_HeavyTrailer5"],
     ["site5","CCM_se_PureEnergy"],
     ["site11","CCM_se_HeavyTrailer3"],
-    ["site1Insert","CCM_se_BreakingNews5"],
-    ["site1Fight","CCM_ps_PickASide"],
+    ["site1Insert","CCM_se_BreakingNews5"], // todo
+    ["site1Fight","CCM_ps_PickASide"], // todo
     ["stalking1","CCM_se_BreakingNews2"],
     ["stalking2","CCM_se_BreakingNews1"],
     ["stalking3","CCM_se_BreakingNews4"]
