@@ -199,6 +199,6 @@ class KISKA_cfgTasks
         visibleIn3D = ON;
         defaultState = "ASSIGNED";
         compiledDestination = "KOR_extractionLZ";
-    }   
+    };
 
 };
