@@ -1,8 +1,11 @@
 scriptName "KOR_fnc_effect_playMusicForScene";
 
-params ["_scene","_detectedTarget"];
+params [
+	"_scene",
+	"_detectedTarget"
+];
 
-if !(_detectedTarget in (call CBA_fnc_players)) exitWith {};
+if ((_detectedTarget isNotEqualTo -1) AND !(_detectedTarget in (call CBA_fnc_players))) exitWith {};
 
 private _var = "KOR_" + _scene + "_musicPlayed";
 if (localNamespace getVariable [_var,false]) exitWith {};

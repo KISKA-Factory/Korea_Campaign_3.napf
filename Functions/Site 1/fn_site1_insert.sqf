@@ -61,7 +61,6 @@ private _heliDropOffScript = {
 
     private _heli = _vehicleInfo select 0;
     _heli engineOn true;
-    ["site1Insert"] call KOR_fnc_effect_playMusicForScene;
     [[10,20,30]] call KISKA_fnc_randomMusic_setTrackInterval;
     
     sleep 9;
@@ -75,6 +74,8 @@ private _heliDropOffScript = {
         sleep 15;
         // let people switch seats
         [KOR_site1_insertHeli, false] remoteExecCall ["lock",KOR_site1_insertHeli];
+        ["site1Insert",-1] call KOR_fnc_effect_playMusicForScene;
+
     };
 
 

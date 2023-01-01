@@ -39,6 +39,7 @@ private _firstWaveUnits = [[
 [
     _firstWaveUnits,
     [[_ambushFunction],{
+        hint "spawn second ambush";
         _thisArgs params ["_ambushFunction"];
         [[
             [15063.1,3850.61,0],
