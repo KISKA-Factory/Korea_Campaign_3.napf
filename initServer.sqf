@@ -150,10 +150,7 @@ _timeForWeather setOvercast 1;
 _timeForWeather setRain 1;
 _timeForWeather setLightnings 1;
 // call KOR_fnc_effect_weatherTimeline;
-// SB
-// SCAV
-// KE
-// Hint
+
 [
     -1,
     [
