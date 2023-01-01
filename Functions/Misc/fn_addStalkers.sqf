@@ -3,7 +3,13 @@
 scriptName "KOR_fnc_addStalkers";
 params ["_layer","_musicScene"];
 
-[_musicScene] call KOR_fnc_effect_playMusicForScene;
+[
+    {
+        [_musicScene] call KOR_fnc_effect_playMusicForScene;
+    },
+    [_musicScene],
+    30
+] call CBA_fnc_waitAndExecute;
 
 
 private _afterFastropeFunction = {
@@ -110,7 +116,7 @@ private _spawnPositions = ["stalker heli spawns"] call KISKA_fnc_getMissionLayer
 
 
     private _stalkerGroup = [
-        8,
+        6,
         [ ENEMY_INFANTRY_UNIT_CLASSES ],
         OPFOR,
         [0,0,0],

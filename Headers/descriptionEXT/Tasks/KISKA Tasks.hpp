@@ -72,6 +72,7 @@ class KISKA_cfgTasks
     {
         title = "Area 2 - Site 1";
         parentTask = "Area2_Task";
+        onComplete = "['Stalker 1 Markers','stalking1'] call KOR_fnc_addStalkers";
     };
     class Site8_clearTask : Site7_clearTask
     {
@@ -80,6 +81,7 @@ class KISKA_cfgTasks
     class Site9_clearTask : Site7_clearTask
     {
         title = "Area 2 - Site 3";
+        onComplete = "['Stalker 2 Markers','stalking2'] call KOR_fnc_addStalkers";
     };
 
     /* ----------------------------------------------------------------------------
@@ -111,6 +113,7 @@ class KISKA_cfgTasks
     {
         title = "Area 4 - Site 1";
         parentTask = "Area4_Task";
+        onComplete = "['Stalker 3 Markers','stalking3'] call KOR_fnc_addStalkers";
     };
 
     /* ----------------------------------------------------------------------------
