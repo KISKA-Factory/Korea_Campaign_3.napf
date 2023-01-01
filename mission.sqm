@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7653;
+		nextID=7815;
 	};
 	class Camera
 	{
-		pos[]={18354.711,137.21762,2294.0071};
-		dir[]={-0.93264204,-0.096117899,0.34803316};
-		up[]={-0.090220466,0.99534369,0.033666659};
-		aside[]={0.34965217,9.7688098e-007,0.93697941};
+		pos[]={18342.982,138.15825,2283.4404};
+		dir[]={-0.33203572,-0.11778579,0.93594718};
+		up[]={-0.039395977,0.99302846,0.11104941};
+		aside[]={0.94251257,6.8482041e-007,0.33436581};
 	};
 };
 binarizationWanted=0;
@@ -17718,6 +17718,7 @@ class Mission
 										};
 									};
 									id=5068;
+									atlOffset=90;
 								};
 								class Item1
 								{
@@ -17834,6 +17835,7 @@ class Mission
 										};
 									};
 									id=5079;
+									atlOffset=90;
 								};
 								class Item2
 								{
@@ -17982,10 +17984,11 @@ class Mission
 								};
 							};
 							id=5061;
+							atlOffset=190.89532;
 						};
 					};
 					id=34;
-					atlOffset=0.72714233;
+					atlOffset=189.57802;
 				};
 				class Item1
 				{
@@ -96250,7 +96253,6 @@ class Mission
 											};
 											id=21677;
 											type="Land_BakedBeans_F";
-											atlOffset=1.1444092e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96323,7 +96325,6 @@ class Mission
 											};
 											id=21678;
 											type="Land_Can_Dented_F";
-											atlOffset=3.8146973e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96396,7 +96397,6 @@ class Mission
 											};
 											id=21679;
 											type="Land_Can_V2_F";
-											atlOffset=7.6293945e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96469,7 +96469,6 @@ class Mission
 											};
 											id=21680;
 											type="Land_Can_V3_F";
-											atlOffset=7.6293945e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96542,7 +96541,6 @@ class Mission
 											};
 											id=21681;
 											type="Land_Can_Rusty_F";
-											atlOffset=7.6293945e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96615,7 +96613,6 @@ class Mission
 											};
 											id=21682;
 											type="Land_Can_V1_F";
-											atlOffset=7.6293945e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96643,7 +96640,6 @@ class Mission
 												angles[]={0.0063851168,0.38210332,6.2626891};
 											};
 											side="Empty";
-											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -96652,7 +96648,7 @@ class Mission
 											};
 											id=21730;
 											type="Land_CanisterFuel_F";
-											atlOffset=0.00019454956;
+											atlOffset=0.46470642;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96680,7 +96676,6 @@ class Mission
 												angles[]={0.0063851168,4.1759782,6.2626891};
 											};
 											side="Empty";
-											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -96689,7 +96684,7 @@ class Mission
 											};
 											id=21731;
 											type="Land_CanisterFuel_Blue_F";
-											atlOffset=0.00011444092;
+											atlOffset=0.47993851;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96726,7 +96721,6 @@ class Mission
 											};
 											id=21735;
 											type="Land_CanisterFuel_Blue_F";
-											atlOffset=0.00016403198;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96763,7 +96757,7 @@ class Mission
 											};
 											id=21732;
 											type="Land_CanisterFuel_Red_F";
-											atlOffset=6.1035156e-005;
+											atlOffset=3.8146973e-006;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96800,7 +96794,6 @@ class Mission
 											};
 											id=21734;
 											type="Land_CanisterFuel_Red_F";
-											atlOffset=5.3405762e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -96909,7 +96902,6 @@ class Mission
 											};
 											id=21683;
 											type="Land_Canteen_F";
-											atlOffset=2.6702881e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -97009,7 +97001,6 @@ class Mission
 												angles[]={0.0063851168,0,6.2626891};
 											};
 											side="Empty";
-											flags=4;
 											class Attributes
 											{
 												createAsSimpleObject=1;
@@ -97018,7 +97009,7 @@ class Mission
 											};
 											id=21684;
 											type="Land_CerealsBox_F";
-											atlOffset=0.00011062622;
+											atlOffset=0.38061905;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -138108,7 +138099,7 @@ class Mission
 				};
 			};
 			id=33;
-			atlOffset=-32.245163;
+			atlOffset=78.503944;
 		};
 		class Item9
 		{
@@ -166510,8 +166501,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18334.045,134.95024,2297.876};
-						angles[]={0,0.55587065,-0};
+						position[]={18347.564,134.5952,2293.9971};
+						angles[]={0,0.55587065,0};
 					};
 					side="West";
 					flags=7;
@@ -166520,10 +166511,6 @@ class Mission
 						isPlayer=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -166575,7 +166562,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18335.684,134.9502,2299.488};
+						position[]={18349.203,134.59515,2295.6091};
 						angles[]={0,2.3852715,0};
 					};
 					side="West";
@@ -166585,10 +166572,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -166604,7 +166587,7 @@ class Mission
 					};
 					id=26305;
 					type="rhsusf_usmc_recon_marpat_wd_rifleman";
-					atlOffset=0.03994751;
+					atlOffset=-4.5776367e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -166641,7 +166624,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18336.533,134.95024,2300.1997};
+						position[]={18350.053,134.5952,2296.3208};
 						angles[]={0,2.3852715,0};
 					};
 					side="West";
@@ -166651,10 +166634,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -166706,7 +166685,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18337.289,134.95024,2300.988};
+						position[]={18350.809,134.5952,2297.1091};
 						angles[]={0,2.3852715,0};
 					};
 					side="West";
@@ -166716,10 +166695,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -166771,7 +166746,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18337.955,134.95024,2301.6753};
+						position[]={18351.475,134.5952,2297.7964};
 						angles[]={0,2.3852715,0};
 					};
 					side="West";
@@ -166781,10 +166756,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -166836,8 +166807,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18338.246,134.95024,2299.2744};
-						angles[]={0,5.2587075,-0};
+						position[]={18351.766,134.5952,2295.3955};
+						angles[]={0,5.2587075,0};
 					};
 					side="West";
 					flags=5;
@@ -166846,10 +166817,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -166901,8 +166868,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18337.443,134.95024,2298.6809};
-						angles[]={0,5.3705049,-0};
+						position[]={18350.963,134.5952,2294.802};
+						angles[]={0,5.3705049,0};
 					};
 					side="West";
 					flags=5;
@@ -166911,10 +166878,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -166966,8 +166929,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18336.852,134.95024,2298.0762};
-						angles[]={0,5.3151641,-0};
+						position[]={18350.371,134.5952,2294.1973};
+						angles[]={0,5.3151641,0};
 					};
 					side="West";
 					flags=5;
@@ -166976,10 +166939,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -167031,8 +166990,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18333.365,134.95024,2298.6184};
-						angles[]={0,0.79228103,-0};
+						position[]={18346.885,134.5952,2294.7395};
+						angles[]={0,0.79228103,0};
 					};
 					side="West";
 					flags=5;
@@ -167041,10 +167000,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
@@ -167096,8 +167051,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={18334.387,134.99019,2299.9553};
-						angles[]={0,3.7044041,-0};
+						position[]={18347.906,134.63515,2296.0764};
+						angles[]={0,3.7044041,0};
 					};
 					side="West";
 					flags=5;
@@ -167106,10 +167061,6 @@ class Mission
 						isPlayable=1;
 						class Inventory
 						{
-							class binocular
-							{
-								name="Binocular";
-							};
 							class uniform
 							{
 								typeName="rhs_uniform_FROG01_wd";
