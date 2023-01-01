@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=26322;
+		nextID=26329;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7815;
+		nextID=7816;
 	};
 	class Camera
 	{
-		pos[]={18342.982,138.15825,2283.4404};
-		dir[]={-0.33203572,-0.11778579,0.93594718};
-		up[]={-0.039395977,0.99302846,0.11104941};
-		aside[]={0.94251257,6.8482041e-007,0.33436581};
+		pos[]={15096.788,395.76749,3975.2383};
+		dir[]={0.089870676,-0.29154697,0.95245105};
+		up[]={0.027395155,0.95650381,0.29032224};
+		aside[]={0.99568993,-2.6232919e-007,-0.093949065};
 	};
 };
 binarizationWanted=0;
@@ -173,8 +173,8 @@ addons[]=
 	"A3_Misc_F_Helpers",
 	"A3_Static_F_Mortar_01",
 	"A3_Modules_F_Curator_Curator",
-	"rhs_c_heavyweapons",
 	"rhsgref_c_vehicles_ret",
+	"rhs_c_heavyweapons",
 	"A3_Ui_F",
 	"A3_Modules_F_Curator_Misc"
 };
@@ -593,15 +593,15 @@ class AddonsMetaData
 		};
 		class Item62
 		{
-			className="rhs_c_heavyweapons";
-			name="Heavy weapons pack";
+			className="rhsgref_c_vehicles_ret";
+			name="GREF Vehicle Retextures";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
 		class Item63
 		{
-			className="rhsgref_c_vehicles_ret";
-			name="GREF Vehicle Retextures";
+			className="rhs_c_heavyweapons";
+			name="Heavy weapons pack";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
@@ -640,8 +640,8 @@ dlcs[]=
 	"Argo",
 	"Oldman",
 	"Curator",
-	"RHS_AFRF",
-	"RHS_GREF"
+	"RHS_GREF",
+	"RHS_AFRF"
 };
 randomSeed=11995243;
 class ScenarioData
@@ -671,7 +671,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=31;
+		items=27;
 		class Item0
 		{
 			dataType="Comment";
@@ -138303,7 +138303,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Hidden 3D Markers";
-			state=1;
 			class Entities
 			{
 				items=18;
@@ -139801,7 +139800,7 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15011.213,417.81976,4188.3618};
+												position[]={15010.59,417.85928,4188.3013};
 												angles[]={6.1736283,3.0774798,6.209321};
 											};
 											side="Empty";
@@ -140078,7 +140077,7 @@ class Mission
 										};
 									};
 									id=12769;
-									atlOffset=-0.21154785;
+									atlOffset=-0.2114563;
 								};
 								class Item4
 								{
@@ -140895,7 +140894,7 @@ class Mission
 								};
 							};
 							id=12819;
-							atlOffset=0.9637146;
+							atlOffset=0.96368408;
 						};
 						class Item3
 						{
@@ -142440,8 +142439,8 @@ class Mission
 											dataType="Object";
 											class PositionInfo
 											{
-												position[]={15090.504,359.46182,3876.7354};
-												angles[]={0.10659204,1.2024348,6.1099429};
+												position[]={15088.918,359.60736,3877.8071};
+												angles[]={0.10659204,1.2024348,6.1255088};
 											};
 											side="Empty";
 											flags=4;
@@ -142452,6 +142451,7 @@ class Mission
 											};
 											id=12782;
 											type="Sign_Arrow_Direction_F";
+											atlOffset=3.0517578e-005;
 											class CustomAttributes
 											{
 												class Attribute0
@@ -142507,11 +142507,11 @@ class Mission
 										};
 									};
 									id=12768;
-									atlOffset=0.18313599;
+									atlOffset=0.19299316;
 								};
 							};
 							id=12820;
-							atlOffset=0.99078369;
+							atlOffset=0.98550415;
 						};
 						class Item4
 						{
@@ -143788,7 +143788,7 @@ class Mission
 						};
 					};
 					id=5154;
-					atlOffset=7.3200684;
+					atlOffset=7.3231964;
 				};
 				class Item4
 				{
@@ -165434,79 +165434,11 @@ class Mission
 		};
 		class Item23
 		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={18186.742,257.6261,4395.7788};
-				angles[]={0.2599746,0,0.15279643};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=25485;
-			type="rhs_KORD_high_VDV";
-			atlOffset=-0.040527344;
-		};
-		class Item24
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={18185.189,257.01013,4396.0503};
-				angles[]={0.2599746,0,0.15279643};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=25486;
-			type="rhs_KORD_VDV";
-			atlOffset=-0.032913208;
-		};
-		class Item25
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={18193.303,258.21661,4396.9141};
-				angles[]={0.2599746,0,0.12041053};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=25489;
-			type="rhsgref_ins_DSHKM";
-			atlOffset=-0.033905029;
-		};
-		class Item26
-		{
-			dataType="Object";
-			class PositionInfo
-			{
-				position[]={18195.041,257.73334,4398.3198};
-				angles[]={0.25903943,0,0.12139694};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=25490;
-			type="rhsgref_ins_DSHKM_Mini_TriPod";
-			atlOffset=-0.027618408;
-		};
-		class Item27
-		{
 			dataType="Layer";
 			name="Turrets";
 			class Entities
 			{
-				items=6;
+				items=7;
 				class Item0
 				{
 					dataType="Layer";
@@ -165852,11 +165784,56 @@ class Mission
 					id=26193;
 					atlOffset=-0.30548859;
 				};
+				class Item6
+				{
+					dataType="Layer";
+					name="Site 1 Turrets";
+					class Entities
+					{
+						items=2;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15090.49,361.07162,3876.5405};
+								angles[]={0.10659204,1.0441583,6.1099429};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								dynamicSimulation=1;
+							};
+							id=26322;
+							type="rhsgref_ins_DSHKM";
+						};
+						class Item1
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15012.137,419.23273,4187.5146};
+								angles[]={6.1736283,3.1579351,6.209321};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								dynamicSimulation=1;
+							};
+							id=26328;
+							type="rhs_KORD_high_VDV";
+						};
+					};
+					id=26323;
+					atlOffset=25.617126;
+				};
 			};
 			id=25500;
-			atlOffset=58.26133;
+			atlOffset=234.65916;
 		};
-		class Item28
+		class Item24
 		{
 			dataType="Layer";
 			name="Markers";
@@ -166474,7 +166451,7 @@ class Mission
 			id=26257;
 			atlOffset=-66.442596;
 		};
-		class Item29
+		class Item25
 		{
 			dataType="Logic";
 			class PositionInfo
@@ -166489,7 +166466,7 @@ class Mission
 			type="ModuleCoverMap_F";
 			atlOffset=129.82181;
 		};
-		class Item30
+		class Item26
 		{
 			dataType="Group";
 			side="West";

@@ -162,4 +162,13 @@ class Site1
             };
         };
     };
+
+    class Turrets
+    {
+        class campTurrets 
+        {
+            turrets = "Site 1 Turrets";
+            dynamicSim = ON;
+        };
+    };
 };

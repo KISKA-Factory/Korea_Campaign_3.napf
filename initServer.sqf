@@ -165,6 +165,7 @@ _timeForWeather setLightnings 1;
         "CCM_KE_CurtainsAreAlwaysDrawn",
         "CCM_KE_MistAndClouds",
         "CCM_SQ_LivedYears",
+        // "CCM_se_BreakingNews3",
         "CCM_HF_grace",
         "CCM_SQ_SuspensePiano",
         "CCM_AV_SunnyWinterDay",
