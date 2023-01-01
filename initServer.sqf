@@ -150,3 +150,37 @@ _timeForWeather setOvercast 1;
 _timeForWeather setRain 1;
 _timeForWeather setLightnings 1;
 // call KOR_fnc_effect_weatherTimeline;
+// SB
+// SCAV
+// KE
+// Hint
+[
+    -1,
+    [
+        "CCM_se_CinematicSuspenseSeriesEpisode004",
+        "CCM_se_CinematicSuspenseSeriesEpisode005",
+        "CCM_se_CinematicSuspenseSeriesEpisode007",
+        "CCM_sb_Permafrost",
+        "CCM_sb_AKindofHope",
+        "CCM_sb_inSearchOfSolitude",
+        "CCM_sb_aurora",
+        "CCM_SAV_incandescent",
+        "CCM_KE_CurtainsAreAlwaysDrawn",
+        "CCM_KE_MistAndClouds",
+        "CCM_SQ_LivedYears",
+        "CCM_HF_grace",
+        "CCM_SQ_SuspensePiano",
+        "CCM_AV_SunnyWinterDay",
+        "CCM_KE_Imminence",
+        "CCM_KE_Scenery",
+        "CCM_KE_Denouement",
+        "CCM_HF_impending",
+        "CCM_sb_sleep",
+        "CCM_KE_Plague",
+        "CCM_sb_sheMovedMountains",
+        "CCM_KE_Harbor",
+        "CCM_HF_theWayOutLonging",
+        "CCM_KE_ColdWarEcho"
+    ],
+    [60,120,180]
+] call KISKA_fnc_randomMusic;
