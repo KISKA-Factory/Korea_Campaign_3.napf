@@ -35,7 +35,7 @@ private _afterFastropeFunction = {
             if !([_stalkerGroup] call KISKA_fnc_isGroupAlive) exitWith {true};
 
             private _leader = leader _stalkerGroup;
-            private _players = call KISKA_fnc_alivePlayers; 
+            private _players = [true] call KISKA_fnc_alivePlayers; 
             if (_players isEqualTo []) exitWith {false};
 
             private _nearestPlayerGroup = grpNull;
