@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=26329;
+		nextID=26338;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=7816;
+		nextID=7820;
 	};
 	class Camera
 	{
-		pos[]={18295.406,286.10806,4653.2944};
-		dir[]={0.73841292,-0.51973575,0.42996225};
-		up[]={0.44916418,0.85424685,0.26153839};
-		aside[]={0.50323582,-4.6061177e-007,-0.86424905};
+		pos[]={15205.129,828.71069,7257.0781};
+		dir[]={0.74376476,-0.34136233,-0.5749228};
+		up[]={0.27014035,0.93983972,-0.20881644};
+		aside[]={-0.61163026,-7.5926073e-007,-0.79125249};
 	};
 };
 binarizationWanted=0;
@@ -138305,7 +138305,7 @@ class Mission
 			name="Hidden 3D Markers";
 			class Entities
 			{
-				items=18;
+				items=19;
 				class Item0
 				{
 					dataType="Layer";
@@ -165185,9 +165185,111 @@ class Mission
 						nAttributes=1;
 					};
 				};
+				class Item18
+				{
+					dataType="Layer";
+					name="Stalker Insert Markers";
+					class Entities
+					{
+						items=4;
+						class Item0
+						{
+							dataType="Layer";
+							name="Stalker 1 Markers";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={18314.699,247.09781,4370.8403};
+										angles[]={6.2402134,0,6.2511969};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+										name="KOR_stalkerInsert_1";
+									};
+									id=26329;
+									type="Sign_Arrow_Large_Green_F";
+								};
+							};
+							id=26331;
+						};
+						class Item1
+						{
+							dataType="Layer";
+							name="Stalker 2 Markers";
+							id=26332;
+							atlOffset=90;
+						};
+						class Item2
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={15664.168,713.24377,7036.8115};
+							};
+							side="Empty";
+							class Attributes
+							{
+								name="KOR_deletePos_enemy";
+							};
+							id=26334;
+							type="Sign_Arrow_Large_Blue_F";
+							atlOffset=438.02975;
+						};
+						class Item3
+						{
+							dataType="Layer";
+							name="stalker heli spawns";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={15213.218,773.40552,6750.1416};
+									};
+									side="Empty";
+									class Attributes
+									{
+									};
+									id=26336;
+									type="Sign_Arrow_Large_Green_F";
+									atlOffset=481.87454;
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={15213.218,773.40552,7264.1997};
+									};
+									side="Empty";
+									class Attributes
+									{
+									};
+									id=26337;
+									type="Sign_Arrow_Large_Green_F";
+									atlOffset=467.44067;
+								};
+							};
+							id=26335;
+							atlOffset=490.43729;
+						};
+					};
+					id=26330;
+					atlOffset=241.67316;
+				};
 			};
 			id=5098;
-			atlOffset=62.151749;
+			atlOffset=232.09856;
 		};
 		class Item11
 		{

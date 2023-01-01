@@ -15,8 +15,6 @@ class KOR
         {};
         class effect_weatherTimeline
         {};
-        class effect_proximityMusic
-        {};
         class effect_playMusicForScene
         {};
     };
@@ -28,6 +26,8 @@ class KOR
         class setupClassEventHandlers
         {};
         class areaTaskComplete
+        {};
+        class addStalkers
         {};
     };
     class Site1

@@ -29,7 +29,6 @@ KOR_ambientArty apply {
         CONDITION_NO_PLAYER_WITHIN_RADIUS_2D(KOR_ambientArty_1,700);
     },
     {
-        hint "no ambient";
         localNamespace setVariable ["KOR_doAmbientArtyFire",false]
     },
     5
