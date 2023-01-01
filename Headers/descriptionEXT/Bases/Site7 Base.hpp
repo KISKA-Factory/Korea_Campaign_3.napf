@@ -10,6 +10,7 @@ class Site7
         canCall[] = {
             "site7_patrol1"
         };
+        onEnemyDetected = "['site7',_this select 1] call KOR_fnc_effect_playMusicForScene; false";
     };
 
     class infantry

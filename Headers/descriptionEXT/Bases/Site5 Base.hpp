@@ -5,6 +5,11 @@ class Site5
         ENEMY_INFANTRY_UNIT_CLASSES
     };
 
+    class reinforceBase
+    {
+        onEnemyDetected = "['site5',_this select 1] call KOR_fnc_effect_playMusicForScene; false";
+    };
+
     class infantry
     {
         class site_5_interior_1
@@ -15,7 +20,7 @@ class Site5
             canPath = OFF;
             dynamicSim = ON;
             
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site_5_exterior_1",
@@ -44,7 +49,7 @@ class Site5
             canPath = OFF;
             dynamicSim = ON;
             
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site_5_exterior_4",
@@ -93,7 +98,7 @@ class Site5
             canPath = ON;
             dynamicSim = ON;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site_5_exterior_2",
@@ -127,7 +132,7 @@ class Site5
             canPath = ON;
             dynamicSim = ON;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site_5_exterior_1",
@@ -146,7 +151,7 @@ class Site5
             canPath = OFF;
             dynamicSim = ON;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site_5_exterior_1",
@@ -162,7 +167,7 @@ class Site5
         {
             positions = "Site 5 Exterior Unit Markers 3";
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site_5_exterior_1",
@@ -176,7 +181,7 @@ class Site5
         {
             positions = "Site 5 Exterior Unit Markers 4";
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site_5_exterior_5",
@@ -192,7 +197,7 @@ class Site5
             canPath = ON;
             dynamicSim = ON;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site_5_exterior_4",

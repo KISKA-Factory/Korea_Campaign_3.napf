@@ -15,6 +15,10 @@ class KOR
         {};
         class effect_weatherTimeline
         {};
+        class effect_proximityMusic
+        {};
+        class effect_playMusicForScene
+        {};
     };
     class Misc
     {

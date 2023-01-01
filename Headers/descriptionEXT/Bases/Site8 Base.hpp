@@ -10,6 +10,7 @@ class Site8
         canCall[] = {
             "site8_patrol1"
         };
+        onEnemyDetected = "['site8',_this select 1] call KOR_fnc_effect_playMusicForScene; false";
     };
 
     class reinforceBase_2
@@ -17,6 +18,7 @@ class Site8
         canCall[] = {
             "site8_patrol2"
         };
+        onEnemyDetected = "['site8',_this select 1] call KOR_fnc_effect_playMusicForScene; false";
     };
 
     class infantry

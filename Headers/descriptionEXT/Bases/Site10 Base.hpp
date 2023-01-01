@@ -5,6 +5,11 @@ class Site10
         ENEMY_INFANTRY_UNIT_CLASSES
     };
 
+    class reinforceBase
+    {
+        onEnemyDetected = "['site10',_this select 1] call KOR_fnc_effect_playMusicForScene; false";
+    };
+
     class infantry
     {
         class site10_static1
@@ -15,7 +20,7 @@ class Site10
             canPath = OFF;
             dynamicSim = ON;
             
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site10_path2",
@@ -29,7 +34,7 @@ class Site10
             numberOfUnits = -1;
             unitsPerGroup = -1;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site10_path1",
@@ -43,7 +48,7 @@ class Site10
             numberOfUnits = 6;
             unitsPerGroup = -1;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site10_path1",
@@ -73,7 +78,7 @@ class Site10
                 };
                 exitOnCombat = ON;
             };
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site10_patrol1"
@@ -86,7 +91,7 @@ class Site10
             numberOfUnits = 6;
             unitsPerGroup = 3;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site10_patrol1"
@@ -99,7 +104,7 @@ class Site10
             numberOfUnits = 6;
             unitsPerGroup = 3;
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site10_patrol1"
@@ -126,7 +131,7 @@ class Site10
                 waypointType = "MOVE";
             };
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site10_path1"

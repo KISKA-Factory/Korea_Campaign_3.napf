@@ -165,7 +165,6 @@ _timeForWeather setLightnings 1;
         "CCM_KE_CurtainsAreAlwaysDrawn",
         "CCM_KE_MistAndClouds",
         "CCM_SQ_LivedYears",
-        // "CCM_se_BreakingNews3",
         "CCM_HF_grace",
         "CCM_SQ_SuspensePiano",
         "CCM_AV_SunnyWinterDay",
@@ -181,4 +180,19 @@ _timeForWeather setLightnings 1;
         "CCM_KE_ColdWarEcho"
     ],
     [60,120,180]
-] call KISKA_fnc_randomMusic;
+] spawn KISKA_fnc_randomMusic;
+
+private _musicSceneMap = createHashMapFromArray [
+    ["site7","CCM_se_HeavyTrailer2"],
+    ["site8","CCM_se_Deathmatch"],
+    ["site10","CCM_se_HeavyTrailer5"],
+    ["site5","CCM_se_PureEnergy"],
+    ["site11","CCM_se_HeavyTrailer3"],
+    ["site1Insert","CCM_se_BreakingNews5"],
+    ["site1Fight","CCM_ps_PickASide"],
+    ["stalking1","CCM_se_BreakingNews2"],
+    ["stalking2","CCM_se_BreakingNews1"],
+    ["stalking3","CCM_se_BreakingNews4"]
+];
+
+localNamespace setVariable ["KOR_musicSceneMap",_musicSceneMap];

@@ -5,6 +5,10 @@ class Site11
         ENEMY_INFANTRY_UNIT_CLASSES
     };
 
+    class reinforceBase
+    {
+        onEnemyDetected = "['site11',_this select 1] call KOR_fnc_effect_playMusicForScene; false";
+    };
 
 	class infantry
     {
@@ -16,7 +20,7 @@ class Site11
             canPath = OFF;
             dynamicSim = ON;
             
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site11_patrol1"
@@ -45,7 +49,7 @@ class Site11
                 exitOnCombat = ON;
             };
             
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site11_patrol1"
@@ -72,7 +76,7 @@ class Site11
                 waypointType = "MOVE";
             };
 
-            class reinforce
+            class reinforce : reinforceBase
             {
                 canCall[] = {
                     "site11_path1"
@@ -83,7 +87,7 @@ class Site11
 
 	class turrets
     {
-        class site8_turrets
+        class site11_turrets
         {
             turrets = "Site 11 Turrets";
             dynamicSim = ON;
