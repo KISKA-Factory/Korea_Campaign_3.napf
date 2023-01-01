@@ -2,10 +2,8 @@
 
 scriptName "KOR_fnc_addStalkers";
 params ["_layer","_musicScene"];
-// ["Stalker 1 Markers","stalking1"] call KOR_fnc_addStalkers
-[_musicScene] call KOR_fnc_effect_playMusicForScene;
-player setCaptive true;
 
+[_musicScene] call KOR_fnc_effect_playMusicForScene;
 
 
 private _afterFastropeFunction = {
@@ -120,7 +118,9 @@ private _spawnPositions = ["stalker heli spawns"] call KISKA_fnc_getMissionLayer
     ] call KISKA_fnc_spawnGroup;
 
 
+    
     private _heli = _heliInfo select 0;
+    _heli flyInHeight 30;
     (units _stalkerGroup) apply {
         _x moveInCargo _heli;
     };
