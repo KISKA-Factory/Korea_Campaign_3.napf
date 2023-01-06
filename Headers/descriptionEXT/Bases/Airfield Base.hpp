@@ -2,6 +2,19 @@ class Airfield
 {
     infantryClasses[] = {"rhsusf_usmc_marpat_wd_rifleman_m4"};
 
+    class sittingAnimationBase
+    {
+        backupAnimations[] = {
+            "STAND_UNARMED_1",
+            "STAND_UNARMED_2",
+            "STAND_UNARMED_3",
+            "STAND_ARMED_1",
+            "STAND_ARMED_2",
+            "BRIEFING"
+        };
+    };
+
+
     class Agents
     {
         class standingMaintainers
@@ -31,14 +44,17 @@ class Airfield
             numberOfAgents = -1;
             class ambientAnim
             {
-                animationSet[] = {
-                    "SIT_CHAIR_UNARMED_1",
-                    "SIT_CHAIR_UNARMED_2",
-                    "SIT_CHAIR_UNARMED_3",
-                    "SIT_HIGH_1",
-                    "SIT_LOW"
+                class animationSet : sittingAnimationBase
+                {
+                    snapToAnimations[] = {
+                        "SIT_CHAIR_UNARMED_1",
+                        "SIT_CHAIR_UNARMED_2",
+                        "SIT_CHAIR_UNARMED_3",
+                        "SIT_HIGH_1",
+                        "SIT_LOW"
+                    };
                 };
-                fallbackFunction = "_this call KOR_fnc_effect_handleAirfieldNoSnap";
+                
                 equipmentLevel = "LIGHT";
             };
 
@@ -74,13 +90,15 @@ class Airfield
             dynamicSim = ON;
             class ambientAnim
             {
-                animationSet[] = {
-                    "SIT_CHAIR_UNARMED_1",0.5,
-                    "SIT_CHAIR_UNARMED_2",0.5,
-                    "SIT_CHAIR_ARMED_1",1,
-                    "SIT_CHAIR_ARMED_2",1
+                class animationSet : sittingAnimationBase
+                {
+                    snapToAnimations[] = {
+                        "SIT_CHAIR_UNARMED_1",0.5,
+                        "SIT_CHAIR_UNARMED_2",0.5,
+                        "SIT_CHAIR_ARMED_1",1,
+                        "SIT_CHAIR_ARMED_2",1
+                    };
                 };
-                fallbackFunction = "_this call KOR_fnc_effect_handleAirfieldNoSnap";
             };
         };
 
